@@ -1,0 +1,77 @@
+﻿<Page
+    x:Class="Lumina.Views.Pages.DashboardPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Lumina.Views.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    Title="DashboardPage"
+    d:DataContext="{d:DesignInstance local:DashboardPage,
+                                     IsDesignTimeCreatable=False}"
+    d:DesignHeight="500"
+    ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
+    ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    mc:Ignorable="d" Width="748">
+
+    <Grid VerticalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="621" />
+            <ColumnDefinition Width="179"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="500"/>
+        </Grid.RowDefinitions>
+
+        <Grid Margin="-10,-86,10,86">
+            <Border CornerRadius="10" Margin="334,406,-13,-76">
+
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#FF524D5B" Offset="0.0"/>
+                        <GradientStop Color="#FF1F1F1F" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Border.Clip>
+                    <RectangleGeometry 
+                    RadiusX="10"
+                    RadiusY="10"
+                    Rect="0,0,700,400"/>
+                </Border.Clip>
+            </Border>
+        </Grid>
+        <TextBlock
+            Text="Changelog:" FontSize="16" TextAlignment="Left" Margin="357,331,82,135" RenderTransformOrigin="0.126,0.498"/>
+        <TextBlock
+    Text="Changelog" Name="Changelog" FontWeight="SemiBold" Foreground="#858b94" TextAlignment="Left" Margin="357,359,36,33"/>
+
+        <Image Source="/Assets/bell-ring1.png" RenderTransformOrigin="0.475,0.358" Margin="5,13,588,459"/>
+        <TextBlock
+            Text="Changelog" Name="Announcement" Foreground="#858b94" TextAlignment="Left" Margin="40,25,206,455"/>
+
+        <TextBlock
+            Text="Announcements" Foreground="White" Name="AnnouncementHeader" FontSize="17" TextAlignment="Left" Margin="40,8,206,470"/>
+
+        <Border Margin="10,319,311,3">
+
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                    <GradientStop Color="#FF1398FF" Offset="0.0"/>
+                    <GradientStop Color="#FF229DC7" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Border.Clip>
+                <RectangleGeometry RadiusX="10" RadiusY="10"
+                                   Rect="0,0 300, 170"/>
+            </Border.Clip>
+
+
+            <Image Source="/Images/cat.png" Height="250" Width="250" Margin="81,-50,-31,-22"/>
+        </Border>
+
+        <TextBlock Name="Version" FontSize="28" Text="v1.0.62" Margin="26,328,499,126"/>
+        <TextBlock FontSize="23" Text="Release" Margin="24,355,501,99"/>
+    </Grid>
+</Page>

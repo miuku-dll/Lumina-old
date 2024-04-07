@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets\lumina ico.ico</ApplicationIcon>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\lumina ico.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Costura.Fody" Version="5.7.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="CShauto" Version="1.0.1" />
+    <PackageReference Include="CSInputs" Version="1.0.3" />
+    <PackageReference Include="SharpHook" Version="5.3.2" />
+    <PackageReference Include="WPF-UI" Version="3.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0 " />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2 " />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\bell-ring1.png" />
+    <None Remove="Assets\firewatch.png" />
+    <None Remove="Assets\wpfui-icon-256.png" />
+    <None Remove="Assets\wpfui-icon-1024.png" />
+    <None Remove="Images\cat.png" />
+    <None Remove="Images\girl.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\bell-ring1.png" />
+    <Resource Include="Assets\firewatch.png" />
+    <Resource Include="Assets\wpfui-icon-256.png" />
+    <Resource Include="Assets\wpfui-icon-1024.png" />
+    <Resource Include="Images\cat.png" />
+    <Resource Include="Images\girl.png" />
+  </ItemGroup>
+
+</Project>
