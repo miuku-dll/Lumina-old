@@ -17,7 +17,7 @@ If you have knowledge of c#, you can edit source of Sute's Macro and create a pu
 
 ## How to install?
 For installation help please refer to
-[Installation Guide](https://github.com/yurkyu/Sutes-Macro/blob/master/Info/Info.md)
+[Installation Guide](https://github.com/yurkyu/Lumina/blob/master/Info/Info.md)
 
 ## How to build?
 To edit the application, first re-build the project, for any reason, then the intellisense should load<.
@@ -65,7 +65,7 @@ The Sute's Macro Project is under the MIT License.
 
 
 ### Stuff to do
-[Full to-do list](https://github.com/yurkyu/Sutes-Macro/blob/master/Info/Sols%20to-do.md)
+[Full to-do list](https://github.com/yurkyu/Lumina/blob/master/Info/Sols%20to-do.md)
 
 
 ### LICENSE
