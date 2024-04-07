@@ -61,12 +61,11 @@ The Sute's Macro Project is under the MIT License.
 
 ### Screenshots
 ![Screenshot_55](https://github.com/yurkyu/Lumina/assets/80363046/76d086fe-1d10-43cc-863b-b017d79b34d8)
-
+![Screenshot_56](https://github.com/yurkyu/Lumina/assets/80363046/4aa67aec-daea-438f-98d8-66b66b79354e)
 
 
 ### Stuff to do
 [Full to-do list](https://github.com/yurkyu/Lumina/blob/master/Info/Sols%20to-do.md)
-![Screenshot_56](https://github.com/yurkyu/Lumina/assets/80363046/4aa67aec-daea-438f-98d8-66b66b79354e)
 
 
 ### LICENSE
