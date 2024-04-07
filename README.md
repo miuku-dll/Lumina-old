@@ -1,4 +1,4 @@
-<h2 align="center">Sute's Macro | Open-source | Easy-to-use</h1>
+<h2 align="center">Lumina | Open-source | Easy-to-use</h1>
 
 ![asddasads](https://github.com/yurkyu/Lumina/assets/80363046/7f39a1b7-f7f1-48f1-a5bc-526977a0822f)
 
@@ -11,9 +11,9 @@
 </p>
 <h3 align="center">A Light Macro For Your Needs</h3>
 
-Sute's Macro, is a free personal macro under the name of Sute's Macro, minimal and easy to use. <br>
+Lumina, is a free personal macro under the name of Lumina, minimal and easy to use. <br>
 For more info refer to [Learn More](https://github.com/yurkyu?tab=repositories). <br>
-If you have knowledge of c#, you can edit source of Sute's Macro and create a pull request. <br>
+If you have knowledge of c#, you can edit source of Lumina and create a pull request. <br>
 
 ## How to install?
 For installation help please refer to
@@ -21,8 +21,8 @@ For installation help please refer to
 
 ## How to build?
 To edit the application, first re-build the project, for any reason, then the intellisense should load<.
-- Clone the repo `gh repo clone yurkyu/Sols-RNG-Macro`
-- Open SutesMacro.sln in Visual Studio 2022.
+- Clone the repo `gh repo clone yurkyu/Lumina`
+- Open Lumina.sln in Visual Studio 2022.
 - Set Release x64
 - Ctrl + Shift + B (build)
 
@@ -33,7 +33,7 @@ To edit the application, first re-build the project, for any reason, then the in
          <img src="https://img.youtube.com/vi/JXNY-ejcBy0/0.jpg" style="width:100%;">
       </a>
 
-#### Sute's Macro, is not fully developed, due to my laziness <br>
+#### Lumina, is not fully developed, due to my laziness <br>
 🔴 Alot of the features are still missing, and under 'developement'. I will most likely push them in the near future(ish)</h4>
 
 ## About
@@ -60,19 +60,20 @@ The Sute's Macro Project is under the MIT License.
 - [Sute's Macro, uses the holy spirits to work.](https://github.com/yurkyu/sutes-macro/
 
 ### Screenshots
-<img src="https://media.discordapp.net/attachments/1167612844779503642/1224074202735448185/Screenshot_38.png?ex=661c2af0&is=6609b5f0&hm=cfbcab3cb8ca9622b6c4f61d51959e34dceb7e3df1988b3438c3b8076f6ed11e&=&format=webp&quality=lossless" width="400px">
-<img src="https://media.discordapp.net/attachments/1167612844779503642/1224074203032981645/Screenshot_39.png?ex=661c2af0&is=6609b5f0&hm=5b5626a7c1e0c3b4910be98e130b37bbbc9b548d42c91b3770b9320c96d9ebe8&=&format=webp&quality=lossless" width="400px">
+![Screenshot_55](https://github.com/yurkyu/Lumina/assets/80363046/76d086fe-1d10-43cc-863b-b017d79b34d8)
+
 
 
 ### Stuff to do
 [Full to-do list](https://github.com/yurkyu/Lumina/blob/master/Info/Sols%20to-do.md)
+![Screenshot_56](https://github.com/yurkyu/Lumina/assets/80363046/4aa67aec-daea-438f-98d8-66b66b79354e)
 
 
 ### LICENSE
 ```
 MIT License
 
-Copyright (c) 2023, The Sute's Macro / Nyaboo Project
+Copyright (c) 2024, Lumina
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
