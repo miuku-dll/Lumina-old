@@ -1,6 +1,7 @@
 <h2 align="center">Sute's Macro | Open-source | Easy-to-use</h1>
 
-![12](https://github.com/yurkyu/Sols-RNG-Macro/assets/80363046/ace26121-6e6e-4b05-b7c9-c06ce1cf6ce8)
+![asddasads](https://github.com/yurkyu/Lumina/assets/80363046/86598f81-0383-49c4-8503-ab1698ebeca5)
+
 
 <p align="center">
 <img src="https://dcbadge.vercel.app/api/shield/960948053152501830">
