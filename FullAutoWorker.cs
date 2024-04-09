@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lumina
 {
-    class Program
+    internal class FullAutoWorker
     {
-
     }
 }

@@ -15,63 +15,109 @@
     Foreground="{DynamicResource TextFillColorPrimaryBrush}"
     mc:Ignorable="d" Width="748">
 
-    <Grid VerticalAlignment="Center">
+    <Grid VerticalAlignment="Top">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="621" />
-            <ColumnDefinition Width="179"/>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="500"/>
+            <RowDefinition Height="320"/>
+            <RowDefinition Height="200"/>
         </Grid.RowDefinitions>
 
-        <Grid Margin="-10,-86,10,86">
-            <Border CornerRadius="10" Margin="334,406,-13,-76">
+        <StackPanel Grid.Row="0" Orientation="Vertical"
+                    Height="100"
+                    Grid.Column="0"
+                    VerticalAlignment="Top">
 
+
+            <Border Height="50" 
+                CornerRadius="5" Width="400"
+                     BorderBrush="#414041"
+                     BorderThickness="1"
+                    HorizontalAlignment="Left">
+
+                <Border.Clip>
+                    <RectangleGeometry 
+                        RadiusX="0"
+                        RadiusY="0"
+                        Rect="0,0,400,50"/>
+                </Border.Clip>
+
+                <Grid Height="40" Width="400" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" RenderTransformOrigin="0.44,0.604">
+                    <Image HorizontalAlignment="Left" Width="25" Height="25" Source="/Assets/bell-ring1.png"/>
+                    <TextBlock Margin="37,3,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Announcements:"/>
+
+                    <TextBlock 
+                        Foreground="#a5a8ab"
+                        Name="Announcements"
+                        Text="Announcement..." FontSize="12" VerticalAlignment="Top" Margin="37,20,-37,0"/>
+                </Grid>
+            </Border>
+
+        </StackPanel>
+
+
+
+
+
+
+        <StackPanel Orientation="Horizontal"
+            Grid.Row="2" Width="700" Height="200" VerticalAlignment="Bottom">
+            <Border CornerRadius="10" Height="150" Width="300">
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                        <GradientStop Color="#FF524D5B" Offset="0.0"/>
-                        <GradientStop Color="#FF1F1F1F" Offset="1"/>
+                        <GradientStop Color="#FF4CB9FF" Offset="0.0"/>
+                        <GradientStop Color="Black" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
                 <Border.Clip>
                     <RectangleGeometry 
-                    RadiusX="10"
-                    RadiusY="10"
-                    Rect="0,0,700,400"/>
+                            RadiusX="10"
+                            RadiusY="10"
+                            Rect="0,0,300,150"/>
                 </Border.Clip>
+                <Grid Margin="20,15,0,0">
+                    <TextBlock Text="v0.9.1"
+                               FontSize="28"
+                               Name="Version"/>
+
+                    <TextBlock Text="Pre Release"
+                               
+                               FontSize="19"
+                               Margin="0,30,0,0"/>
+                    <Image Source="/Images/cat3.png" Margin="79,-45,-79,-22"/>
+                </Grid>
             </Border>
-        </Grid>
-        <TextBlock
-            Text="Changelog:" FontSize="16" TextAlignment="Left" Margin="357,331,82,135" RenderTransformOrigin="0.126,0.498"/>
-        <TextBlock
-    Text="Changelog" Name="Changelog" FontWeight="SemiBold" Foreground="#858b94" TextAlignment="Left" Margin="357,359,36,33"/>
 
-        <Image Source="/Assets/bell-ring1.png" RenderTransformOrigin="0.475,0.358" Margin="5,13,588,459"/>
-        <TextBlock
-            Text="Changelog" Name="Announcement" Foreground="#858b94" TextAlignment="Left" Margin="40,25,206,455"/>
+            <Border CornerRadius="10" Height="150" Margin="10,0,0,0" Width="388">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#FF9BFF6E" Offset="0.0"/>
+                        <GradientStop Color="Black" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Border.Clip>
+                    <RectangleGeometry 
+                RadiusX="10"
+                RadiusY="10"
+                Rect="0,0,380,150"/>
+                </Border.Clip>
 
-        <TextBlock
-            Text="Announcements" Foreground="White" Name="AnnouncementHeader" FontSize="17" TextAlignment="Left" Margin="40,8,206,470"/>
+                <Grid Margin="20,15,0,0">
+                    <TextBlock Text="Changelog:"
+                               FontSize="21"/>
 
-        <Border Margin="10,319,311,3">
+                    <TextBlock Text="Pre Release"
+                               FontSize="15"
+                               Name="Changelog"
+                               Margin="0,30,0,0"/>
+                    <Image Source="/Images/cat4.png" Margin="116,-26,-84,-39"/>
+                </Grid>
+            </Border>
+        </StackPanel>
 
-            <Border.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                    <GradientStop Color="#FF1398FF" Offset="0.0"/>
-                    <GradientStop Color="#FF229DC7" Offset="1"/>
-                </LinearGradientBrush>
-            </Border.Background>
-            <Border.Clip>
-                <RectangleGeometry RadiusX="10" RadiusY="10"
-                                   Rect="0,0 300, 170"/>
-            </Border.Clip>
-
-
-            <Image Source="/Images/cat.png" Height="250" Width="250" Margin="81,-50,-31,-22"/>
-        </Border>
-
-        <TextBlock Name="Version" FontSize="28" Text="v1.0.62" Margin="26,328,499,126"/>
-        <TextBlock FontSize="23" Text="Release" Margin="24,355,501,99"/>
     </Grid>
+
 </Page>

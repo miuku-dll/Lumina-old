@@ -6,11 +6,13 @@ using Lumina.Views.Windows;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Text;
 using System.Windows.Threading;
 using Wpf.Ui;
+using Wpf.Ui.Appearance;
 
 namespace Lumina
 {
@@ -66,11 +68,19 @@ namespace Lumina
             return _host.Services.GetService(typeof(T)) as T;
         }
 
+        public enum SystemTheme
+        {
+            Dark = 1
+        }
         /// <summary>
         /// Occurs when the application is loading.
         /// </summary>
         public void OnStartup(object sender, StartupEventArgs e)
         {
+            ApplicationThemeManager.Apply(
+                ApplicationTheme.Dark
+                );
+
             try
             {
                 Webhooks.WebhookLaunch();
@@ -98,6 +108,8 @@ namespace Lumina
                         char[] value = Path.ToCharArray();
                         fs.Write(Encoding.UTF8.GetBytes(value), 0, value.Length);
                     }
+
+                    
                 }
                 else { }
 
@@ -107,6 +119,7 @@ namespace Lumina
                 }
                 else
                 {
+
                     Console.WriteLine("Adding Files...");
                     using (FileStream fs = File.Create(PrivateServerFile))
                     {
@@ -128,8 +141,8 @@ namespace Lumina
                         char[] value = "".ToCharArray();
                         fs.Write(Encoding.UTF8.GetBytes(value), 0, value.Length);
                     }
+                   
                 }
-
 
                 Console.WriteLine("Done Checking Folder...");
                 Thread.Sleep(1000);

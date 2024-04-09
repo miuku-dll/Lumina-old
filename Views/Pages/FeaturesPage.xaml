@@ -23,37 +23,88 @@
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
-        <TextBlock
-            FontSize="20"
-            FontWeight="Medium"
-            Text="Global Toggle" Margin="0,0,219,361" />
 
-        <ui:Button Name="GlobalToggle" Height="32" Content="Start" Margin="204,40,0,0" VerticalAlignment="Top" Width="78" Click="GlobalToggle_Click"/>
-        <TextBlock
-            FontSize="15"
-            FontWeight="Regular"
-            Foreground="#abadaf"
-            Text="This will start all true features" Margin="1,43,354,311" />
-        <TextBlock
-            FontSize="20"
-            FontWeight="Medium"
-            Text="Auto Collect" Margin="1,106,218,256" />
-        <ui:Button Height="32" x:Name="AutoCollectToggle" Content="false" Margin="149,144,0,0" VerticalAlignment="Top" Width="78" Click="Button_Click_1"/>
-        <TextBlock
-            FontSize="15"
-            FontWeight="Regular"
-            Foreground="#abadaf"
-            Text="Collect all item spots" Margin="0,148,404,207" />
-        <TextBlock
-            FontSize="20"
-            FontWeight="Medium"
-            Text="Auto Craft" Margin="1,195,218,167" />
-        <ui:Button Height="32" x:Name="AutoCraftGilded" Content="false" Margin="167,234,0,0" Width="78" Click="Button_Click_2" VerticalAlignment="Top"/>
-        <TextBlock
-            FontSize="15"
-            FontWeight="Regular"
-            Foreground="#abadaf"
-            Text="Auto Craft Gilded Coins" Margin="0,237,386,118" />
+        <StackPanel Width="600" Height="500">
+            <Border CornerRadius="10"
+                    BorderBrush="#414041" BorderThickness="1"
+            Margin="0,0,0,0" Width="600">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="Transparent" Offset="0.1"/>
+                        <GradientStop Color="Transparent" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Border.Clip>
+                    <RectangleGeometry 
+                    RadiusX="10"
+                    RadiusY="10"
+                    Rect="0,0,600,115"/>
+                </Border.Clip>
 
+
+                <Grid>
+
+                    <ui:Button
+                    Margin="502,0,0,0"
+                    Name="GlobalToggle" VerticalAlignment="Center" BorderBrush="#414041" Background="#002D2D2D" Height="32" Content="Start" Width="78" Click="GlobalToggle_Click" RenderTransformOrigin="0.235,0.438"/>
+                    <TextBlock Text="Global Toggle"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           Margin="20,14,0,37"
+                           FontSize="18"/>
+
+                    <TextBlock
+                    FontSize="15"
+                    FontWeight="Regular"
+                    Foreground="#a5a8ab"
+                    Height="20"
+                    VerticalAlignment="Top"
+                    Margin="20,40,101,0"
+                    Text="This will start all true features" />
+                </Grid>
+
+            </Border>
+
+
+            <Border CornerRadius="10"
+            BorderBrush="#414041" BorderThickness="1"
+    Margin="0,10,0,0" Width="600">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="Transparent" Offset="0.1"/>
+                        <GradientStop Color="Transparent" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Border.Clip>
+                    <RectangleGeometry 
+            RadiusX="10"
+            RadiusY="10"
+            Rect="0,0,600,115"/>
+                </Border.Clip>
+
+
+                <Grid>
+
+                    <ui:Button
+                        Margin="502,0,0,0"
+                        Name="AutoCollectBtn" Content="Off" VerticalAlignment="Center" BorderBrush="#414041" Background="#002D2D2D" Height="32" Width="78" Click="AutoCollect_Click" RenderTransformOrigin="0.235,0.438"/>
+                    <TextBlock Text="Auto Collect"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Margin="20,14,0,37"
+                   FontSize="18"/>
+
+                    <TextBlock
+            FontSize="15"
+            FontWeight="Regular"
+            Foreground="#a5a8ab"
+            Height="20"
+            VerticalAlignment="Top"
+            Margin="20,40,101,0"
+            Text="This will turn Auto Collect on" />
+                </Grid>
+
+            </Border>
+        </StackPanel>
     </Grid>
 </Page>

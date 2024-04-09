@@ -20,7 +20,7 @@ namespace Lumina.Views.Pages
             try
             {
                 WebClient client = new WebClient();
-                Stream stream = client.OpenRead("https://raw.githubusercontent.com/yurkyu/Sutes-Macro/master/Info/changelog.txt");
+                Stream stream = client.OpenRead("https://raw.githubusercontent.com/yurkyu/Lumina/master/Info/changelog.txt");
                 StreamReader reader = new StreamReader(stream);
                 String content = reader.ReadToEnd();
                 Changelog.Text = content;
@@ -30,17 +30,17 @@ namespace Lumina.Views.Pages
             try
             {
                 WebClient client2 = new WebClient();
-                Stream stream2 = client2.OpenRead("https://raw.githubusercontent.com/yurkyu/Sutes-Macro/master/Info/Announcement.txt");
+                Stream stream2 = client2.OpenRead("https://raw.githubusercontent.com/yurkyu/Lumina/master/Info/Announcement.txt");
                 StreamReader reader2 = new StreamReader(stream2);
                 String content2 = reader2.ReadToEnd();
-                Announcement.Text = content2;
+                Announcements.Text = content2;
             }
             catch { }
 
             try
             {
                 WebClient client = new WebClient();
-                Stream stream = client.OpenRead("https://raw.githubusercontent.com/yurkyu/Sutes-Macro/master/Info/Version");
+                Stream stream = client.OpenRead("https://raw.githubusercontent.com/yurkyu/Lumina/master/Info/Version");
                 StreamReader reader = new StreamReader(stream);
                 String content = reader.ReadToEnd();
                 Version.Text = content;

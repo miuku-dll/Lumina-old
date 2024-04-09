@@ -35,14 +35,26 @@ namespace Lumina
             }
         }
 
+        public static void ResetChar()
+        {
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Escape, KeyFlags.Down);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Escape, KeyFlags.Up);
+            Thread.Sleep(500);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.R, KeyFlags.Down);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.R, KeyFlags.Up);
+            Thread.Sleep(500);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Return, KeyFlags.Down);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Return, KeyFlags.Up);
+            Thread.Sleep(3500);
+        }
+
         public static void ResetKeys()
         {
-            var simulator = new EventSimulator(); // For mouse hooks
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.A, KeyFlags.Up);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Up);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Up);
-            simulator.SimulateMouseRelease(MouseButton.Button1);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
         }
 
         public static void StartPrivateServer()

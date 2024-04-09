@@ -17,32 +17,22 @@ namespace Lumina
             Run();
         }
 
-
-
-
-
-
-        static void Run()
+        static async void Run()
         {
             for (; ; )
             {
-
-                string Check2Path = File.ReadAllText(@".\Config\Status2.txt");
                 string CheckPath = File.ReadAllText(@".\Config\Status1.txt");
                 if (CheckPath.Contains("true", StringComparison.OrdinalIgnoreCase))
                 {
                     int i = 1;
                     for (; ; )
                     {
+                        Util.ResetChar();
                         Util.AutoCollect();
                         i++;
                         if (i > 4)
                             break;
                     }
-                }
-                else if (Check2Path.Contains("true", StringComparison.OrdinalIgnoreCase))
-                {
-                    Util.AutoCraft();
                 }
                 else
                 {
