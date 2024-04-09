@@ -1,3 +1,3 @@
 [*] Whole rebrand
 [+] New Graphical User Interface
-[+] Added Private Server Addres to settings
+[+] Added Private Server Address setting
