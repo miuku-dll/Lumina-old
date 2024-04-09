@@ -31,5 +31,21 @@ namespace Lumina.Views.Pages
             }
             catch (Exception ex) { }
         }
+
+        private void SaveServ_Click(object sender, RoutedEventArgs e)
+        {
+            var PrivateServerAddress = PrivServ.Text;
+
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(@"./config/PrivateServer.txt"))
+                {
+                    writer.WriteLine(PrivateServerAddress);
+                    System.Windows.MessageBox.Show(PrivateServerAddress);
+
+                }
+            }
+            catch (Exception ex) { }
+        }
     }
 }

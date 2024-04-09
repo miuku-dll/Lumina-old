@@ -13,9 +13,10 @@
     ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
     ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
     Foreground="{DynamicResource TextFillColorPrimaryBrush}"
-    mc:Ignorable="d" Width="748">
+    mc:Ignorable="d" Width="748"
+    HorizontalAlignment="Left">
 
-    <Grid VerticalAlignment="Top">
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Left" Height="500">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="auto"/>
@@ -27,13 +28,14 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Orientation="Vertical"
+                    HorizontalAlignment="Left"
                     Height="100"
                     Grid.Column="0"
-                    VerticalAlignment="Top">
+                    VerticalAlignment="Top" Width="551">
 
 
             <Border Height="50" 
-                CornerRadius="5" Width="400"
+                CornerRadius="5" Width="549"
                      BorderBrush="#414041"
                      BorderThickness="1"
                     HorizontalAlignment="Left">
@@ -42,10 +44,12 @@
                     <RectangleGeometry 
                         RadiusX="0"
                         RadiusY="0"
-                        Rect="0,0,400,50"/>
+                        Rect="0,0,550,50"/>
                 </Border.Clip>
 
-                <Grid Height="40" Width="400" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" RenderTransformOrigin="0.44,0.604">
+                <Grid
+                    
+                    Height="40" Width="400" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" RenderTransformOrigin="0.44,0.604">
                     <Image HorizontalAlignment="Left" Width="25" Height="25" Source="/Assets/bell-ring1.png"/>
                     <TextBlock Margin="37,3,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Announcements:"/>
 
@@ -63,7 +67,7 @@
 
 
 
-        <StackPanel Orientation="Horizontal"
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"
             Grid.Row="2" Width="700" Height="200" VerticalAlignment="Bottom">
             <Border CornerRadius="10" Height="150" Width="300">
                 <Border.Background>
@@ -94,7 +98,7 @@
             <Border CornerRadius="10" Height="150" Margin="10,0,0,0" Width="388">
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                        <GradientStop Color="#FF9BFF6E" Offset="0.0"/>
+                        <GradientStop Color="#FF6E91FF" Offset="0.0"/>
                         <GradientStop Color="Black" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
