@@ -1,0 +1,2 @@
+[*] Whole rebrand
+[+] New Graphical User Interface
