@@ -12,8 +12,8 @@
 
 ## How to build? <br>
 To edit the application, first re-build the project, for any reason, then the intellisense should load.<br>
-- Clone the repo `gh repo clone yurkyu/Sutes-Macro`<br>
-- Open SutesMacro.sln in Visual Studio 2022.<br>
+- Clone the repo `gh repo clone yurkyu/Lumina`<br>
+- Open Lumina.sln in Visual Studio 2022.<br>
 - Set Release x64<br>
 - Ctrl + Shift + B (build)<br>
 
@@ -29,7 +29,8 @@ To install the built application first<br>
 <br>
 
 ### Make sure you have these files before running the .exe <br>
-![Screenshot_45](https://github.com/yurkyu/Sutes-Macro/assets/80363046/3b36c5ce-1b4f-467b-8763-5cf401a6001d)
+![Screenshot_64](https://github.com/yurkyu/Lumina/assets/80363046/32f27ebf-3ae6-49ab-b637-0542f3253bc3)
+
 
 
 ## Browser compatibility <br>
