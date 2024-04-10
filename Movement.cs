@@ -43,7 +43,7 @@ namespace Lumina
                     break;
             }
         }
-        public static void CollectAll()
+        public async static void CollectAll()
         {
             Util.Focus(); // Focus on Roblox process
             Util.ResetKeys();

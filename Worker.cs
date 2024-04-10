@@ -9,16 +9,13 @@ namespace Lumina
 {
     class Worker
     {
-        public static void Starting()
+
+        public async static void SomeMethod()
         {
-            
             Util.Focus();
             Thread.Sleep(1000);
-            Run();
-        }
+            await Task.Delay(1000);
 
-        static async void Run()
-        {
             for (; ; )
             {
                 string CheckPath = File.ReadAllText(@".\Config\Status1.txt");
@@ -28,18 +25,30 @@ namespace Lumina
                     for (; ; )
                     {
                         Util.ResetChar();
-                        Util.AutoCollect();
-                        i++;
-                        if (i > 4)
-                            break;
+                        if (CheckPath.Contains("false",StringComparison.OrdinalIgnoreCase))
+                        {
+                            return;
+                        }
+                        else
+                        {
+                            await Task.Delay(1000);
+                            Util.AutoCollect();
+                            i++;
+                            if (i > 4)
+                                break;
+                        }
                     }
                 }
                 else
                 {
+                    
                     MessageBox.Show("No features turned on...");
+                    
                     break;
                 }
             }
+           
         }
+
     }
 }

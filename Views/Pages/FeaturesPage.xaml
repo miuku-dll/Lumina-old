@@ -25,86 +25,54 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Width="600" Height="500">
-            <Border CornerRadius="10"
-                    BorderBrush="#414041" BorderThickness="1"
-            Margin="0,0,0,0" Width="600">
-                <Border.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                        <GradientStop Color="Transparent" Offset="0.1"/>
-                        <GradientStop Color="Transparent" Offset="1"/>
-                    </LinearGradientBrush>
-                </Border.Background>
-                <Border.Clip>
-                    <RectangleGeometry 
-                    RadiusX="10"
-                    RadiusY="10"
-                    Rect="0,0,600,115"/>
-                </Border.Clip>
+            <ui:CardExpander Grid.Column="0" 
+                            Margin="0,10,0,0" Icon="{ui:SymbolIcon Play24}">
+                <ui:CardExpander.Header>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <ui:TextBlock
+                Grid.Row="0"
+                Grid.Column="0"
+                FontSize="16"
+                FontTypography="Body"
+                Text="Auto Collect" />
+                        <ui:TextBlock
+                Grid.Row="1"
+                Grid.Column="0"
+                FontSize="12"
+                Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}"
+                Text="Auto Collect Features"/>
+                        <ui:ToggleSwitch
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.Column="1"
+                Margin="0,0,16,0"
+                OffContent="Off"
+                OnContent="On" Checked="AutoCollectGlobal_Checked" Unchecked="AutoCollectGlobal_UnChecked" />
+                    </Grid>
+                </ui:CardExpander.Header>
+                <StackPanel Margin="24,0.5,24,0">
+                    <ui:CardControl Padding="20,10,20,10" Header="Auto collect all spots">
+                        <ui:ToggleSwitch
+                            HorizontalContentAlignment="Left"
+                            IsEnabled="True"
+                            OffContent="Off"
+                            OnContent="On" Checked="ToggleSwitch_Checked"
+                            Unchecked="ToggleSwitch_UnChecked"/>
+                    </ui:CardControl>
 
 
-                <Grid>
+                </StackPanel>
+            </ui:CardExpander>
+            
 
-                    <ui:Button
-                    Margin="502,0,0,0"
-                    Name="GlobalToggle" VerticalAlignment="Center" BorderBrush="#414041" Background="#002D2D2D" Height="32" Content="Start" Width="78" Click="GlobalToggle_Click" RenderTransformOrigin="0.235,0.438"/>
-                    <TextBlock Text="Global Toggle"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Left"
-                           Margin="20,14,0,37"
-                           FontSize="18"/>
-
-                    <TextBlock
-                    FontSize="15"
-                    FontWeight="Regular"
-                    Foreground="#a5a8ab"
-                    Height="20"
-                    VerticalAlignment="Top"
-                    Margin="20,40,101,0"
-                    Text="This will start all true features" />
-                </Grid>
-
-            </Border>
-
-
-            <Border CornerRadius="10"
-            BorderBrush="#414041" BorderThickness="1"
-    Margin="0,10,0,0" Width="600">
-                <Border.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                        <GradientStop Color="Transparent" Offset="0.1"/>
-                        <GradientStop Color="Transparent" Offset="1"/>
-                    </LinearGradientBrush>
-                </Border.Background>
-                <Border.Clip>
-                    <RectangleGeometry 
-            RadiusX="10"
-            RadiusY="10"
-            Rect="0,0,600,115"/>
-                </Border.Clip>
-
-
-                <Grid>
-
-                    <ui:Button
-                        Margin="502,0,0,0"
-                        Name="AutoCollectBtn" Content="Off" VerticalAlignment="Center" BorderBrush="#414041" Background="#002D2D2D" Height="32" Width="78" Click="AutoCollect_Click" RenderTransformOrigin="0.235,0.438"/>
-                    <TextBlock Text="Auto Collect"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Left"
-                   Margin="20,14,0,37"
-                   FontSize="18"/>
-
-                    <TextBlock
-            FontSize="15"
-            FontWeight="Regular"
-            Foreground="#a5a8ab"
-            Height="20"
-            VerticalAlignment="Top"
-            Margin="20,40,101,0"
-            Text="This will turn Auto Collect on" />
-                </Grid>
-
-            </Border>
         </StackPanel>
     </Grid>
 </Page>

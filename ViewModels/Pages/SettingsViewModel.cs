@@ -59,5 +59,7 @@ namespace Lumina.ViewModels.Pages
                     break;
             }
         }
+
+
     }
 }

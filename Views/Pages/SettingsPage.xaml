@@ -19,7 +19,8 @@
     <Page.Resources>
         <helpers:EnumToBooleanConverter x:Key="EnumToBooleanConverter" />
     </Page.Resources>
-
+    
+    
 
     <Grid VerticalAlignment="Top">
 
@@ -29,6 +30,7 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Height="600" Width="700">
+
 
             <TextBlock
             FontSize="23"
@@ -41,10 +43,9 @@
 
              <TextBlock Text="Change webhook" FontSize="16" VerticalAlignment="Top" Margin="0,8,0,0"/>
                 <ui:Button VerticalAlignment="Bottom"
-            Content="Save"
-            x:Name="SaveWebhook"
-            Icon="Fluent24" Height="36" Click="Button_Click" Margin="489,0,0,0" Width="66" />
-
+                           Content="Save"
+                           x:Name="SaveWebhook"
+                           Icon="Fluent24" Height="36" Click="Button_Click" Margin="489,0,0,0" Width="66" />
                 <ui:TextBox VerticalAlignment="Bottom"
             x:Name="Webhook" 
             PlaceholderText="Enter webhook..."
@@ -54,6 +55,7 @@
 
             <Grid Width="700"
                   Height="70" Margin="0,10,0,0">
+                
 
                 <TextBlock Text="Change Private Server Address" FontSize="16" VerticalAlignment="Top" Margin="0,8,0,0"/>
                 <ui:Button VerticalAlignment="Bottom"
@@ -87,12 +89,13 @@
             GroupName="themeSelect"
             IsChecked="{Binding ViewModel.CurrentTheme, ConverterParameter=Dark, Converter={StaticResource EnumToBooleanConverter}, Mode=OneWay}" VerticalAlignment="Top" Grid.ColumnSpan="2" />
 
-            <TextBlock
-                Margin="0,20,0,0"
-            FontSize="23"
-            FontWeight="Regular"
-            Text="About Lumina" Grid.ColumnSpan="2" />
+
+            
+            <ui:InfoBar Title="Information" Name="WebhookInfo" VerticalAlignment="Bottom" Message="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+            
 
         </StackPanel>
+        
+        
     </Grid>
 </Page>

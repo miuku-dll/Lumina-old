@@ -20,14 +20,28 @@ namespace Lumina.ViewModels.Windows
             new NavigationViewItem()
             {
                 Content = "Features",
-                Icon = new SymbolIcon { Symbol = SymbolRegular.ContentSettings24 },
+                Icon = new SymbolIcon { Symbol = SymbolRegular.HourglassThreeQuarter24 },
                 TargetPageType = typeof(Views.Pages.FeaturesPage)
+            },
+            new NavigationViewItem()
+            {
+                Content = "Full Auto",
+                Icon = new SymbolIcon { Symbol = SymbolRegular.DrinkCoffee24 },
+                TargetPageType = typeof(Views.Pages.FullAutoPage)
             }
+
         };
 
         [ObservableProperty]
         private ObservableCollection<object> _footerMenuItems = new()
         {
+            new NavigationViewItem()
+            {
+                Content = "Lumina",
+                Icon = new SymbolIcon { Symbol = SymbolRegular.Star24 },
+                TargetPageType = typeof(Views.Pages.LuminaPage)
+            },
+
             new NavigationViewItem()
             {
                 Content = "Settings",

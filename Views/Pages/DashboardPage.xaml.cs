@@ -15,44 +15,19 @@ namespace Lumina.Views.Pages
             ViewModel = viewModel;
             DataContext = this;
 
+
+            WebClient client = new WebClient();
+            Stream stream = client.OpenRead("https://raw.githubusercontent.com/yurkyu/Lumina/master/Info/Version");
+            StreamReader reader = new StreamReader(stream);
+            String content = reader.ReadLine();
+
+            
+
             InitializeComponent();
 
-            try
-            {
-                WebClient client = new WebClient();
-                Stream stream = client.OpenRead("https://raw.githubusercontent.com/yurkyu/Lumina/master/Info/changelog.txt");
-                StreamReader reader = new StreamReader(stream);
-                String content = reader.ReadToEnd();
-                Changelog.Text = content;
-            }
-            catch (Exception ex) { }
-
-            try
-            {
-                WebClient client2 = new WebClient();
-                Stream stream2 = client2.OpenRead("https://raw.githubusercontent.com/yurkyu/Lumina/master/Info/Announcement.txt");
-                StreamReader reader2 = new StreamReader(stream2);
-                String content2 = reader2.ReadToEnd();
-                Announcements.Text = content2;
-            }
-            catch { }
-
-            try
-            {
-                WebClient client = new WebClient();
-                Stream stream = client.OpenRead("https://raw.githubusercontent.com/yurkyu/Lumina/master/Info/Version");
-                StreamReader reader = new StreamReader(stream);
-                String content = reader.ReadToEnd();
-                Version.Text = content;
-            }
-            catch (Exception ex) { }
+            Version.Text = content + "";
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            System.Windows.MessageBox.Show("Hoimo");
-
-        }
 
         
 

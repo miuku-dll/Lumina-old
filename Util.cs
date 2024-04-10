@@ -170,7 +170,7 @@ namespace Lumina
             RobloxRunning();
         }
 
-        public static void AutoCollect()
+        public async static void AutoCollect()
         {
             Focus();
             Movement.CollectAll();

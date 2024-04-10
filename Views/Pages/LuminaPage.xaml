@@ -1,0 +1,38 @@
+<Page
+    x:Class="Lumina.Views.Pages.LuminaPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Lumina.Views.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="clr-namespace:Lumina.Models"
+    Title="DataPage"
+    d:DataContext="{d:DesignInstance local:LuminaPage,
+                                     IsDesignTimeCreatable=False}"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+
+    Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    ScrollViewer.CanContentScroll="False"
+    mc:Ignorable="d">
+
+    <Grid Margin="0,0,0,24">
+        <TreeView AllowDrop="True" ScrollViewer.CanContentScroll="False">
+                <TreeViewItem
+                 Header="To-Do"
+                 IsExpanded="False"
+                 IsSelected="False">
+                    <TreeViewItem Header="Auto Obby"/>
+                    <TreeViewItem Header="Full Auto Features" />
+                </TreeViewItem>
+                <TreeViewItem Header="Other Stuff...">
+                    <TreeViewItem Header="" />
+                    <TreeViewItem Header="">
+                        <TreeViewItem Header="" />
+                        <TreeViewItem Header="" />
+                        <TreeViewItem Header="" />
+                    </TreeViewItem>
+                </TreeViewItem>
+            </TreeView>
+    </Grid>
+</Page>

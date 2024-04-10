@@ -16,45 +16,10 @@ namespace Lumina.Views.Pages
             ViewModel = viewModel;
             DataContext = this;
 
-            try
-            {
-                string Status1File = File.ReadAllText(@"./Config/Status1.txt");
-
-                if (Status1File.Contains("false", StringComparison.OrdinalIgnoreCase))
-                {
-                    AutoCollectBtn.Content = "Off";
-                }
-                else if (Status1File.Contains("true", StringComparison.OrdinalIgnoreCase))
-                {
-                    AutoCollectBtn.Content = "On";
-                }
-                
-            }
-            catch { }
-
-
-
             InitializeComponent();
         }
 
-        private void GlobalToggle_Click(object sender, RoutedEventArgs e)
-        {
-            bool on = false;
-
-            if (on == false)
-            {
-                Worker.Starting();
-                on = true;
-            }
-            else if (on == true)
-            {
-                return;
-            }
-
-           
-        }
-
-        private void AutoCollect_Click(object sender, RoutedEventArgs e)
+        private void ToggleSwitch_Checked(object sender, RoutedEventArgs e)
         {
             string Status1File = File.ReadAllText(@"./Config/Status1.txt");
 
@@ -63,18 +28,41 @@ namespace Lumina.Views.Pages
                 using (StreamWriter writer = new StreamWriter(@"./config/Status1.txt"))
                 {
                     writer.WriteLine("true");
-                    AutoCollectBtn.Content = writer.ToString();
-                    AutoCollectBtn.Content = "On";
                 }
             }
             else
             {
                 using (StreamWriter writer = new StreamWriter(@"./config/Status1.txt"))
                 {
-                        writer.WriteLine("false");
-                    AutoCollectBtn.Content = "Off";
+                    writer.WriteLine("false");
                 }
             }
+        }
+        private void ToggleSwitch_UnChecked(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Toggled Off");
+            using (StreamWriter writer = new StreamWriter(@"./config/Status1.txt"))
+            {
+                writer.WriteLine("false");
+            }
+        }
+
+        private void AutoCollectGlobal_Checked(object sender, RoutedEventArgs e)
+        {
+            string Status1File = File.ReadAllText(@"./Config/Status1.txt");
+
+            if (Status1File.Contains("false", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("No Features Selected");
+            }
+            else if (Status1File.Contains("true", StringComparison.OrdinalIgnoreCase))
+            {
+                Worker.SomeMethod();
+            }
+        }
+        private void AutoCollectGlobal_UnChecked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

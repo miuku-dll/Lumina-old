@@ -16,6 +16,7 @@ namespace Lumina.Views.Pages
             InitializeComponent();
         }
 
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var WebhookAddress = Webhook.Text;
@@ -25,7 +26,8 @@ namespace Lumina.Views.Pages
                 using (StreamWriter writer = new StreamWriter(@"./config/Webhook.txt"))
                 {
                     writer.WriteLine(WebhookAddress);
-                    System.Windows.MessageBox.Show(WebhookAddress);
+                    WebhookInfo.IsOpen = true;
+                    WebhookInfo.Message = "Webhook set to:" + WebhookAddress;
 
                 }
             }
@@ -36,12 +38,12 @@ namespace Lumina.Views.Pages
         {
             var PrivateServerAddress = PrivServ.Text;
 
+
             try
             {
                 using (StreamWriter writer = new StreamWriter(@"./config/PrivateServer.txt"))
                 {
                     writer.WriteLine(PrivateServerAddress);
-                    System.Windows.MessageBox.Show(PrivateServerAddress);
 
                 }
             }
