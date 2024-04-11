@@ -25,14 +25,6 @@
                     <TreeViewItem Header="Auto Obby"/>
                     <TreeViewItem Header="Full Auto Features" />
                 </TreeViewItem>
-                <TreeViewItem Header="Other Stuff...">
-                    <TreeViewItem Header="" />
-                    <TreeViewItem Header="">
-                        <TreeViewItem Header="" />
-                        <TreeViewItem Header="" />
-                        <TreeViewItem Header="" />
-                    </TreeViewItem>
-                </TreeViewItem>
-            </TreeView>
+        </TreeView>
     </Grid>
 </Page>
