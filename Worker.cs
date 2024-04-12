@@ -10,38 +10,43 @@ namespace Lumina
     class Worker
     {
 
-        public async static void Run()
+        public static async Task Run()
         {
-            Util.Focus();
-            Thread.Sleep(1000);
             await Task.Delay(1000);
-            bool Completed = false;
 
-            for (; ; )
+            try
             {
+                Util.Focus();
+                Thread.Sleep(1000);
+                await Task.Delay(1000);
+
                 string CheckPath = File.ReadAllText(@".\Config\Status1.txt");
                 string CheckPath3 = File.ReadAllText(@".\Config\Status3.txt");
                 if (CheckPath.Contains("true", StringComparison.OrdinalIgnoreCase))
-                {  
-
+                {
+                loop:
                     int i = 1;
-                    for (; ; )
+                    Util.ResetChar();
+                    if (CheckPath.Contains("false", StringComparison.OrdinalIgnoreCase))
                     {
-                        Util.ResetChar();
-                        if (CheckPath.Contains("false",StringComparison.OrdinalIgnoreCase))
+                        return;
+                    }
+                    else
+                    {
+                        await Task.Delay(1000);
+                        Util.AutoCollect();
+                        i++;
+                        if (i > 3)
                         {
-                            return;
+                            goto AfterLoop;
                         }
                         else
                         {
-                            await Task.Delay(1000);
-                            Util.AutoCollect();
-                            i++;
-                            if (i > 3)
-                            goto AfterLoop;
+                            goto loop;
                         }
                     }
                 }
+
 
             AfterLoop:
                 if (CheckPath3.Contains("true", StringComparison.OrdinalIgnoreCase))
@@ -51,14 +56,15 @@ namespace Lumina
                 }
                 else
                 {
-                    
+
                     MessageBox.Show("No features turned on...");
-                    
-                    break;
+
                 }
             }
-           
+            catch (Exception ex) { return; }
+
         }
 
     }
 }
+

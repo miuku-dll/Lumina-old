@@ -19,8 +19,8 @@
     <Page.Resources>
         <helpers:EnumToBooleanConverter x:Key="EnumToBooleanConverter" />
     </Page.Resources>
-    
-    
+
+
 
     <Grid VerticalAlignment="Top">
 
@@ -31,44 +31,66 @@
 
         <StackPanel Height="600" Width="700">
 
+            <ui:Card>
+                <Grid>
+                    <StackPanel  Margin="10,0,0,0" HorizontalAlignment="Left" Width="496">
+                        <TextBlock Text="Rare star announcements" FontSize="16"/>
+                        <TextBlock FontSize="12" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="This will announce all rare stars you get through your webhook" Width="575"/>
+                    </StackPanel>
 
-            <TextBlock
-            FontSize="23"
-                Margin="0,0,0,0"
-            FontWeight="Regular"
-            Text="Global Settings"/>
-            
-            <Grid Width="700"
-                  Height="70" Margin="0,10,0,0">
+                    <ui:ToggleSwitch Name="SetToggle" Checked="StarChecker_UnChecked"
+                Unchecked="StarChecker_Checked" HorizontalAlignment="Right" Margin="0,0,10,0"/>
+                </Grid>
+            </ui:Card>
 
-             <TextBlock Text="Change webhook" FontSize="16" VerticalAlignment="Top" Margin="0,8,0,0"/>
-                <ui:Button VerticalAlignment="Bottom"
-                           Content="Save"
-                           x:Name="SaveWebhook"
-                           Icon="Fluent24" Height="36" Click="Button_Click" Margin="489,0,0,0" Width="66" />
-                <ui:TextBox VerticalAlignment="Bottom"
-            x:Name="Webhook" 
-            PlaceholderText="Enter webhook..."
-            Width="480" Height="36" Margin="0,7,220,0" Opacity="0.7">
-                </ui:TextBox>
-            </Grid>
+            <ui:Card>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70" />
+                    </Grid.RowDefinitions>
 
-            <Grid Width="700"
-                  Height="70" Margin="0,10,0,0">
-                
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="598"/>
+                        <ColumnDefinition Width="502"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel HorizontalAlignment="Left" Width="550" Grid.Row="0">
+                        <TextBlock Height="30" Grid.Row="1" Grid.Column="0" Text="Change Private Server Address" FontSize="16"/>
+                        <ui:TextBox
+                                    x:Name="PrivServ" 
+                                    PlaceholderText="Enter Address..." Height="36" Opacity="0.7" Width="549" TextChanged="PrivServ_TextChanged"/>
 
-                <TextBlock Text="Change Private Server Address" FontSize="16" VerticalAlignment="Top" Margin="0,8,0,0"/>
-                <ui:Button VerticalAlignment="Bottom"
-            Content="Save"
-            x:Name="SavePrivateServer"
-            Icon="Fluent24" Height="36" Click="SaveServ_Click" Margin="489,0,0,0" Width="66" />
+                    </StackPanel>
+                    <ui:Button
+                        Content="Save"
+                        x:Name="SavePrivateServer"
+                        Icon="Fluent24" Height="35" Click="SaveServ_Click" Width="109" Grid.ColumnSpan="2" Margin="555,31,0,0" VerticalAlignment="Top" />
+                </Grid>
+            </ui:Card>
 
-                <ui:TextBox VerticalAlignment="Bottom"
-            x:Name="PrivServ" 
-            PlaceholderText="Enter Address..."
-            Width="480" Height="36" Margin="0,7,220,0" Opacity="0.7">
-                </ui:TextBox>
-            </Grid>
+            <ui:Card>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="598"/>
+                        <ColumnDefinition Width="502"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel HorizontalAlignment="Left" Width="550" Grid.Row="0">
+                        <TextBlock Height="30" Grid.Row="1" Grid.Column="0" Text="Change Private Server Address" FontSize="16"/>
+                        <ui:TextBox
+                                    x:Name="Webhook" 
+                                    PlaceholderText="Enter Address..." Height="36" Opacity="0.7" Width="549" TextChanged="PrivServ_TextChanged"/>
+
+                    </StackPanel>
+                    <ui:Button
+                        Content="Save"
+                        x:Name="WebhookBtn"
+                        Icon="Fluent24" Height="35" Click="Button_Click" Width="109" Grid.ColumnSpan="2" Margin="555,31,0,0" VerticalAlignment="Top" />
+                </Grid>
+            </ui:Card>
+
 
             <TextBlock
                 Margin="0,20,0,0"
@@ -89,13 +111,9 @@
             GroupName="themeSelect"
             IsChecked="{Binding ViewModel.CurrentTheme, ConverterParameter=Dark, Converter={StaticResource EnumToBooleanConverter}, Mode=OneWay}" VerticalAlignment="Top" Grid.ColumnSpan="2" />
 
-
             
-            <ui:InfoBar Title="Information" Name="WebhookInfo" VerticalAlignment="Bottom" Message="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
-            
-
         </StackPanel>
-        
-        
+
+
     </Grid>
 </Page>

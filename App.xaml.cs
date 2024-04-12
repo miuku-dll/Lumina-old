@@ -80,7 +80,7 @@ namespace Lumina
         /// <summary>
         /// Occurs when the application is loading.
         /// </summary>
-        public void OnStartup(object sender, StartupEventArgs e)
+        async void OnStartup(object sender, StartupEventArgs e)
         {
             ApplicationThemeManager.Apply(
                 ApplicationTheme.Dark

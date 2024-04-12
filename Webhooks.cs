@@ -72,11 +72,145 @@ namespace Lumina
             );
         }
 
-        public static void WebhookStart()
+        public static void WebhookPermaFrost()
         {
             Util.sendDiscordWebhook(
                 File.ReadAllText(@"./config/Webhook.txt"),
-                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"Starting macro...\", \"title\":\"\", \"color\":6618908}]  }"
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Permafrost...\", \"title\":\"\", \"color\":6618908}]  }"
+            );
+        }
+
+        public static void WebhookFlushed()
+        {
+            Util.sendDiscordWebhook(
+                File.ReadAllText(@"./config/Webhook.txt"),
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Flushed : Lobotomy...\", \"title\":\"\", \"color\":6618908}]  }"
+            );
+        }
+
+        public static void WebhookUndead()
+        {
+            Util.sendDiscordWebhook(
+                File.ReadAllText(@"./config/Webhook.txt"),
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Undead...\", \"title\":\"\", \"color\":6618908}]  }"
+            );
+        }
+
+        public static void WebhookAquatic()
+        {
+            Util.sendDiscordWebhook(
+                File.ReadAllText(@"./config/Webhook.txt"),
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Aquatic...\", \"title\":\"\", \"color\":6618908}]  }"
+            );
+        }
+
+        public static void WebhookNautilus()
+        {
+            Util.sendDiscordWebhook(
+                File.ReadAllText(@"./config/Webhook.txt"),
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Nautilus...\", \"title\":\"\", \"color\":6618908}]  }"
+            );
+        }
+
+        public static void WebhookExotic()
+        {
+            Util.sendDiscordWebhook(
+                File.ReadAllText(@"./config/Webhook.txt"),
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Exotic...\", \"title\":\"\", \"color\":6618908}]  }"
+            );
+        }
+
+        public static void WebhookJade()
+        {
+            Util.sendDiscordWebhook(
+                File.ReadAllText(@"./config/Webhook.txt"),
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Jade...\", \"title\":\"\", \"color\":6618908}]  }"
+            );
+        }
+
+        public static void WebhookBounded()
+        {
+            Util.sendDiscordWebhook(
+                File.ReadAllText(@"./config/Webhook.txt"),
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Bounded...\", \"title\":\"\", \"color\":6618908}]  }"
+            );
+        }
+
+        public static void WebhookCelestial()
+        {
+            Util.sendDiscordWebhook(
+                File.ReadAllText(@"./config/Webhook.txt"),
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Celestial...\", \"title\":\"\", \"color\":6618908}]  }"
+            );
+        }
+
+        public static void WebhookKyawthuite()
+        {
+            Util.sendDiscordWebhook(
+                File.ReadAllText(@"./config/Webhook.txt"),
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Kyawthuite...\", \"title\":\"\", \"color\":6618908}]  }"
+            );
+        }
+
+        public static void WebhookArcane()
+        {
+            Util.sendDiscordWebhook(
+                File.ReadAllText(@"./config/Webhook.txt"),
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Arcane...\", \"title\":\"\", \"color\":6618908}]  }"
+            );
+        }
+
+        public static void WebhookGravitational()
+        {
+            Util.sendDiscordWebhook(
+                File.ReadAllText(@"./config/Webhook.txt"),
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Gravitational...\", \"title\":\"\", \"color\":6618908}]  }"
+            );
+        }
+
+        public static void WebhookVirtual()
+        {
+            Util.sendDiscordWebhook(
+                File.ReadAllText(@"./config/Webhook.txt"),
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Virtual...\", \"title\":\"\", \"color\":6618908}]  }"
+            );
+        }
+
+        public static void WebhookComet()
+        {
+            Util.sendDiscordWebhook(
+                File.ReadAllText(@"./config/Webhook.txt"),
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Comet...\", \"title\":\"\", \"color\":6618908}]  }"
+            );
+        }
+
+        public static void WebhookGalaxy()
+        {
+            Util.sendDiscordWebhook(
+                File.ReadAllText(@"./config/Webhook.txt"),
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Galaxy...\", \"title\":\"\", \"color\":6618908}]  }"
+            );
+        }
+
+        public static void WebhookStarscourge()
+        {
+            Util.sendDiscordWebhook(
+                File.ReadAllText(@"./config/Webhook.txt"),
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Starscourge...\", \"title\":\"\", \"color\":6618908}]  }"
+            );
+        }
+        public static void WebhookTwilight()
+        {
+            Util.sendDiscordWebhook(
+                File.ReadAllText(@"./config/Webhook.txt"),
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Twilight...\", \"title\":\"\", \"color\":6618908}]  }"
+            );
+        }
+        public static void WebhookStormal()
+        {
+            Util.sendDiscordWebhook(
+                File.ReadAllText(@"./config/Webhook.txt"),
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Stormal...\", \"title\":\"\", \"color\":6618908}]  }"
             );
         }
     }
