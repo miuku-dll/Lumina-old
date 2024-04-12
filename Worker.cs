@@ -10,17 +10,20 @@ namespace Lumina
     class Worker
     {
 
-        public async static void SomeMethod()
+        public async static void Run()
         {
             Util.Focus();
             Thread.Sleep(1000);
             await Task.Delay(1000);
+            bool Completed = false;
 
             for (; ; )
             {
                 string CheckPath = File.ReadAllText(@".\Config\Status1.txt");
+                string CheckPath3 = File.ReadAllText(@".\Config\Status3.txt");
                 if (CheckPath.Contains("true", StringComparison.OrdinalIgnoreCase))
-                {
+                {  
+
                     int i = 1;
                     for (; ; )
                     {
@@ -34,10 +37,17 @@ namespace Lumina
                             await Task.Delay(1000);
                             Util.AutoCollect();
                             i++;
-                            if (i > 4)
-                                break;
+                            if (i > 1)
+                            goto AfterLoop;
                         }
                     }
+                }
+
+            AfterLoop:
+                if (CheckPath3.Contains("true", StringComparison.OrdinalIgnoreCase))
+                {
+                    Util.ResetChar();
+                    Movement.AutoObb();
                 }
                 else
                 {

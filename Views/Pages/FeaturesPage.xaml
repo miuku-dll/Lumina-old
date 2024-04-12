@@ -25,53 +25,42 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Width="600" Height="500">
-            <ui:CardExpander Grid.Column="0" 
-                            Margin="0,10,0,0" Icon="{ui:SymbolIcon Play24}">
-                <ui:CardExpander.Header>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="Auto" />
-                        </Grid.ColumnDefinitions>
-                        <ui:TextBlock
-                Grid.Row="0"
-                Grid.Column="0"
-                FontSize="16"
-                FontTypography="Body"
-                Text="Auto Collect" />
-                        <ui:TextBlock
-                Grid.Row="1"
-                Grid.Column="0"
-                FontSize="12"
-                Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}"
-                Text="Auto Collect Features"/>
-                        <ui:ToggleSwitch
-                Grid.Row="0"
-                Grid.RowSpan="2"
-                Grid.Column="1"
-                Margin="0,0,16,0"
-                OffContent="Off"
-                OnContent="On" Checked="AutoCollectGlobal_Checked" Unchecked="AutoCollectGlobal_UnChecked" />
-                    </Grid>
-                </ui:CardExpander.Header>
-                <StackPanel Margin="24,0.5,24,0">
-                    <ui:CardControl Padding="20,10,20,10" Header="Auto collect all spots">
-                        <ui:ToggleSwitch
-                            HorizontalContentAlignment="Left"
-                            IsEnabled="True"
-                            OffContent="Off"
-                            OnContent="On" Checked="ToggleSwitch_Checked"
-                            Unchecked="ToggleSwitch_UnChecked"/>
-                    </ui:CardControl>
 
+            <ui:Card>
+                <Grid>
+                    <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" Width="200">
+                        <TextBlock Text="Global Toggle" FontSize="16"/>
+                        <TextBlock FontSize="12" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="This will toggle all true features"/>
+                    </StackPanel>
 
-                </StackPanel>
-            </ui:CardExpander>
-            
+                    <ui:ToggleSwitch Name="GlobalToggle" Checked="GlobalToggle_Checked"
+                            Unchecked="GlobalToggle_UnChecked" HorizontalAlignment="Right" Margin="0,0,10,0"/>
+                </Grid>
+            </ui:Card>
+
+            <ui:Card>
+                <Grid>
+                    <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" Width="200">
+                        <TextBlock Text="Auto Collect" FontSize="16"/>
+                        <TextBlock FontSize="12" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="This will toggle auto collection"/>
+                    </StackPanel>
+
+                    <ui:ToggleSwitch Name="AutoCollectToggle" Checked="AutoCollectToggle_Checked"
+                            Unchecked="AutoCollectToggle_UnChecked" HorizontalAlignment="Right" Margin="0,0,10,0"/>
+                </Grid>
+            </ui:Card>
+
+            <ui:Card>
+                <Grid>
+                    <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" Width="300">
+                        <TextBlock Text="Auto Obby" FontSize="16"/>
+                        <TextBlock FontSize="12" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="This will complete the obby every 2 minutes" Width="333"/>
+                    </StackPanel>
+
+                    <ui:ToggleSwitch Name="ObbyToggle" Checked="ObbyToggle_Checked"
+                            Unchecked="ObbyToggle_UnChecked" HorizontalAlignment="Right" Margin="0,0,10,0"/>
+                </Grid>
+            </ui:Card>
 
         </StackPanel>
     </Grid>

@@ -14,7 +14,7 @@ using SharpHook.Native;
 
 namespace Lumina
 {
-    internal class Movement
+    partial class Movement
     {
 
         public static void ResetCam()
@@ -678,170 +678,143 @@ namespace Lumina
             Thread.Sleep(1200);
         }
 
-        public static void AutoObby()
+
+        public static void AutoObb()
         {
-            Util.ResetKeys();
             Util.Focus();
-            Thread.Sleep(100);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-            Thread.Sleep(500);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Down);
-            Thread.Sleep(1500);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-            Thread.Sleep(2000);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
-            Thread.Sleep(10);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Up);
             Thread.Sleep(1000);
-
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Down);
-            Thread.Sleep(1400);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Up);
+            Util.ResetKeys();
+            Util.ResetChar();
 
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-            Thread.Sleep(2000);
-
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Down);
-            Thread.Sleep(2000);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-            Thread.Sleep(500);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Up);
-            Thread.Sleep(4200);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
-
-
-            // Hyppy 1
+            Thread.Sleep(1034);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Down);
+            Thread.Sleep(375);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
+            Thread.Sleep(250);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
+            Thread.Sleep(282);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
+            Thread.Sleep(1265);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Up);
+            Thread.Sleep(125);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Down);
+            Thread.Sleep(625);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
+            Thread.Sleep(3281);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Up);
+            Thread.Sleep(594);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
+            Thread.Sleep(63);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
+            Thread.Sleep(4906);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
+            Thread.Sleep(100);
+
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Down);
+            Thread.Sleep(172);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
+            Thread.Sleep(109);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
+            Thread.Sleep(406);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
             Thread.Sleep(250);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-            Thread.Sleep(500);
+            Thread.Sleep(157);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
+            Thread.Sleep(750);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
+            Thread.Sleep(171);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
+            Thread.Sleep(204);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
+            Thread.Sleep(515);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
+            Thread.Sleep(141);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
+            Thread.Sleep(94);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
+            Thread.Sleep(421);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
+            Thread.Sleep(297);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
+            Thread.Sleep(63);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Up);
-
-            // Hyppy 2
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down); 
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Down);
-            Thread.Sleep(350);
+            Thread.Sleep(15);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-            Thread.Sleep(500);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Up);
+            Thread.Sleep(219);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-
-            // Hyppy 3
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Down);
-            Thread.Sleep(200);
+            Thread.Sleep(735);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-            Thread.Sleep(500);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Up);
+            Thread.Sleep(156);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-
-            // Hyppy 4
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Down);
-            Thread.Sleep(100);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-            Thread.Sleep(300);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
-            Thread.Sleep(10);
+            Thread.Sleep(672);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-            Thread.Sleep(550);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Up);
+            Thread.Sleep(78);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-
-            // Hyppy 5
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Down);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-            Thread.Sleep(400);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-            Thread.Sleep(500);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Up);
+            Thread.Sleep(1500);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
 
-            // Hyppy 6
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-            Thread.Sleep(400);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-            Thread.Sleep(500);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
-
-            // Hyppy 7 isolle saarelle
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-            Thread.Sleep(400);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-            Thread.Sleep(500);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
-
-            // Move to next jump
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-            Thread.Sleep(1300);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
-
-            // Hyppy 8
+            Thread.Sleep(234);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Down);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-            Thread.Sleep(100);
+            Thread.Sleep(63);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-            Thread.Sleep(500);
+            Thread.Sleep(109);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
+            Thread.Sleep(172);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Up);
-
-            // Hyppy 9
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-            Thread.Sleep(300);
+            Thread.Sleep(578);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Down);
-            Thread.Sleep(300);
+            Thread.Sleep(125);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-            Thread.Sleep(500);
+            Thread.Sleep(141);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
+            Thread.Sleep(218);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Up);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-
-            // Hyppy 10
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
             Thread.Sleep(500);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Down);
+            Thread.Sleep(110);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-            Thread.Sleep(500);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
+            Thread.Sleep(156);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-
-            // Hyppy 11
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-            Thread.Sleep(300);
+            Thread.Sleep(141);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Up);
+            Thread.Sleep(578);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Down);
+            Thread.Sleep(93);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-            Thread.Sleep(500);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Up);
+            Thread.Sleep(219);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-
-            // Hyppy 12
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Down);
-            Thread.Sleep(400);
+            Thread.Sleep(781);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-            Thread.Sleep(500);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Up);
+            Thread.Sleep(141);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-
-            // Hyppy 13
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Down);
-            Thread.Sleep(400);
+            Thread.Sleep(703);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
+            Thread.Sleep(110);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-            Thread.Sleep(500);
-            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Up);
+            Thread.Sleep(156);
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-
+            Thread.Sleep(844);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
+            Thread.Sleep(109);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
+            Thread.Sleep(687);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.A, KeyFlags.Down);
+            Thread.Sleep(141);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
+            Thread.Sleep(109);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
+            Thread.Sleep(16);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.A, KeyFlags.Up);
+            Thread.Sleep(1000);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.A, KeyFlags.Down);
+            Thread.Sleep(156);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Up);
+            Thread.Sleep(344);
+            CSInputs.SendInput.Keyboard.Send(KeyboardKeys.A, KeyFlags.Up);
+            Thread.Sleep(3000);
         }
     }
 }

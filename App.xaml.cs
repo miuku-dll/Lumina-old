@@ -100,30 +100,13 @@ namespace Lumina
                 var WebhookLocation = "./Config/Webhook.txt";
                 var CollectStatus = "./Config/Status1.txt";
                 var CraftStatus = "./Config/Status2.txt";
+                var ObbyStatus = "./Config/Status3.txt";
 
                 if (!Directory.Exists("./Config/"))
                 {
                     // Try to create the Path.
                     DirectoryInfo di = Directory.CreateDirectory("./Config");
                     Console.WriteLine("Path Created...");
-
-                    var Path = "off"; // Too lazy to find out myself for now
-                    using (FileStream fs = File.Create(@".\Config\Status1.txt"))
-                    {
-                        char[] value = Path.ToCharArray();
-                        fs.Write(Encoding.UTF8.GetBytes(value), 0, value.Length);
-                    }
-
-                    
-                }
-                else { }
-
-                if (File.Exists(CraftStatus))
-                {
-                    goto Address;
-                }
-                else
-                {
 
                     Console.WriteLine("Adding Files...");
                     using (FileStream fs = File.Create(PrivateServerFile))
@@ -146,8 +129,14 @@ namespace Lumina
                         char[] value = "".ToCharArray();
                         fs.Write(Encoding.UTF8.GetBytes(value), 0, value.Length);
                     }
-                   
+                    using (FileStream fs = File.Create(ObbyStatus))
+                    {
+                        char[] value = "".ToCharArray();
+                        fs.Write(Encoding.UTF8.GetBytes(value), 0, value.Length);
+                    }
+
                 }
+                else { }
 
                 Console.WriteLine("Done Checking Folder...");
                 Thread.Sleep(1000);
