@@ -210,7 +210,7 @@ namespace Lumina
         {
             Util.sendDiscordWebhook(
                 File.ReadAllText(@"./config/Webhook.txt"),
-                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Stormal...\", \"title\":\"\", \"color\":6618908}]  }"
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Stormal...\", \"title\":\"**Rare Found: 1 IN 30,000**\", \"color\":6618908}]  }"
             );
         }
     }

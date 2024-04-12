@@ -78,16 +78,16 @@
                         <ColumnDefinition Width="502"/>
                     </Grid.ColumnDefinitions>
                     <StackPanel HorizontalAlignment="Left" Width="550" Grid.Row="0">
-                        <TextBlock Height="30" Grid.Row="1" Grid.Column="0" Text="Change Private Server Address" FontSize="16"/>
+                        <TextBlock Height="30" Grid.Row="1" Grid.Column="0" Text="Change connected webhook link" FontSize="16"/>
                         <ui:TextBox
                                     x:Name="Webhook" 
-                                    PlaceholderText="Enter Address..." Height="36" Opacity="0.7" Width="549" TextChanged="PrivServ_TextChanged"/>
+                                    PlaceholderText="Enter Webhook..." Height="36" Opacity="0.7" Width="549" TextChanged="PrivServ_TextChanged"/>
 
                     </StackPanel>
                     <ui:Button
                         Content="Save"
-                        x:Name="WebhookBtn"
-                        Icon="Fluent24" Height="35" Click="Button_Click" Width="109" Grid.ColumnSpan="2" Margin="555,31,0,0" VerticalAlignment="Top" />
+                        x:Name="WebhookButton"
+                        Icon="Fluent24" Height="35" Click="WebhookButton_Click" Width="109" Grid.ColumnSpan="2" Margin="555,31,0,0" VerticalAlignment="Top" />
                 </Grid>
             </ui:Card>
 

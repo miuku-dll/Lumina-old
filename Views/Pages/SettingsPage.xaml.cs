@@ -22,19 +22,15 @@ namespace Lumina.Views.Pages
         }
 
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        private void WebhookButton_Click(object sender, RoutedEventArgs e)
         {
-            var WebhookAddress = Webhook.Text;
-
-            try
+            var WEbhook = Webhook.Text;
+            using (StreamWriter writer = new StreamWriter(@"./config/Webhook.txt"))
             {
-                using (StreamWriter writer = new StreamWriter(@"./config/Webhook.txt"))
-                {
-                    writer.WriteLine(WebhookAddress);
+                writer.WriteLine(WEbhook);
 
-                }
             }
-            catch (Exception ex) { }
         }
 
         private void SaveServ_Click(object sender, RoutedEventArgs e)
@@ -101,7 +97,6 @@ namespace Lumina.Views.Pages
 
                 if ($"{color}".StartsWith("Color [A=255, R=7, G=142, B=0]"))
                 {
-                    System.Windows.MessageBox.Show("You found Undead!");
                     Webhooks.WebhookUndead();
                     await Task.Yield();
                     Thread.Sleep(8000);
@@ -109,7 +104,6 @@ namespace Lumina.Views.Pages
                 }
                 else if ($"{color}".StartsWith("Color [A=255, R=190, G=210, B=255]"))
                 {
-                    System.Windows.MessageBox.Show("You found Comet!");
                     Webhooks.WebhookComet();
                     await Task.Yield();
                     Thread.Sleep(8000);
@@ -117,7 +111,6 @@ namespace Lumina.Views.Pages
                 }
                 else if ($"{color}".StartsWith("Color [A=255, R=255, G=66, B=69]"))
                 {
-                    System.Windows.MessageBox.Show("You found Rage : Heated!");
                     await Task.Yield();
                     Thread.Sleep(8000);
                     goto Back;
@@ -125,7 +118,6 @@ namespace Lumina.Views.Pages
 
                 else if ($"{color}".StartsWith("Color [A=255, R=125, G=255, B=223]"))
                 {
-                    System.Windows.MessageBox.Show("You found Permafrost!");
                     Webhooks.WebhookPermaFrost();
                     await Task.Yield();
                     Thread.Sleep(8000);
@@ -134,7 +126,6 @@ namespace Lumina.Views.Pages
 
                 else if ($"{color}".StartsWith("Color [A=255, R=136, G=136, B=136]"))
                 {
-                    System.Windows.MessageBox.Show("You found Stormal!");
                     Webhooks.WebhookStormal();
                     await Task.Yield();
                     Thread.Sleep(8000);
@@ -143,7 +134,6 @@ namespace Lumina.Views.Pages
 
                 else if ($"{color}".StartsWith("Color [A=255, R=76, G=133, B=255]"))
                 {
-                    System.Windows.MessageBox.Show("You found Aquatic!");
                     Webhooks.WebhookAquatic();
                     await Task.Yield();
                     Thread.Sleep(8000);
@@ -152,7 +142,6 @@ namespace Lumina.Views.Pages
 
                 else if ($"{color}".StartsWith("Color [A=255, R=119, G=91, B=255]"))
                 {
-                    System.Windows.MessageBox.Show("You found Lunar : Full Moon!");
                     await Task.Yield();
                     Thread.Sleep(8000);
                     goto Back;
@@ -160,7 +149,6 @@ namespace Lumina.Views.Pages
 
                 else if ($"{color}".StartsWith("Color [A=255, R=255, G=169, B=0]"))
                 {
-                    System.Windows.MessageBox.Show("You found Flushed : Lobotomy!");
                     Webhooks.WebhookFlushed();
                     await Task.Yield();
                     Thread.Sleep(8000);
@@ -169,7 +157,6 @@ namespace Lumina.Views.Pages
 
                 else if ($"{color}".StartsWith("Color [A=255, R=85, G=98, B=255]"))
                 {
-                    System.Windows.MessageBox.Show("You found Nautilus!");
                     Webhooks.WebhookNautilus();
                     await Task.Yield();
                     Thread.Sleep(8000);
@@ -178,7 +165,6 @@ namespace Lumina.Views.Pages
 
                 else if ($"{color}".StartsWith("Color [A=255, R=56, G=201, B=216]"))
                 {
-                    System.Windows.MessageBox.Show("You found Exotic!");
                     Webhooks.WebhookExotic();
                     await Task.Yield();
                     Thread.Sleep(8000);
@@ -187,7 +173,6 @@ namespace Lumina.Views.Pages
 
                 else if ($"{color}".StartsWith("Color [A=255, R=163, G=34, B=72]"))
                 {
-                    System.Windows.MessageBox.Show("You found Diaboli : Void!");
                     await Task.Yield();
                     Thread.Sleep(8000);
                     goto Back;
@@ -195,7 +180,6 @@ namespace Lumina.Views.Pages
 
                 else if ($"{color}".StartsWith("Color [A=255, R=9, G=104, B=55]"))
                 {
-                    System.Windows.MessageBox.Show("You found Jade!");
                     Webhooks.WebhookJade();
                     await Task.Yield();
                     Thread.Sleep(8000);
@@ -204,7 +188,6 @@ namespace Lumina.Views.Pages
 
                 else if ($"{color}".StartsWith("Color [A=255, R=151, G=162, B=255]"))
                 {
-                    System.Windows.MessageBox.Show("You found Celestial!");
                     Webhooks.WebhookCelestial();
                     await Task.Yield();
                     Thread.Sleep(8000);
@@ -213,7 +196,6 @@ namespace Lumina.Views.Pages
 
                 else if ($"{color}".StartsWith("Color [A=255, R=37, G=86, B=255]"))
                 {
-                    System.Windows.MessageBox.Show("You found Bounded!");
                     Webhooks.WebhookBounded();
                     await Task.Yield();
                     Thread.Sleep(8000);
@@ -222,7 +204,6 @@ namespace Lumina.Views.Pages
 
                 else if ($"{color}".StartsWith("Color [A=255, R=81, G=66, B=255]"))
                 {
-                    System.Windows.MessageBox.Show("You found Galaxy!");
                     Webhooks.WebhookGalaxy();
                     await Task.Yield();
                     Thread.Sleep(8000);
@@ -231,7 +212,6 @@ namespace Lumina.Views.Pages
 
                 else if ($"{color}".StartsWith("Color [A=255, R=81, G=64, B=255]"))
                 {
-                    System.Windows.MessageBox.Show("You found Twilight!");
                     Webhooks.WebhookTwilight();
                     await Task.Yield();
                     Thread.Sleep(8000);
@@ -240,7 +220,6 @@ namespace Lumina.Views.Pages
 
                 else if ($"{color}".StartsWith("Color [A=255, R=41, G=22, B=147]"))
                 {
-                    System.Windows.MessageBox.Show("You found Kyawthuite!");
                     Webhooks.WebhookKyawthuite();
                     await Task.Yield();
                     Thread.Sleep(8000);
@@ -251,7 +230,6 @@ namespace Lumina.Views.Pages
 
                 else if ($"{color}".StartsWith("Color [A=255, R=111, G=150, B=255]"))
                 {
-                    System.Windows.MessageBox.Show("You found Arcane!");
                     Webhooks.WebhookArcane();
                     await Task.Yield();
                     Thread.Sleep(8000);
@@ -260,7 +238,6 @@ namespace Lumina.Views.Pages
 
                 else if ($"{color}".StartsWith("Color [A=255, R=255, G=127, B=127]"))
                 {
-                    System.Windows.MessageBox.Show("You found Starscourge!");
                     Webhooks.WebhookStarscourge();
                     await Task.Yield();
                     Thread.Sleep(8000);
@@ -269,7 +246,6 @@ namespace Lumina.Views.Pages
 
                 else if ($"{color}".StartsWith("Color [A=255, R=81, G=99, B=255]"))
                 {
-                    System.Windows.MessageBox.Show("You found Gravitational!");
                     Webhooks.WebhookGravitational();
                     await Task.Yield();
                     Thread.Sleep(8000);
@@ -278,7 +254,6 @@ namespace Lumina.Views.Pages
 
                 else if ($"{color}".StartsWith("Color [A=255, R=75, G=138, B=255]"))
                 {
-                    System.Windows.MessageBox.Show("You found Virtual!");
                     Webhooks.WebhookVirtual();
                     await Task.Yield();
                     Thread.Sleep(8000);
