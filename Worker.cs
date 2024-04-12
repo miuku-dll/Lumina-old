@@ -37,7 +37,7 @@ namespace Lumina
                             await Task.Delay(1000);
                             Util.AutoCollect();
                             i++;
-                            if (i > 1)
+                            if (i > 3)
                             goto AfterLoop;
                         }
                     }
