@@ -26,7 +26,6 @@ namespace Lumina
                 {
                 loop:
                     int i = 1;
-                    Util.ResetChar();
                     if (CheckPath.Contains("false", StringComparison.OrdinalIgnoreCase))
                     {
                         return;

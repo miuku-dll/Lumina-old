@@ -76,7 +76,7 @@ namespace Lumina
         {
             Util.sendDiscordWebhook(
                 File.ReadAllText(@"./config/Webhook.txt"),
-                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Permafrost...\", \"title\":\"\", \"color\":6618908}]  }"
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Permafrost...\", \"title\":\"**Rare Found: 1 IN 24,500**\", \"color\":8322783}]  }"
             );
         }
 
@@ -84,7 +84,7 @@ namespace Lumina
         {
             Util.sendDiscordWebhook(
                 File.ReadAllText(@"./config/Webhook.txt"),
-                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Flushed : Lobotomy...\", \"title\":\"\", \"color\":6618908}]  }"
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Flushed : Lobotomy...\", \"title\":\"**Rare Found: 1 IN 69,000**\", \"color\":16754944}]  }"
             );
         }
 
@@ -92,7 +92,7 @@ namespace Lumina
         {
             Util.sendDiscordWebhook(
                 File.ReadAllText(@"./config/Webhook.txt"),
-                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Undead...\", \"title\":\"\", \"color\":6618908}]  }"
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Undead...\", \"title\":\"**Rare Found: 1 IN 10,000**\", \"color\":494848}]  }"
             );
         }
 
@@ -100,7 +100,7 @@ namespace Lumina
         {
             Util.sendDiscordWebhook(
                 File.ReadAllText(@"./config/Webhook.txt"),
-                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Aquatic...\", \"title\":\"\", \"color\":6618908}]  }"
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Aquatic...\", \"title\":\"**Rare Found: 1 IN 40,000**\", \"color\":4949238}]  }"
             );
         }
 
@@ -108,7 +108,7 @@ namespace Lumina
         {
             Util.sendDiscordWebhook(
                 File.ReadAllText(@"./config/Webhook.txt"),
-                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Nautilus...\", \"title\":\"\", \"color\":6618908}]  }"
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Nautilus...\", \"title\":\"**Rare Found: 1 IN 70,000**\", \"color\":5464061}]  }"
             );
         }
 
@@ -116,7 +116,7 @@ namespace Lumina
         {
             Util.sendDiscordWebhook(
                 File.ReadAllText(@"./config/Webhook.txt"),
-                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Exotic...\", \"title\":\"\", \"color\":6618908}]  }"
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Exotic...\", \"title\":\"**Rare Found: 1 IN 99,999**\", \"color\":3720154}]  }"
             );
         }
 
@@ -124,7 +124,7 @@ namespace Lumina
         {
             Util.sendDiscordWebhook(
                 File.ReadAllText(@"./config/Webhook.txt"),
-                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Jade...\", \"title\":\"\", \"color\":6618908}]  }"
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Jade...\", \"title\":\"**Rare Found: 1 IN 125,000**\", \"color\":616247}]  }"
             );
         }
 
@@ -132,7 +132,7 @@ namespace Lumina
         {
             Util.sendDiscordWebhook(
                 File.ReadAllText(@"./config/Webhook.txt"),
-                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Bounded...\", \"title\":\"\", \"color\":6618908}]  }"
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Bounded...\", \"title\":\"**Rare Found: 1 IN 200,000**\", \"color\":2447359}]  }"
             );
         }
 
@@ -140,7 +140,7 @@ namespace Lumina
         {
             Util.sendDiscordWebhook(
                 File.ReadAllText(@"./config/Webhook.txt"),
-                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Celestial...\", \"title\":\"\", \"color\":6618908}]  }"
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Celestial...\", \"title\":\"**Rare Found: 1 IN 350,000**\", \"color\":9937151}]  }"
             );
         }
 
@@ -148,7 +148,7 @@ namespace Lumina
         {
             Util.sendDiscordWebhook(
                 File.ReadAllText(@"./config/Webhook.txt"),
-                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Kyawthuite...\", \"title\":\"\", \"color\":6618908}]  }"
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Kyawthuite...\", \"title\":\"**Rare Found: 1 IN 850,000**\", \"color\":2627217}]  }"
             );
         }
 
@@ -156,7 +156,7 @@ namespace Lumina
         {
             Util.sendDiscordWebhook(
                 File.ReadAllText(@"./config/Webhook.txt"),
-                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Arcane...\", \"title\":\"\", \"color\":6618908}]  }"
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Arcane...\", \"title\":\"**Rare Found: 1 IN 1,000,000**\", \"color\":4950783}]  }"
             );
         }
 
@@ -164,7 +164,7 @@ namespace Lumina
         {
             Util.sendDiscordWebhook(
                 File.ReadAllText(@"./config/Webhook.txt"),
-                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Gravitational...\", \"title\":\"\", \"color\":6618908}]  }"
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Gravitational...\", \"title\":\"**Rare Found: 1 IN 2,000,000**\", \"color\":8807414}]  }"
             );
         }
 
@@ -172,7 +172,7 @@ namespace Lumina
         {
             Util.sendDiscordWebhook(
                 File.ReadAllText(@"./config/Webhook.txt"),
-                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Virtual...\", \"title\":\"\", \"color\":6618908}]  }"
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Virtual...\", \"title\":\"**Rare Found: 1 IN 2,500,000**\", \"color\":4950783}]  }"
             );
         }
 
@@ -180,7 +180,7 @@ namespace Lumina
         {
             Util.sendDiscordWebhook(
                 File.ReadAllText(@"./config/Webhook.txt"),
-                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Comet...\", \"title\":\"\", \"color\":6618908}]  }"
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Comet...\", \"title\":\"**Rare Found: 1 IN 12,000**\", \"color\":12242682}]  }"
             );
         }
 
@@ -188,7 +188,7 @@ namespace Lumina
         {
             Util.sendDiscordWebhook(
                 File.ReadAllText(@"./config/Webhook.txt"),
-                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Galaxy...\", \"title\":\"\", \"color\":6618908}]  }"
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Galaxy...\", \"title\":\"**Rare Found: 1 IN 500,000**\", \"color\":8807414}]  }"
             );
         }
 
@@ -196,21 +196,21 @@ namespace Lumina
         {
             Util.sendDiscordWebhook(
                 File.ReadAllText(@"./config/Webhook.txt"),
-                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Starscourge...\", \"title\":\"\", \"color\":6618908}]  }"
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Starscourge...\", \"title\":\"**Rare Found: 1 IN 1,000,000**\", \"color\":15697796}]  }"
             );
         }
         public static void WebhookTwilight()
         {
             Util.sendDiscordWebhook(
                 File.ReadAllText(@"./config/Webhook.txt"),
-                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Twilight...\", \"title\":\"\", \"color\":6618908}]  }"
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Twilight...\", \"title\":\"**Rare Found: 1 IN 600,000**\", \"color\":8807414}]  }"
             );
         }
         public static void WebhookStormal()
         {
             Util.sendDiscordWebhook(
                 File.ReadAllText(@"./config/Webhook.txt"),
-                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Stormal...\", \"title\":\"**Rare Found: 1 IN 30,000**\", \"color\":6618908}]  }"
+                "{\"username\": \"Sute's Macro\",\"embeds\":[    {\"description\":\"You rolled Stormal...\", \"title\":\"**Rare Found: 1 IN 30,000**\", \"color\":9079434}]  }"
             );
         }
     }

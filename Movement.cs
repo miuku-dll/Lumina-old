@@ -49,27 +49,9 @@ namespace Lumina
             Util.ResetKeys();
 
             Console.WriteLine("Resetting camera...");
-            CShauto.Mouse.Move(962, 598);
-            Thread.Sleep(500);
+            ResetCam();
+            Util.ResetChar();
 
-            int i = 1;
-            for (; ; )
-            {
-                CShauto.Mouse.Scroll(150);
-                Thread.Sleep(10);
-                i++;
-                if (i > 30)
-                    break;
-            }
-
-            for (; ; )
-            {
-                CShauto.Mouse.Scroll(-35);
-                Thread.Sleep(10);
-                i++;
-                if (i > 31)
-                    break;
-            }
             Thread.Sleep(1000);
             // Resetting location
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
