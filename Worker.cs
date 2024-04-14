@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.Threading;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,12 +8,14 @@ using System.Threading.Tasks;
 
 namespace Lumina
 {
-    class Worker
+    partial class Worker
     {
 
         public static async Task Run()
         {
-            await Task.Delay(1000);
+
+            await TaskScheduler.Default;
+            ISITON();
 
             try
             {
@@ -25,6 +28,7 @@ namespace Lumina
                 if (CheckPath.Contains("true", StringComparison.OrdinalIgnoreCase))
                 {
                 loop:
+
                     int i = 1;
                     if (CheckPath.Contains("false", StringComparison.OrdinalIgnoreCase))
                     {
@@ -50,8 +54,8 @@ namespace Lumina
             AfterLoop:
                 if (CheckPath3.Contains("true", StringComparison.OrdinalIgnoreCase))
                 {
-                    Util.ResetChar();
                     Movement.AutoObb();
+                    Util.ResetChar();
                 }
                 else
                 {
@@ -62,6 +66,20 @@ namespace Lumina
             }
             catch (Exception ex) { return; }
 
+        }
+
+        public static async Task ISITON()
+        {
+            string CheckPath = File.ReadAllText(@".\Config\ISON.txt");
+
+            if (CheckPath.Contains("true", StringComparison.OrdinalIgnoreCase))
+            {
+
+            }
+            else if (CheckPath.Contains("false", StringComparison.OrdinalIgnoreCase))
+            {
+                return;
+            }
         }
 
     }

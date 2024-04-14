@@ -101,6 +101,7 @@ namespace Lumina
                 var CollectStatus = "./Config/Status1.txt";
                 var CraftStatus = "./Config/Status2.txt";
                 var ObbyStatus = "./Config/Status3.txt";
+                var IsOn = "./Config/ISON.txt";
 
                 if (!Directory.Exists("./Config/"))
                 {
@@ -109,6 +110,11 @@ namespace Lumina
                     Console.WriteLine("Path Created...");
 
                     Console.WriteLine("Adding Files...");
+                    using (FileStream fs = File.Create(IsOn))
+                    {
+                        char[] value = "".ToCharArray();
+                        fs.Write(Encoding.UTF8.GetBytes(value), 0, value.Length);
+                    }
                     using (FileStream fs = File.Create(PrivateServerFile))
                     {
                         char[] value = "".ToCharArray();

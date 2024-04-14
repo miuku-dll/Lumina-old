@@ -34,7 +34,7 @@
                     </StackPanel>
 
                     <ui:ToggleSwitch Name="GlobalToggle" Checked="GlobalToggle_Checked"
-                            Unchecked="GlobalToggle_UnChecked" HorizontalAlignment="Right" Margin="0,0,10,0"/>
+                            Unchecked="GlobalToggle_UnChecked" Margin="520,9,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </ui:Card>
 
@@ -46,7 +46,7 @@
                     </StackPanel>
 
                     <ui:ToggleSwitch Name="AutoCollectToggle" Checked="AutoCollectToggle_Checked"
-                            Unchecked="AutoCollectToggle_UnChecked" HorizontalAlignment="Right" Margin="0,0,10,0"/>
+                            Unchecked="AutoCollectToggle_UnChecked" Margin="520,0,0,8" IsChecked="False" VerticalAlignment="Bottom"/>
                 </Grid>
             </ui:Card>
 
