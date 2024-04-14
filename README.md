@@ -60,8 +60,10 @@ The Sute's Macro Project is under the MIT License.
 - [Sute's Macro, uses the holy spirits to work.](https://github.com/yurkyu/sutes-macro/
 
 ### Screenshots
-![Screenshot_69](https://github.com/yurkyu/Lumina/assets/80363046/589b0e2b-3816-4105-8c9a-f3664defec8d)
-![Screenshot_68](https://github.com/yurkyu/Lumina/assets/80363046/67ac50b1-8f07-45ae-840b-414cde8b430b)
+
+![Screenshot_80](https://github.com/yurkyu/Lumina/assets/80363046/3baf16b3-0d7a-4633-a9cf-268c59ff7eae)
+![Screenshot_79](https://github.com/yurkyu/Lumina/assets/80363046/c4c5e7ec-fcb3-4e93-bfae-e370b8611eec)
+![Screenshot_78](https://github.com/yurkyu/Lumina/assets/80363046/8a612823-e335-48f5-ae19-e902a7fc4fda)
 
 
 
