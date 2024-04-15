@@ -6,6 +6,7 @@ using static CommunityToolkit.Mvvm.ComponentModel.__Internals.__TaskExtensions.T
 using System.Windows.Controls;
 using System.Windows.Documents;
 using Microsoft.VisualStudio.Threading;
+using System.Configuration;
 
 namespace Lumina.Views.Pages
 {
@@ -15,38 +16,27 @@ namespace Lumina.Views.Pages
 
         public FeaturesPage(FeaturesViewModel viewModel)
         {
-            bool StatusAutoCollect = false;
-            bool StatusAutoObby = false;
             ViewModel = viewModel;
             DataContext = this;
 
-            string CheckPath2 = File.ReadAllText(@".\Config\Status3.txt");
-            string CheckPath = File.ReadAllText(@".\Config\Status1.txt");
-
             InitializeComponent();
 
-            if (CheckPath.Contains("false", StringComparison.OrdinalIgnoreCase))
+            if (Settings1.Default.Status1 == true)
             {
-                StatusAutoCollect = false;
+                AutoCollectToggle.IsChecked = true;
+            }
+            else
+            {
                 AutoCollectToggle.IsChecked = false;
             }
 
-            else if (CheckPath.Contains("true", StringComparison.OrdinalIgnoreCase))
+            if (Settings1.Default.Status2 == true)
             {
-                StatusAutoCollect = true;
-                AutoCollectToggle.IsChecked = true;
-            }
-
-            if (CheckPath2.Contains("false", StringComparison.OrdinalIgnoreCase))
-            {
-                StatusAutoCollect = false;
-                ObbyToggle.IsChecked = false;
-            }
-
-            else if (CheckPath2.Contains("true", StringComparison.OrdinalIgnoreCase))
-            {
-                StatusAutoCollect = true;
                 ObbyToggle.IsChecked = true;
+            }
+            else
+            {
+                ObbyToggle.IsChecked = false;
             }
         }
 
@@ -57,51 +47,73 @@ namespace Lumina.Views.Pages
 
         private void GlobalToggle_UnChecked(object sender, RoutedEventArgs e)
         {
-            using (StreamWriter writer = new StreamWriter(@"./config/ISON.txt"))
-            {
-                writer.WriteLine("false");
-            }
+            isonFalse();
         }
         private async void GlobalToggle_Checked(object sender, RoutedEventArgs e)
         {
-            await TaskScheduler.Default;
-            using (StreamWriter writer = new StreamWriter(@"./config/ISON.txt"))
-            {
-                writer.WriteLine("true");
-            }
+            isonTrue();
             Worker.Run();
         }
 
         private void AutoCollectToggle_Checked(object sender, RoutedEventArgs e)
         {
-            using (StreamWriter writer = new StreamWriter(@"./config/Status1.txt"))
-            {
-                writer.WriteLine("true");
-            }
+            Status1True();
         }
 
         private void AutoCollectToggle_UnChecked(object sender, RoutedEventArgs e)
         {
-            using (StreamWriter writer = new StreamWriter(@"./config/Status1.txt"))
-            {
-                writer.WriteLine("false");
-            }
+            Status1False();
         }
 
         private void ObbyToggle_Checked(object sender, RoutedEventArgs e)
         {
-            using (StreamWriter writer = new StreamWriter(@"./config/Status3.txt"))
-            {
-                writer.WriteLine("true");
-            }
+            Status2True();
         }
 
         private void ObbyToggle_UnChecked(object sender, RoutedEventArgs e)
         {
-            using (StreamWriter writer = new StreamWriter(@"./config/Status3.txt"))
-            {
-                writer.WriteLine("false");
-            }
+            Status2False();
+        }
+
+        // Config Saving
+        private static void isonTrue()
+        {
+            Settings1.Default.ison = true;
+            Settings1.Default.Save();
+            Settings1.Default.Reload();
+        }
+        private static void isonFalse()
+        {
+            Settings1.Default.ison = false;
+            Settings1.Default.Save();
+            Settings1.Default.Reload();
+        }
+
+
+        private static void Status1True()
+        {
+            Settings1.Default.Status1 = true;
+            Settings1.Default.Save();
+            Settings1.Default.Reload();
+        }
+        private static void Status1False()
+        {
+            Settings1.Default.Status1 = false;
+            Settings1.Default.Save();
+            Settings1.Default.Reload();
+        }
+
+        private static void Status2True()
+        {
+            Settings1.Default.Status2 = true;
+            Settings1.Default.Save();
+            Settings1.Default.Reload();
+        }
+        private static void Status2False()
+        {
+            Settings1.Default.Status2 = false;
+            Settings1.Default.Save();
+            Settings1.Default.Reload();
         }
     }
 }

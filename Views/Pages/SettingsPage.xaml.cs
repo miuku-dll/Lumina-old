@@ -4,12 +4,15 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using Wpf.Ui.Controls;
+using System.Configuration;
 using ZedGraph;
+using System.Printing;
 
 namespace Lumina.Views.Pages
 {
     public partial class SettingsPage : INavigableView<SettingsViewModel>
     {
+
         string myString = "#FFF";
         public SettingsViewModel ViewModel { get; }
 
@@ -21,32 +24,42 @@ namespace Lumina.Views.Pages
             InitializeComponent();
         }
 
-
+        void WinLoaded(object sender, RoutedEventArgs e)
+        {
+            PrivServ.PlaceholderText = Settings1.Default.PrivateServer;
+            Webhook.PlaceholderText = Settings1.Default.WebhookAddress;
+        }
 
         private void WebhookButton_Click(object sender, RoutedEventArgs e)
         {
-            var WEbhook = Webhook.Text;
-            using (StreamWriter writer = new StreamWriter(@"./config/Webhook.txt"))
+            Lumina.Settings1.Default.WebhookAddress = Webhook.Text;
+            Settings1.Default.WebhookAddress = Webhook.Text;
+            try
             {
-                writer.WriteLine(WEbhook);
-
+                Settings1.Default.Save();
+                Settings1.Default.Reload();
+                System.Windows.MessageBox.Show(Settings1.Default.WebhookAddress);
+            }
+            catch
+            {
+                System.Windows.MessageBox.Show("failed");
             }
         }
 
         private void SaveServ_Click(object sender, RoutedEventArgs e)
         {
-            var PrivateServerAddress = PrivServ.Text;
 
-
+            Lumina.Settings1.Default.PrivateServer = PrivServ.Text;
+            Settings1.Default.PrivateServer = PrivServ.Text;
             try
             {
-                using (StreamWriter writer = new StreamWriter(@"./config/PrivateServer.txt"))
-                {
-                    writer.WriteLine(PrivateServerAddress);
-
-                }
+                Settings1.Default.Save();
+                Settings1.Default.Reload();
+                System.Windows.MessageBox.Show(Settings1.Default.PrivateServer);
             }
-            catch (Exception ex) { }
+            catch {
+                System.Windows.MessageBox.Show("failed");
+            }
         }
 
         [DllImport("user32.dll")]
@@ -291,6 +304,11 @@ namespace Lumina.Views.Pages
         }
 
         private void PrivServ_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
 
         }

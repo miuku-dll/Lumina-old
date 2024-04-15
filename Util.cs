@@ -59,7 +59,7 @@ namespace Lumina
 
         public static void StartPrivateServer()
         {
-            string PrivateServer = File.ReadAllText(@"./Config/PrivateServer.txt");
+            string PrivateServer = Settings1.Default.PrivateServer;
 
             try
             {

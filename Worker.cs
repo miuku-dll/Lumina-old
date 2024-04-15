@@ -13,75 +13,46 @@ namespace Lumina
 
         public static async Task Run()
         {
-
             await TaskScheduler.Default;
-            ISITON();
 
-            try
+            while (Settings1.Default.ison == true)
             {
                 Util.Focus();
                 Thread.Sleep(1000);
                 await Task.Delay(1000);
-
-                string CheckPath = File.ReadAllText(@".\Config\Status1.txt");
-                string CheckPath3 = File.ReadAllText(@".\Config\Status3.txt");
-                if (CheckPath.Contains("true", StringComparison.OrdinalIgnoreCase))
+            loop:
+                int i = 1;
+                if (Settings1.Default.Status1 == false)
                 {
-                loop:
-
-                    int i = 1;
-                    if (CheckPath.Contains("false", StringComparison.OrdinalIgnoreCase))
+                    return;
+                }
+                
+                else if (Settings1.Default.Status1 == true)
+                {
+                    await Task.Delay(1000);
+                    Util.AutoCollect();
+                    i++;
+                    if (i > 3)
                     {
-                        return;
+                        goto AfterLoop;
                     }
                     else
                     {
-                        await Task.Delay(1000);
-                        Util.AutoCollect();
-                        i++;
-                        if (i > 3)
-                        {
-                            goto AfterLoop;
-                        }
-                        else
-                        {
-                            goto loop;
-                        }
+                        goto loop;
                     }
                 }
-
-
-            AfterLoop:
-                if (CheckPath3.Contains("true", StringComparison.OrdinalIgnoreCase))
-                {
-                    Movement.AutoObb();
-                    Util.ResetChar();
-                }
-                else
-                {
-
-                    MessageBox.Show("No features turned on...");
-
-                }
-            }
-            catch (Exception ex) { return; }
-
-        }
-
-        public static async Task ISITON()
-        {
-            string CheckPath = File.ReadAllText(@".\Config\ISON.txt");
-
-            if (CheckPath.Contains("true", StringComparison.OrdinalIgnoreCase))
+        AfterLoop:
+            if (Settings1.Default.Status2 == true)
             {
-
+                Movement.AutoObb();
+                Util.ResetChar();
             }
-            else if (CheckPath.Contains("false", StringComparison.OrdinalIgnoreCase))
+            else
             {
-                return;
+                    goto loop;
+            }
             }
         }
-
     }
 }
 

@@ -94,61 +94,6 @@ namespace Lumina
             }
             catch { }
 
-            try
-            {
-                var PrivateServerFile = "./Config/PrivateServer.txt";
-                var WebhookLocation = "./Config/Webhook.txt";
-                var CollectStatus = "./Config/Status1.txt";
-                var CraftStatus = "./Config/Status2.txt";
-                var ObbyStatus = "./Config/Status3.txt";
-                var IsOn = "./Config/ISON.txt";
-
-                if (!Directory.Exists("./Config/"))
-                {
-                    // Try to create the Path.
-                    DirectoryInfo di = Directory.CreateDirectory("./Config");
-                    Console.WriteLine("Path Created...");
-
-                    Console.WriteLine("Adding Files...");
-                    using (FileStream fs = File.Create(IsOn))
-                    {
-                        char[] value = "".ToCharArray();
-                        fs.Write(Encoding.UTF8.GetBytes(value), 0, value.Length);
-                    }
-                    using (FileStream fs = File.Create(PrivateServerFile))
-                    {
-                        char[] value = "".ToCharArray();
-                        fs.Write(Encoding.UTF8.GetBytes(value), 0, value.Length);
-                    }
-                    using (FileStream fs = File.Create(WebhookLocation))
-                    {
-                        char[] value = "".ToCharArray();
-                        fs.Write(Encoding.UTF8.GetBytes(value), 0, value.Length);
-                    }
-                    using (FileStream fs = File.Create(CollectStatus))
-                    {
-                        char[] value = "".ToCharArray();
-                        fs.Write(Encoding.UTF8.GetBytes(value), 0, value.Length);
-                    }
-                    using (FileStream fs = File.Create(CraftStatus))
-                    {
-                        char[] value = "".ToCharArray();
-                        fs.Write(Encoding.UTF8.GetBytes(value), 0, value.Length);
-                    }
-                    using (FileStream fs = File.Create(ObbyStatus))
-                    {
-                        char[] value = "".ToCharArray();
-                        fs.Write(Encoding.UTF8.GetBytes(value), 0, value.Length);
-                    }
-
-                }
-                else { }
-
-                Console.WriteLine("Done Checking Folder...");
-                Thread.Sleep(1000);
-                Console.Clear();
-            }
-            catch { }
 
             Address:
 

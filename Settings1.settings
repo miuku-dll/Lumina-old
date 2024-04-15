@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Lumina" GeneratedClassName="Settings1">
+  <Profiles />
+  <Settings>
+    <Setting Name="ison" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="PrivateServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter your private server address...</Value>
+    </Setting>
+    <Setting Name="WebhookAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter your webhook...</Value>
+    </Setting>
+    <Setting Name="Status1" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Status2" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
