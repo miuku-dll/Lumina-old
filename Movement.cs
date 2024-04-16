@@ -203,7 +203,7 @@ namespace Lumina
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
             Thread.Sleep(500);
 
-
+            // Addint mountain top later, I wrote it like 5 times and it was always off i wanna kms rn
         }
         public static void AutoObb()
         {
