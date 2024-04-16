@@ -18,7 +18,6 @@ namespace Lumina
             while (Settings1.Default.ison == true)
             {
                 Util.Focus();
-                Thread.Sleep(1000);
                 await Task.Delay(1000);
             loop:
                 int i = 1;
@@ -30,7 +29,7 @@ namespace Lumina
                 else if (Settings1.Default.Status1 == true)
                 {
                     await Task.Delay(1000);
-                    Util.AutoCollect();
+                    Movement.CollectAll();
                     i++;
                     if (i > 3)
                     {
