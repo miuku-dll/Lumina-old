@@ -1,6 +1,6 @@
-﻿using Lumina.ViewModels.Pages;
+﻿using FluentScheduler;
+using Lumina.ViewModels.Pages;
 using Wpf.Ui.Controls;
-using Lumina.Workers;
 
 namespace Lumina.Views.Pages
 {
@@ -46,7 +46,7 @@ namespace Lumina.Views.Pages
         private async void GlobalToggle_Checked(object sender, RoutedEventArgs e)
         {
             isonTrue();
-            Task.Factory.StartNew(() => Worker.Run());
+
         }
 
         private void AutoCollectToggle_Checked(object sender, RoutedEventArgs e)
