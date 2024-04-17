@@ -97,6 +97,59 @@ namespace Lumina
             }
             catch { }
         }
+
+
+        public static void CheckObby()
+        {
+            try
+            {
+
+                IntPtr hdc = GetDC(IntPtr.Zero);
+                uint pixel = GetPixel(hdc, 1896, 1054);
+                ReleaseDC(IntPtr.Zero, hdc);
+                Color color = Color.FromArgb(
+                    (byte)(pixel & 0x000000FF),
+                    (byte)((pixel & 0x0000FF00) >> 8),
+                    (byte)((pixel & 0x00FF0000) >> 16));
+                try
+                {
+                    bool exists;
+                    string firstMatch;
+                    IEnumerable<string> matchingList;
+
+
+
+                    var Colors = new List<string>() { "Color [A=255, R=153, G=250, B=169]" };
+
+                    exists = Colors.Any(x => x.Contains($"{color}"));
+                    if (exists)
+                    {
+
+
+                    }
+                    else
+                    {
+                    }
+
+                    if ($"{color}".StartsWith("Color [A=255, R=153, G=250, B=169]"))
+                    {
+                        Movement.AutoObb();
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Failed to check obby status");
+                }
+
+            }
+            catch { }
+        }
+
+
         public static void ResetChar()
         {
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Escape, KeyFlags.Down);

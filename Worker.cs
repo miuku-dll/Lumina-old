@@ -31,20 +31,14 @@ namespace Lumina
                 {
                     await Task.Delay(1000);
                     Movement.CollectAll();
-                    i++;
-                    if (i > 3)
-                    {
-                        goto AfterLoop;
-                    }
-                    else
-                    {
-                        goto loop;
-                    }
+
+                    goto AfterLoop;
+
                 }
         AfterLoop:
             if (Settings1.Default.Status2 == true)
             {
-                Movement.AutoObb();
+                Util.CheckObby();
                 Util.ResetChar();
             }
             else
