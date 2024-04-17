@@ -1,7 +1,6 @@
 ﻿using Lumina.ViewModels.Pages;
 using System.IO;
 using System.Net;
-using System.Reflection.PortableExecutable;
 using Wpf.Ui.Controls;
 
 namespace Lumina.Views.Pages
@@ -24,13 +23,13 @@ namespace Lumina.Views.Pages
 
 
 
-        InitializeComponent();
+            InitializeComponent();
 
             Version.Text = content + "";
         }
 
 
-        
+
 
 
     }

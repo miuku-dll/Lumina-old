@@ -1,10 +1,4 @@
 ﻿using Microsoft.VisualStudio.Threading;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lumina.Workers
 {
@@ -29,9 +23,7 @@ namespace Lumina.Workers
 
                 else if (Settings.Default.Status1 == true)
                 {
-                    await Task.Delay(1000);
-                    Util.Focus();
-                    Task.Factory.StartNew(() => Movement.CollectAll());
+                    await Task.Run(() => Movement.CollectAll());
 
                     goto AfterLoop;
 
@@ -39,12 +31,12 @@ namespace Lumina.Workers
             AfterLoop:
                 if (Settings.Default.Status2 == true)
                 {
-                    Task.Factory.StartNew(() => Movement.AutoObb());
-                    Util.ResetChar();
+                    Util.Focus();
+                    await Task.Run(() => Movement.AutoObb());
                 }
                 else
                 {
-                    goto loop;
+                    return;
                 }
             }
         }

@@ -1,11 +1,5 @@
 ﻿using Lumina.ViewModels.Pages;
-using System.IO;
 using Wpf.Ui.Controls;
-using static CommunityToolkit.Mvvm.ComponentModel.__Internals.__TaskExtensions.TaskAwaitableWithoutEndValidation;
-using System.Windows.Controls;
-using System.Windows.Documents;
-using Microsoft.VisualStudio.Threading;
-using System.Configuration;
 using Lumina.Workers;
 
 namespace Lumina.Views.Pages
