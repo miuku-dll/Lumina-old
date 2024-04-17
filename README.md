@@ -36,14 +36,8 @@ To edit the application, first re-build the project, for any reason, then the in
 🔴 Alot of the features are still missing, and under 'developement'. I will most likely push them in the near future(ish)</h4>
 
 ## About
-Sute's Macro, developed by [sute / yurkyu](https://github.com/yurkyu). Using c# to work.
+Lumina, developed mainly by [sute / yurkyu](https://github.com/yurkyu). Using c# to work.
 Created by the necessity to have a open-source and easy to use macro for <bold>lazy people's</bold> needs.
-
-### Error codes (For support / debugging) [not important for users]
-```
-.\Error code 101  (Failed to find a executeable to save)
-```
-
 
 About 
 
