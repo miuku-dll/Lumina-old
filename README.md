@@ -1,7 +1,6 @@
 <h2 align="center">Lumina | Open-source | Easy-to-use</h1>
 
-![asddasads](https://github.com/yurkyu/Lumina/assets/80363046/7f39a1b7-f7f1-48f1-a5bc-526977a0822f)
-
+![LuminaBanner](https://github.com/yurkyu/Lumina/assets/80363046/2cafa315-2f40-4378-8ebe-20597834755b)
 
 <p align="center">
 <img src="https://dcbadge.vercel.app/api/shield/960948053152501830">
@@ -37,14 +36,8 @@ To edit the application, first re-build the project, for any reason, then the in
 🔴 Alot of the features are still missing, and under 'developement'. I will most likely push them in the near future(ish)</h4>
 
 ## About
-Sute's Macro, developed by [sute / yurkyu](https://github.com/yurkyu). Using c# to work.
+Lumina, developed mainly by [sute / yurkyu](https://github.com/yurkyu). Using c# to work.
 Created by the necessity to have a open-source and easy to use macro for <bold>lazy people's</bold> needs.
-
-### Error codes (For support / debugging) [not important for users]
-```
-.\Error code 101  (Failed to find a executeable to save)
-```
-
 
 About 
 
