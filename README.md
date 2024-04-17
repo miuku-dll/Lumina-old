@@ -1,6 +1,7 @@
 <h2 align="center">Lumina | Open-source | Easy-to-use</h1>
 
-![asddasads](https://github.com/yurkyu/Lumina/assets/80363046/7f39a1b7-f7f1-48f1-a5bc-526977a0822f)
+![LuminaBanner](https://github.com/yurkyu/Lumina/assets/80363046/f13fddce-bc39-4526-8835-916c88821c71)
+
 
 
 <p align="center">
