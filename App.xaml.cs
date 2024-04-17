@@ -9,6 +9,7 @@ using Microsoft.Extensions.Hosting;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
+using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Threading;
 using Wpf.Ui;
@@ -19,6 +20,7 @@ namespace Lumina
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
+
     public partial class App
     {
         // The.NET Generic Host provides dependency injection, configuration, logging, and other services.
@@ -80,6 +82,9 @@ namespace Lumina
         /// <summary>
         /// Occurs when the application is loading.
         /// </summary>
+
+        
+
         async void OnStartup(object sender, StartupEventArgs e)
         {
             ApplicationThemeManager.Apply(
@@ -95,7 +100,7 @@ namespace Lumina
             catch { }
 
 
-            Address:
+        Address:
 
             _host.Start();
         }
@@ -108,6 +113,8 @@ namespace Lumina
             await _host.StopAsync();
 
             _host.Dispose();
+
+            Environment.Exit(0);
         }
 
         /// <summary>

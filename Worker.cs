@@ -19,6 +19,7 @@ namespace Lumina
             {
                 Util.Focus();
                 await Task.Delay(1000);
+                Util.CheckChat();
             loop:
                 int i = 1;
                 if (Settings1.Default.Status1 == false)

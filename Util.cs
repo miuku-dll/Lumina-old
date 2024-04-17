@@ -5,6 +5,7 @@ using SharpHook.Native;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -35,6 +36,67 @@ namespace Lumina
             }
         }
 
+        [DllImport("user32.dll")]
+        static extern IntPtr GetDC(IntPtr hwnd);
+        [DllImport("user32.dll")]
+        static extern Int32 ReleaseDC(IntPtr hwnd, IntPtr hdc);
+        [DllImport("gdi32.dll")]
+        static extern uint GetPixel(IntPtr hdc, int nXPos, int nYPos);
+        public static void CheckChat()
+        {
+            try
+            {
+
+                IntPtr hdc = GetDC(IntPtr.Zero);
+                uint pixel = GetPixel(hdc, 79, 19);
+                ReleaseDC(IntPtr.Zero, hdc);
+                Color color = Color.FromArgb(
+                    (byte)(pixel & 0x000000FF),
+                    (byte)((pixel & 0x0000FF00) >> 8),
+                    (byte)((pixel & 0x00FF0000) >> 16));
+                try
+                {
+                    bool exists;
+                    string firstMatch;
+                    IEnumerable<string> matchingList;
+
+
+
+                    var Colors = new List<string>() { "Color [A=255, R=255, G=255, B=255]" };
+
+                    exists = Colors.Any(x => x.Contains($"{color}"));
+                    if (exists)
+                    {
+
+
+                    }
+                    else
+                    {
+                    }
+
+                    if ($"{color}".StartsWith("Color [A=255, R=255, G=255, B=255]"))
+                    {
+                        Webhooks.WebhookUndead();
+                        Thread.Sleep(100);
+                        CShauto.Mouse.Move(79, 19);
+                        Thread.Sleep(50);
+                        CShauto.Mouse.Move(81, 20);
+                        Thread.Sleep(50);
+                        CShauto.Mouse.Click();
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Failed to check chat");
+                }
+
+            }
+            catch { }
+        }
         public static void ResetChar()
         {
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Escape, KeyFlags.Down);

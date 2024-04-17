@@ -6,6 +6,7 @@ using Wpf.Ui.Controls;
 
 namespace Lumina.Views.Pages
 {
+
     public partial class DashboardPage : INavigableView<DashboardViewModel>
     {
         public DashboardViewModel ViewModel { get; }
@@ -21,15 +22,16 @@ namespace Lumina.Views.Pages
             StreamReader reader = new StreamReader(stream);
             String content = reader.ReadLine();
 
-            
 
-            InitializeComponent();
+
+        InitializeComponent();
 
             Version.Text = content + "";
         }
 
 
         
+
 
     }
 }

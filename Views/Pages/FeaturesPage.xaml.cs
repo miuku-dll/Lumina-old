@@ -52,7 +52,7 @@ namespace Lumina.Views.Pages
         private async void GlobalToggle_Checked(object sender, RoutedEventArgs e)
         {
             isonTrue();
-            Worker.Run();
+            Task.Factory.StartNew(() => Worker.Run());
         }
 
         private void AutoCollectToggle_Checked(object sender, RoutedEventArgs e)
