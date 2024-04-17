@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lumina
+namespace Lumina.Workers
 {
     internal class FullAutoWorker
     {

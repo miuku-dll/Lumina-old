@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lumina
+namespace Lumina.Workers
 {
     partial class Worker
     {
@@ -15,36 +15,37 @@ namespace Lumina
         {
             await TaskScheduler.Default;
 
-            while (Settings1.Default.ison == true)
+            while (Settings.Default.ison == true)
             {
                 Util.Focus();
                 await Task.Delay(1000);
                 Util.CheckChat();
             loop:
                 int i = 1;
-                if (Settings1.Default.Status1 == false)
+                if (Settings.Default.Status1 == false)
                 {
                     return;
                 }
-                
-                else if (Settings1.Default.Status1 == true)
+
+                else if (Settings.Default.Status1 == true)
                 {
                     await Task.Delay(1000);
-                    Movement.CollectAll();
+                    Util.Focus();
+                    Task.Factory.StartNew(() => Movement.CollectAll());
 
                     goto AfterLoop;
 
                 }
-        AfterLoop:
-            if (Settings1.Default.Status2 == true)
-            {
-                Util.CheckObby();
-                Util.ResetChar();
-            }
-            else
-            {
+            AfterLoop:
+                if (Settings.Default.Status2 == true)
+                {
+                    Task.Factory.StartNew(() => Movement.AutoObb());
+                    Util.ResetChar();
+                }
+                else
+                {
                     goto loop;
-            }
+                }
             }
         }
     }

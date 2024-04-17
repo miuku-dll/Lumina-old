@@ -44,7 +44,7 @@
     <None Remove="Images\cat3.png" />
     <None Remove="Images\cat4.png" />
     <None Remove="Images\girl.png" />
-    <None Remove="Settings1.settings" />
+    <None Remove="Settings.settings" />
   </ItemGroup>
 
   <ItemGroup>
@@ -62,17 +62,17 @@
     <Resource Include="Images\cat3.png" />
     <Resource Include="Images\cat4.png" />
     <Resource Include="Images\girl.png" />
-    <Resource Include="Settings1.settings">
+    <Resource Include="Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </Resource>
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Settings1.Designer.cs">
+    <Compile Update="Settings.Designer.cs">
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Settings1.settings</DependentUpon>
+      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
   </ItemGroup>
 

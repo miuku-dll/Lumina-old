@@ -1,23 +1,10 @@
-﻿using System;
-using System.Diagnostics;
-using System.Drawing;
-using System.IO;
-using System.Net;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using System.Text;
-using CSInputs;
-using CSInputs.Enums;
-using SharpHook;
-using SharpHook.Native;
-
+﻿using CSInputs.Enums;
 
 namespace Lumina
 {
     partial class Movement
     {
-
-        public async static void CollectAll()
+        public static async Task CollectAll()
         {
             // Leaderboard Spots
             Thread.Sleep(1000);
@@ -205,7 +192,7 @@ namespace Lumina
 
             // Addint mountain top later, I wrote it like 5 times and it was always off i wanna kms rn
         }
-        public static void AutoObb()
+        public static async Task AutoObb()
         {
             Util.Focus();
             Thread.Sleep(1000);

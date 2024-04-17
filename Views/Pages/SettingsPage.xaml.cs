@@ -26,19 +26,18 @@ namespace Lumina.Views.Pages
 
         void WinLoaded(object sender, RoutedEventArgs e)
         {
-            PrivServ.PlaceholderText = Settings1.Default.PrivateServer;
-            Webhook.PlaceholderText = Settings1.Default.WebhookAddress;
+            PrivServ.PlaceholderText = Settings.Default.PrivateServer;
+            Webhook.PlaceholderText = Settings.Default.WebhookAddress;
         }
 
         private void WebhookButton_Click(object sender, RoutedEventArgs e)
         {
-            Lumina.Settings1.Default.WebhookAddress = Webhook.Text;
-            Settings1.Default.WebhookAddress = Webhook.Text;
+            Settings.Default.WebhookAddress = Webhook.Text;
             try
             {
-                Settings1.Default.Save();
-                Settings1.Default.Reload();
-                System.Windows.MessageBox.Show(Settings1.Default.WebhookAddress);
+                Settings.Default.Save();
+                Settings.Default.Reload();
+                System.Windows.MessageBox.Show(Settings.Default.WebhookAddress);
             }
             catch
             {
@@ -49,15 +48,16 @@ namespace Lumina.Views.Pages
         private void SaveServ_Click(object sender, RoutedEventArgs e)
         {
 
-            Lumina.Settings1.Default.PrivateServer = PrivServ.Text;
-            Settings1.Default.PrivateServer = PrivServ.Text;
+            Settings.Default.PrivateServer = PrivServ.Text;
+            Settings.Default.PrivateServer = PrivServ.Text;
             try
             {
-                Settings1.Default.Save();
-                Settings1.Default.Reload();
-                System.Windows.MessageBox.Show(Settings1.Default.PrivateServer);
+                Settings.Default.Save();
+                Settings.Default.Reload();
+                System.Windows.MessageBox.Show(Settings.Default.PrivateServer);
             }
-            catch {
+            catch
+            {
                 System.Windows.MessageBox.Show("failed");
             }
         }

@@ -1,12 +1,12 @@
 ﻿using Lumina.ViewModels.Pages;
 using System.IO;
 using Wpf.Ui.Controls;
-using Lumina;
 using static CommunityToolkit.Mvvm.ComponentModel.__Internals.__TaskExtensions.TaskAwaitableWithoutEndValidation;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using Microsoft.VisualStudio.Threading;
 using System.Configuration;
+using Lumina.Workers;
 
 namespace Lumina.Views.Pages
 {
@@ -21,7 +21,7 @@ namespace Lumina.Views.Pages
 
             InitializeComponent();
 
-            if (Settings1.Default.Status1 == true)
+            if (Settings.Default.Status1 == true)
             {
                 AutoCollectToggle.IsChecked = true;
             }
@@ -30,7 +30,7 @@ namespace Lumina.Views.Pages
                 AutoCollectToggle.IsChecked = false;
             }
 
-            if (Settings1.Default.Status2 == true)
+            if (Settings.Default.Status2 == true)
             {
                 ObbyToggle.IsChecked = true;
             }
@@ -78,42 +78,42 @@ namespace Lumina.Views.Pages
         // Config Saving
         private static void isonTrue()
         {
-            Settings1.Default.ison = true;
-            Settings1.Default.Save();
-            Settings1.Default.Reload();
+            Settings.Default.ison = true;
+            Settings.Default.Save();
+            Settings.Default.Reload();
         }
         private static void isonFalse()
         {
-            Settings1.Default.ison = false;
-            Settings1.Default.Save();
-            Settings1.Default.Reload();
+            Settings.Default.ison = false;
+            Settings.Default.Save();
+            Settings.Default.Reload();
         }
 
 
         private static void Status1True()
         {
-            Settings1.Default.Status1 = true;
-            Settings1.Default.Save();
-            Settings1.Default.Reload();
+            Settings.Default.Status1 = true;
+            Settings.Default.Save();
+            Settings.Default.Reload();
         }
         private static void Status1False()
         {
-            Settings1.Default.Status1 = false;
-            Settings1.Default.Save();
-            Settings1.Default.Reload();
+            Settings.Default.Status1 = false;
+            Settings.Default.Save();
+            Settings.Default.Reload();
         }
 
         private static void Status2True()
         {
-            Settings1.Default.Status2 = true;
-            Settings1.Default.Save();
-            Settings1.Default.Reload();
+            Settings.Default.Status2 = true;
+            Settings.Default.Save();
+            Settings.Default.Reload();
         }
         private static void Status2False()
         {
-            Settings1.Default.Status2 = false;
-            Settings1.Default.Save();
-            Settings1.Default.Reload();
+            Settings.Default.Status2 = false;
+            Settings.Default.Save();
+            Settings.Default.Reload();
         }
     }
 }
