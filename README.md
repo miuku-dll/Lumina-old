@@ -2,9 +2,6 @@
 
 ![LuminaBanner](https://github.com/yurkyu/Lumina/assets/80363046/2cafa315-2f40-4378-8ebe-20597834755b)
 
-
-
-
 <p align="center">
 <img src="https://dcbadge.vercel.app/api/shield/960948053152501830">
 <a href="https://discord.gg/VsRMhhYYQC">
