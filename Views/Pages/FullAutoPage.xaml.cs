@@ -18,24 +18,5 @@ namespace Lumina.Views.Pages
 
             InitializeComponent();
         }
-
-
-        private void FullAutoToggle_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-
-            }
-            catch (Exception ex) { }
-        }
-
-        private void No_Click(object sender, RoutedEventArgs e) 
-        {
-            try
-            {
-
-            }
-            catch (Exception ex) { }
-        }
     }
 }
