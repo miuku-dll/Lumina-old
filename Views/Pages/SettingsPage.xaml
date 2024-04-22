@@ -92,28 +92,42 @@
                 </Grid>
             </ui:Card>
 
-            <Button Click="Button_Click" Content=">asd"/>
+            <ui:Card>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40" />
+                    </Grid.RowDefinitions>
 
-            <TextBlock
-                Margin="0,20,0,0"
-            FontSize="23"
-            FontWeight="Regular"
-            Text="Personalization"/>
-            <TextBlock Text="Theme"/>
-            <RadioButton
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="450"/>
+                        <ColumnDefinition Width="502"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="550" Grid.Row="0">
+                        <TextBlock Text="Personalization" FontSize="16"/>
+                        <TextBlock FontSize="12" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="This will announce all rare stars you get through your webhook" Width="575"/>
+
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Grid.Column="2" VerticalAlignment="Center">
+
+                        <RadioButton
             Command="{Binding ViewModel.ChangeThemeCommand, Mode=OneWay}"
             CommandParameter="theme_light"
             Content="Light"
             GroupName="themeSelect"
             IsChecked="{Binding ViewModel.CurrentTheme, ConverterParameter=Light, Converter={StaticResource EnumToBooleanConverter}, Mode=OneWay}" Grid.ColumnSpan="2" VerticalAlignment="Top" />
-            <RadioButton
+                        <RadioButton
             Command="{Binding ViewModel.ChangeThemeCommand, Mode=OneWay}"
             CommandParameter="theme_dark"
             Content="Dark"
             GroupName="themeSelect"
             IsChecked="{Binding ViewModel.CurrentTheme, ConverterParameter=Dark, Converter={StaticResource EnumToBooleanConverter}, Mode=OneWay}" VerticalAlignment="Top" Grid.ColumnSpan="2" />
 
+                    </StackPanel>
 
+                </Grid>
+            </ui:Card>
         </StackPanel>
 
 

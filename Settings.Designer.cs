@@ -62,24 +62,36 @@ namespace Lumina {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool Status1 {
+        public bool CollectStatus {
             get {
-                return ((bool)(this["Status1"]));
+                return ((bool)(this["CollectStatus"]));
             }
             set {
-                this["Status1"] = value;
+                this["CollectStatus"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool Status2 {
+        public bool ObbyStatus {
             get {
-                return ((bool)(this["Status2"]));
+                return ((bool)(this["ObbyStatus"]));
             }
             set {
-                this["Status2"] = value;
+                this["ObbyStatus"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool FirstLaunch {
+            get {
+                return ((bool)(this["FirstLaunch"]));
+            }
+            set {
+                this["FirstLaunch"] = value;
             }
         }
     }

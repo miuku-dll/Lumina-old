@@ -22,12 +22,6 @@ namespace Lumina.ViewModels.Windows
                 Content = "Features",
                 Icon = new SymbolIcon { Symbol = SymbolRegular.HourglassThreeQuarter24 },
                 TargetPageType = typeof(Views.Pages.FeaturesPage)
-            },
-            new NavigationViewItem()
-            {
-                Content = "Full Auto",
-                Icon = new SymbolIcon { Symbol = SymbolRegular.DrinkCoffee24 },
-                TargetPageType = typeof(Views.Pages.FullAutoPage)
             }
 
         };

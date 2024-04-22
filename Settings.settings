@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Lumina" GeneratedClassName="Settings1">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Lumina" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="ison" Type="System.Boolean" Scope="User">
@@ -11,11 +11,14 @@
     <Setting Name="WebhookAddress" Type="System.String" Scope="User">
       <Value Profile="(Default)">Enter your webhook...</Value>
     </Setting>
-    <Setting Name="Status1" Type="System.Boolean" Scope="User">
+    <Setting Name="CollectStatus" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Status2" Type="System.Boolean" Scope="User">
+    <Setting Name="ObbyStatus" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="FirstLaunch" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

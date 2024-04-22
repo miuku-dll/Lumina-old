@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Diagnostics;
 using System.IO;
+using System.Net;
 using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
@@ -87,6 +88,26 @@ namespace Lumina
 
         async void OnStartup(object sender, StartupEventArgs e)
         {
+
+            WebClient client = new WebClient();
+            Stream stream = client.OpenRead("https://raw.githubusercontent.com/yurkyu/Lumina/master/Info/Version");
+            StreamReader reader = new StreamReader(stream);
+            String content = reader.ReadLine();
+
+            var Version = "v0.9.5";
+
+            if (Version.Equals(content, StringComparison.OrdinalIgnoreCase))
+            {
+                
+            }
+            else
+            {
+                MessageBox.Show("Version mismatch, please install the new version");
+                Thread.Sleep(1000);
+                Process.Start(new ProcessStartInfo("https://discordapp.com/channels/1154133794417295532/1224072077405978646") { UseShellExecute = true });
+                Environment.Exit(0);
+            }
+
             ApplicationThemeManager.Apply(
                 ApplicationTheme.Dark
                 );
@@ -99,6 +120,16 @@ namespace Lumina
             }
             catch { }
 
+
+            if (Settings.Default.FirstLaunch == true)
+            {
+
+                Process.Start(new ProcessStartInfo("https://discord.gg/4xuYgTzp5H") { UseShellExecute = true });
+
+
+                Settings.Default.FirstLaunch = false;
+                Util.SaveConfig();
+            }
 
         Address:
 

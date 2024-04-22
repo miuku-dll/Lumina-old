@@ -5,7 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Lumina.Views.Pages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:models="clr-namespace:Lumina.Models"
+    xmlns:models="clr-namespace:Lumina.Models" xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
     Title="DataPage"
     d:DataContext="{d:DesignInstance local:LuminaPage,
                                      IsDesignTimeCreatable=False}"
@@ -16,15 +16,39 @@
     ScrollViewer.CanContentScroll="False"
     mc:Ignorable="d">
 
-    <Grid Margin="0,0,0,24">
-        <TreeView AllowDrop="True" ScrollViewer.CanContentScroll="False">
+    
+
+    <ui:Card Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="598"/>
+                <ColumnDefinition Width="502"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel>
+                <TreeView AllowDrop="True" ScrollViewer.CanContentScroll="False">
                 <TreeViewItem
-                 Header="To-Do"
-                 IsExpanded="False"
-                 IsSelected="False">
-                    <TreeViewItem Header="Auto Obby"/>
-                    <TreeViewItem Header="Full Auto Features" />
+             Header="Backend To-Do"
+             IsExpanded="False"
+             IsSelected="False">
+                    <TreeViewItem Header="Auto obby for new character reset method"/>
+                    <TreeViewItem Header="Add full auto features" />
                 </TreeViewItem>
-        </TreeView>
-    </Grid>
+            </TreeView>
+
+            <TreeView AllowDrop="True" ScrollViewer.CanContentScroll="False">
+                    <TreeViewItem
+                    Header="Frontend To-Do"
+                    IsExpanded="False"
+                    IsSelected="False">
+                    </TreeViewItem>
+            </TreeView>
+            </StackPanel>
+        </Grid>
+    </ui:Card>
+    
 </Page>

@@ -27,14 +27,14 @@ namespace Lumina
             CShauto.Mouse.Move(37, 372);
             Thread.Sleep(50);
             CShauto.Mouse.Move(35, 370);
-            Thread.Sleep(50);
+            Thread.Sleep(200);
             CShauto.Mouse.Click();
 
             Thread.Sleep(500);
 
-            CShauto.Mouse.Move(298, 91);
+            CShauto.Mouse.Move(397, 90);
             Thread.Sleep(50);
-            CShauto.Mouse.Move(300, 93);
+            CShauto.Mouse.Move(400, 95);
             Thread.Sleep(50);
             CShauto.Mouse.Click();
             Thread.Sleep(500);

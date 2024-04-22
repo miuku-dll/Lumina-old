@@ -1,5 +1,7 @@
 ﻿using FluentScheduler;
 using Lumina.ViewModels.Pages;
+using Lumina.Workers;
+using Microsoft.VisualStudio.Threading;
 using Wpf.Ui.Controls;
 
 namespace Lumina.Views.Pages
@@ -15,7 +17,7 @@ namespace Lumina.Views.Pages
 
             InitializeComponent();
 
-            if (Settings.Default.Status1 == true)
+            if (Settings.Default.CollectStatus == true)
             {
                 AutoCollectToggle.IsChecked = true;
             }
@@ -24,7 +26,7 @@ namespace Lumina.Views.Pages
                 AutoCollectToggle.IsChecked = false;
             }
 
-            if (Settings.Default.Status2 == true)
+            if (Settings.Default.ObbyStatus == true)
             {
                 ObbyToggle.IsChecked = true;
             }
@@ -36,7 +38,7 @@ namespace Lumina.Views.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Movement.AutoObb();
+
         }
 
         private void GlobalToggle_UnChecked(object sender, RoutedEventArgs e)
@@ -46,7 +48,9 @@ namespace Lumina.Views.Pages
         private async void GlobalToggle_Checked(object sender, RoutedEventArgs e)
         {
             isonTrue();
+            var timeout = Settings.Default.ison == false;
 
+            await Task.Run(() => Movement.Run());
         }
 
         private void AutoCollectToggle_Checked(object sender, RoutedEventArgs e)
@@ -73,41 +77,36 @@ namespace Lumina.Views.Pages
         private static void isonTrue()
         {
             Settings.Default.ison = true;
-            Settings.Default.Save();
-            Settings.Default.Reload();
+            Util.SaveConfig();
         }
         private static void isonFalse()
         {
             Settings.Default.ison = false;
             Settings.Default.Save();
-            Settings.Default.Reload();
+            Util.SaveConfig();
         }
 
 
         private static void Status1True()
         {
-            Settings.Default.Status1 = true;
-            Settings.Default.Save();
-            Settings.Default.Reload();
+            Settings.Default.CollectStatus = true;
+            Util.SaveConfig();
         }
         private static void Status1False()
         {
-            Settings.Default.Status1 = false;
-            Settings.Default.Save();
-            Settings.Default.Reload();
+            Settings.Default.CollectStatus = false;
+            Util.SaveConfig();
         }
 
         private static void Status2True()
         {
-            Settings.Default.Status2 = true;
-            Settings.Default.Save();
-            Settings.Default.Reload();
+            Settings.Default.ObbyStatus = true;
+            Util.SaveConfig();
         }
         private static void Status2False()
         {
-            Settings.Default.Status2 = false;
-            Settings.Default.Save();
-            Settings.Default.Reload();
+            Settings.Default.ObbyStatus = false;
+            Util.SaveConfig();
         }
     }
 }

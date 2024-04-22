@@ -87,6 +87,11 @@ namespace Lumina
             catch { }
         }
 
+        public static void SaveConfig()
+        {
+            Settings.Default.Save();
+            Settings.Default.Reload();
+        }
 
         public static void CheckObby()
         {
@@ -110,23 +115,13 @@ namespace Lumina
 
                     var Colors = new List<string>() { "Color [A=255, R=153, G=250, B=169]" };
 
-                    exists = Colors.Any(x => x.Contains($"{color}"));
-                    if (exists)
-                    {
-
-
-                    }
-                    else
-                    {
-                    }
-
                     if ($"{color}".StartsWith("Color [A=255, R=153, G=250, B=169]"))
                     {
-                        Movement.AutoObb();
+                        Movement.Obby();
                     }
                     else
                     {
-                        return;
+                        Movement.Obby();
                     }
                 }
                 catch
