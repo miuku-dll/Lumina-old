@@ -104,7 +104,7 @@
                     </Grid.ColumnDefinitions>
                     <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="550" Grid.Row="0">
                         <TextBlock Text="Personalization" FontSize="16"/>
-                        <TextBlock FontSize="12" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="This will announce all rare stars you get through your webhook" Width="575"/>
+                        <TextBlock FontSize="12" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="Pick what color scheme you prefer" Width="575"/>
 
 
                     </StackPanel>

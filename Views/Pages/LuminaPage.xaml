@@ -31,12 +31,11 @@
 
             <StackPanel>
                 <TreeView AllowDrop="True" ScrollViewer.CanContentScroll="False">
-                <TreeViewItem
+                    <TreeViewItem
              Header="Backend To-Do"
              IsExpanded="False"
              IsSelected="False">
-                    <TreeViewItem Header="Auto obby for new character reset method"/>
-                    <TreeViewItem Header="Add full auto features" />
+                        <TreeViewItem Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Header="Add full auto features" />
                 </TreeViewItem>
             </TreeView>
 
