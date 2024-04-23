@@ -9,7 +9,6 @@ namespace Lumina
 {
     class Util
     {
-
         public static void sendDiscordWebhook(string URL, string escapedjson)
         {
             try
@@ -21,10 +20,7 @@ namespace Lumina
                     sw.Write(escapedjson);
                 wr.GetResponse();
             }
-            catch
-            {
-
-            }
+            catch { }
         }
 
         [DllImport("user32.dll")]
@@ -37,7 +33,6 @@ namespace Lumina
         {
             try
             {
-
                 IntPtr hdc = GetDC(IntPtr.Zero);
                 uint pixel = GetPixel(hdc, 79, 19);
                 ReleaseDC(IntPtr.Zero, hdc);
@@ -52,16 +47,6 @@ namespace Lumina
                     IEnumerable<string> matchingList;
 
                     var Colors = new List<string>() { "Color [A=255, R=255, G=255, B=255]" };
-
-                    exists = Colors.Any(x => x.Contains($"{color}"));
-                    if (exists)
-                    {
-
-
-                    }
-                    else
-                    {
-                    }
 
                     if ($"{color}".StartsWith("Color [A=255, R=255, G=255, B=255]"))
                     {
@@ -97,17 +82,13 @@ namespace Lumina
         {
             try
             {
+                bool exists;
+                string firstMatch;
+                IEnumerable<string> matchingList;
+                var Colors = new List<string>() { "Color [A=255, R=153, G=250, B=169]" };
 
-                    bool exists;
-                    string firstMatch;
-                    IEnumerable<string> matchingList;
-
-
-
-                    var Colors = new List<string>() { "Color [A=255, R=153, G=250, B=169]" };
-
-                    if (Settings.Default.GloveCount == "0")
-                    {
+                if (Settings.Default.GloveCount == "0")
+                {
                     IntPtr hdc = GetDC(IntPtr.Zero);
                     uint pixel = GetPixel(hdc, 1887, 1053);
                     ReleaseDC(IntPtr.Zero, hdc);
@@ -117,15 +98,13 @@ namespace Lumina
                         (byte)((pixel & 0x00FF0000) >> 16));
 
                     if ($"{color}".StartsWith("Color [A=255, R=153, G=250, B=169]"))
-                        {
-                           
-                        }
-                        else
-                        {
-                            Movement.Obby();
-                        }
+                    { }
+                    else
+                    {
+                        Movement.Obby();
                     }
-                    else if (Settings.Default.GloveCount == "1")
+                }
+                else if (Settings.Default.GloveCount == "1")
                 {
                     IntPtr hdc = GetDC(IntPtr.Zero);
                     uint pixel = GetPixel(hdc, 1829, 1053);
@@ -136,9 +115,7 @@ namespace Lumina
                         (byte)((pixel & 0x00FF0000) >> 16));
 
                     if ($"{color}".StartsWith("Color [A=255, R=153, G=250, B=169]"))
-                    {
-
-                    }
+                    { }
                     else
                     {
                         Movement.Obby(); // Doesnt really work, since if you have any extra effects on it wont read shit, could just add a setting for how many gloves u have enabled etc (too much work)
@@ -155,20 +132,15 @@ namespace Lumina
                         (byte)((pixel & 0x00FF0000) >> 16));
 
                     if ($"{color}".StartsWith("Color [A=255, R=153, G=250, B=169]"))
-                    {
-
-                    }
+                    { }
                     else
                     {
                         Movement.Obby(); // Doesnt really work, since if you have any extra effects on it wont read shit, could just add a setting for how many gloves u have enabled etc (too much work)
                     }
                 }
-
             }
             catch { }
         }
-
-
         public static void ResetChar()
         {
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Escape);
@@ -178,7 +150,6 @@ namespace Lumina
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Return);
             Thread.Sleep(3500);
         }
-
         public static void ResetKeys()
         {
             CSInputs.SendInput.Keyboard.Send(KeyboardKeys.A, KeyFlags.Up);
@@ -218,6 +189,5 @@ namespace Lumina
                 StartPrivateServer();
             }
         }
-
     }
 }

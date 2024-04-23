@@ -1,10 +1,9 @@
-﻿using Lumina.ViewModels.Pages;
+﻿using FluentScheduler;
+using Lumina.ViewModels.Pages;
 using System.Drawing;
 using System.IO;
 using System.Runtime.InteropServices;
 using Wpf.Ui.Controls;
-using System.ServiceModel;
-using FluentScheduler;
 
 namespace Lumina.Views.Pages
 {

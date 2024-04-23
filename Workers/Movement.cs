@@ -20,7 +20,7 @@ namespace Lumina
                 MovementUtil.ResetChar();
                 Util.ResetKeys();
 
-                if (Settings.Default.CollectStatus == true) 
+                if (Settings.Default.CollectStatus == true)
                 {
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.A, KeyFlags.Down);
                     Thread.Sleep(93);
@@ -258,11 +258,8 @@ namespace Lumina
 
                     Util.CheckObby();
                 }
-                else
-                {
-
-                }
-            }         
+                else { }
+            }
         }
 
         public static void Obby()

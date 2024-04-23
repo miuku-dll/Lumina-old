@@ -1,7 +1,4 @@
-﻿using FluentScheduler;
-using Lumina.ViewModels.Pages;
-using Lumina.Workers;
-using Microsoft.VisualStudio.Threading;
+﻿using Lumina.ViewModels.Pages;
 using System.Windows.Controls;
 using Wpf.Ui.Controls;
 
