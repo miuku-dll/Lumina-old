@@ -10,8 +10,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Reflection;
-using System.Security.Cryptography;
-using System.Text;
 using System.Windows.Threading;
 using Wpf.Ui;
 using Wpf.Ui.Appearance;
@@ -119,7 +117,6 @@ namespace Lumina
 
             }
             catch { }
-
 
             if (Settings.Default.FirstLaunch == true)
             {
