@@ -84,7 +84,7 @@ namespace Lumina
         /// Occurs when the application is loading.
         /// </summary>
 
-        
+
 
         async void OnStartup(object sender, StartupEventArgs e)
         {
@@ -94,11 +94,11 @@ namespace Lumina
             StreamReader reader = new StreamReader(stream);
             String content = reader.ReadLine();
 
-            var Version = "v0.9.5";
+            var Version = "v0.9.51";
 
             if (Version.Equals(content, StringComparison.OrdinalIgnoreCase))
             {
-                
+
             }
             else
             {
@@ -116,7 +116,7 @@ namespace Lumina
             {
                 Webhooks.WebhookLaunch();
                 DashboardViewModel viewModel = new DashboardViewModel();
-                
+
             }
             catch { }
 

@@ -20,7 +20,7 @@ namespace Lumina.ViewModels.Windows
             new NavigationViewItem()
             {
                 Content = "Features",
-                Icon = new SymbolIcon { Symbol = SymbolRegular.HourglassThreeQuarter24 },
+                Icon = new SymbolIcon { Symbol = SymbolRegular.DrinkCoffee24 },
                 TargetPageType = typeof(Views.Pages.FeaturesPage)
             }
 

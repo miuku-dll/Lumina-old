@@ -46,6 +46,7 @@
     <None Remove="Images\cat3.png" />
     <None Remove="Images\cat4.png" />
     <None Remove="Images\girl.png" />
+    <None Remove="Images\grad.jpg" />
     <None Remove="Settings.settings" />
   </ItemGroup>
 
@@ -64,6 +65,7 @@
     <Resource Include="Images\cat3.png" />
     <Resource Include="Images\cat4.png" />
     <Resource Include="Images\girl.png" />
+    <Resource Include="Images\grad.jpg" />
     <Resource Include="Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
