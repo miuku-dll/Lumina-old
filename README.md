@@ -1,6 +1,6 @@
 <h2 align="center">Lumina | Open-source | Easy-to-use</h1>
 
-![LuminaBanner](https://github.com/yurkyu/Lumina/assets/80363046/2cafa315-2f40-4378-8ebe-20597834755b)
+![Lumina_Github_Banner](https://github.com/miuku-dll/Lumina/assets/80363046/1026330d-29d9-4b54-81b3-3f5b5e221298)
 
 <p align="center">
 <img src="https://dcbadge.vercel.app/api/shield/960948053152501830">
