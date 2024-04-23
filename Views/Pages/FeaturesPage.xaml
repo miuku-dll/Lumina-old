@@ -57,8 +57,8 @@
                             <TextBlock Text="Auto Obby" FontSize="16"/>
                             <TextBlock FontSize="12" HorizontalAlignment="Left" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="This will complete the obby every 2 minutes" Width="333"/>
 
-                            
-                       </StackPanel>
+
+                        </StackPanel>
                     </Border>
                     <ui:ToggleSwitch Name="ObbyToggle" Checked="ObbyToggle_Checked"
                  Unchecked="ObbyToggle_UnChecked" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,20,20,0"/>
@@ -70,7 +70,7 @@
                         </StackPanel>
 
                     </Border>
-                    <ComboBox x:Name="GloveBox" Margin="451,77,20,0" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged">
+                    <ComboBox x:Name="GloveBox" Margin="461,78,20,0" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged" Height="34">
                         <ComboBoxItem Content="None" />
                         <ComboBoxItem Content="1" />
                         <ComboBoxItem Content="2" />

@@ -112,6 +112,7 @@ namespace Lumina.Views.Pages
             String Item = (this.GloveBox.SelectedItem as ComboBoxItem).Content.ToString();
 
             Settings.Default.GloveCount = Item;
+            Util.SaveConfig();
         }
     }
 }
