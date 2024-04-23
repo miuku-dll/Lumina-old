@@ -94,5 +94,17 @@ namespace Lumina {
                 this["FirstLaunch"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public string GloveCount {
+            get {
+                return ((string)(this["GloveCount"]));
+            }
+            set {
+                this["GloveCount"] = value;
+            }
+        }
     }
 }

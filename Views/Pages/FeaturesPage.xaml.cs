@@ -2,6 +2,7 @@
 using Lumina.ViewModels.Pages;
 using Lumina.Workers;
 using Microsoft.VisualStudio.Threading;
+using System.Windows.Controls;
 using Wpf.Ui.Controls;
 
 namespace Lumina.Views.Pages
@@ -107,6 +108,13 @@ namespace Lumina.Views.Pages
         {
             Settings.Default.ObbyStatus = false;
             Util.SaveConfig();
+        }
+
+        private void ComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            String Item = (this.GloveBox.SelectedItem as ComboBoxItem).Content.ToString();
+
+            Settings.Default.GloveCount = Item;
         }
     }
 }
