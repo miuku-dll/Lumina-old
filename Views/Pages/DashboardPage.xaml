@@ -31,8 +31,8 @@
             <Border.Background>
                 <ImageBrush
                     RenderOptions.BitmapScalingMode="HighQuality"
-                    Stretch="UniformToFill" 
-                    ImageSource="/Images/grad.jpg"/>
+                    Stretch="UniformToFill"
+                    ImageSource="/Assets/bluegrad.jpg"/>
             </Border.Background>
             <Border CornerRadius="8">
                 <Border.Background>
@@ -61,7 +61,7 @@
                             Text="For Roblox." />
                     </StackPanel>
                     <ui:TextBlock
-                        Margin="12"
+                        Margin="0,0,13,12"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Bottom"
                         FontTypography="Caption"
@@ -105,7 +105,7 @@
                     <Image
                         Width="60"
                         Margin="24,0,0,0"
-                        Source="/Assets/wpfui-icon-256.png"/>
+                        Source="/Assets/Fingerprint.png"/>
 
                     <StackPanel
                         Grid.Column="1"
@@ -143,7 +143,7 @@
                     <Image
                         Width="60"
                         Margin="24,0,0,0"
-                        Source="/Assets/RatingControl.png"/>
+                        Source="/Assets/About.png"/>
 
                     <StackPanel
                         Grid.Column="1"
@@ -179,7 +179,7 @@
                     <Image
                         Width="60"
                         Margin="24,0,0,0"
-                        Source="/Assets/XamlUICommand.png"/>
+                        Source="/Assets/query.png"/>
 
                     <StackPanel
                         Grid.Column="1"

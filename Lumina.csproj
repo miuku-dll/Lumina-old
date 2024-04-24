@@ -32,8 +32,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Assets\About.png" />
     <None Remove="Assets\bell-ring1.png" />
+    <None Remove="Assets\bluegrad.jpg" />
+    <None Remove="Assets\Fingerprint.png" />
     <None Remove="Assets\firewatch.png" />
+    <None Remove="Assets\query.png" />
     <None Remove="Assets\RatingControl.png" />
     <None Remove="Assets\toggle2.png" />
     <None Remove="Assets\Toggle3.png" />
@@ -47,12 +51,17 @@
     <None Remove="Images\cat4.png" />
     <None Remove="Images\girl.png" />
     <None Remove="Images\grad.jpg" />
+    <None Remove="Images\mountain.png" />
     <None Remove="Settings.settings" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\About.png" />
     <Resource Include="Assets\bell-ring1.png" />
+    <Resource Include="Assets\bluegrad.jpg" />
+    <Resource Include="Assets\Fingerprint.png" />
     <Resource Include="Assets\firewatch.png" />
+    <Resource Include="Assets\query.png" />
     <Resource Include="Assets\RatingControl.png" />
     <Resource Include="Assets\toggle2.png" />
     <Resource Include="Assets\Toggle3.png" />
@@ -66,6 +75,7 @@
     <Resource Include="Images\cat4.png" />
     <Resource Include="Images\girl.png" />
     <Resource Include="Images\grad.jpg" />
+    <Resource Include="Images\mountain.png" />
     <Resource Include="Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
