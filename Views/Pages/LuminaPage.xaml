@@ -16,7 +16,7 @@
     ScrollViewer.CanContentScroll="False"
     mc:Ignorable="d">
 
-    
+
 
     <ui:Card Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
         <Grid>
@@ -32,22 +32,21 @@
             <StackPanel>
                 <TreeView AllowDrop="True" ScrollViewer.CanContentScroll="False">
                     <TreeViewItem
-             Header="Backend To-Do"
-             IsExpanded="False"
-             IsSelected="False">
+                        Header="Backend To-Do"
+                        IsExpanded="False"
+                        IsSelected="False">
                         <TreeViewItem Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Header="Add full auto features" />
-                </TreeViewItem>
-            </TreeView>
-
-            <TreeView AllowDrop="True" ScrollViewer.CanContentScroll="False">
-                    <TreeViewItem
-                    Header="Frontend To-Do"
-                    IsExpanded="False"
-                    IsSelected="False">
                     </TreeViewItem>
-            </TreeView>
+                </TreeView>
+
+                <TreeView AllowDrop="True" ScrollViewer.CanContentScroll="False">
+                    <TreeViewItem
+                        Header="Frontend To-Do"
+                        IsExpanded="False"
+                        IsSelected="False">
+                    </TreeViewItem>
+                </TreeView>
             </StackPanel>
         </Grid>
     </ui:Card>
-    
 </Page>

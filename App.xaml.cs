@@ -114,9 +114,9 @@ namespace Lumina
             {
                 Webhooks.WebhookLaunch();
                 DashboardViewModel viewModel = new DashboardViewModel();
-
             }
-            catch { }
+            catch
+            { /* If no webhook is set catches it */ }
 
             if (Settings.Default.FirstLaunch == true)
             {
