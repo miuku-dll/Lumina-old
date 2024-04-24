@@ -32,9 +32,21 @@ namespace Lumina
 
             Thread.Sleep(500);
 
-            CShauto.Mouse.Move(397, 90);
+            CShauto.Mouse.Move(436, 99);
             Thread.Sleep(50);
-            CShauto.Mouse.Move(400, 95);
+            CShauto.Mouse.Move(435, 99);
+            Thread.Sleep(50);
+            CShauto.Mouse.Move(434, 99);
+            Thread.Sleep(50);
+            CShauto.Mouse.Move(433, 99);
+            Thread.Sleep(50);
+            CShauto.Mouse.Move(432, 99);
+            Thread.Sleep(50);
+            CShauto.Mouse.Move(431, 99);
+            Thread.Sleep(50);
+            CShauto.Mouse.Move(430, 99);
+            Thread.Sleep(50);
+            CShauto.Mouse.Move(429, 99);
             Thread.Sleep(50);
             CShauto.Mouse.Click();
             Thread.Sleep(500);
