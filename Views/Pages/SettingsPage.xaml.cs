@@ -3,6 +3,7 @@ using Lumina.ViewModels.Pages;
 using System.Drawing;
 using System.IO;
 using System.Runtime.InteropServices;
+using System.Windows.Controls;
 using Wpf.Ui.Controls;
 
 namespace Lumina.Views.Pages
@@ -19,6 +20,7 @@ namespace Lumina.Views.Pages
             DataContext = this;
             InitializeComponent();
 
+            ResolutionCombobox.Text = Settings.Default.Resolution;
             SetToggle.IsChecked = false;
         }
 
@@ -215,6 +217,14 @@ namespace Lumina.Views.Pages
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void ResolutionCombobox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            String Item = (this.ResolutionCombobox.SelectedItem as ComboBoxItem).Content.ToString();
+
+            Settings.Default.Resolution = Item;
+            Util.SaveConfig();
         }
     }
 }

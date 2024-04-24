@@ -92,6 +92,28 @@
                 </Grid>
             </ui:Card>
 
+            <ui:Card Height="80">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="508"/>
+                        <ColumnDefinition Width="502"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel  Margin="10,0,0,0" HorizontalAlignment="Left" Width="496">
+                        <TextBlock Text="Resolution" FontSize="16"/>
+                        <TextBlock FontSize="12" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="Select your monitors resolution" Width="575"/>
+                    </StackPanel>
+                    <ComboBox Name="ResolutionCombobox" Margin="492,3,347,0" VerticalAlignment="Top" Grid.ColumnSpan="2" SelectionChanged="ResolutionCombobox_SelectionChanged">
+                        <ComboBoxItem Content="3440x1440" />
+                        <ComboBoxItem Content="1080x1920" />
+                        <ComboBoxItem Content="1360x786" />
+                    </ComboBox>
+                </Grid>
+            </ui:Card>
+
             <ui:Card>
                 <Grid>
                     <Grid.RowDefinitions>

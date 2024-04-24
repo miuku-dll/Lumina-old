@@ -23,5 +23,8 @@
     <Setting Name="GloveCount" Type="System.String" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
+    <Setting Name="Resolution" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1080x1920</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

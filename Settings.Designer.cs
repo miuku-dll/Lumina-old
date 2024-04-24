@@ -106,5 +106,17 @@ namespace Lumina {
                 this["GloveCount"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1080x1920")]
+        public string Resolution {
+            get {
+                return ((string)(this["Resolution"]));
+            }
+            set {
+                this["Resolution"] = value;
+            }
+        }
     }
 }
