@@ -22,7 +22,7 @@ namespace Lumina.Views.Pages
 
             ResolutionCombobox.Text = Settings.Default.Resolution;
 
-            if  (Settings.Default.AutoUpdater == true)
+            if (Settings.Default.AutoUpdater == true)
             {
                 AutoUpdateToggle.IsChecked = true;
             }
@@ -240,10 +240,12 @@ namespace Lumina.Views.Pages
         private void AutoUpdateToggle_Checked(object sender, RoutedEventArgs e)
         {
             Settings.Default.AutoUpdater = true;
+            Util.SaveConfig();
         }
         private void AutoUpdateToggle_UnChecked(object sender, RoutedEventArgs e)
         {
             Settings.Default.AutoUpdater = false;
+            Util.SaveConfig();
         }
     }
 }
