@@ -118,5 +118,17 @@ namespace Lumina {
                 this["Resolution"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AutoUpdater {
+            get {
+                return ((bool)(this["AutoUpdater"]));
+            }
+            set {
+                this["AutoUpdater"] = value;
+            }
+        }
     }
 }

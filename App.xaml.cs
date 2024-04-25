@@ -94,7 +94,7 @@ namespace Lumina
             StreamReader reader = new StreamReader(stream);
             String content = reader.ReadLine();
 
-            var Version = "v0.9.55";
+            var Version = "v0.9.54";
 
             if (Version.Equals(content, StringComparison.OrdinalIgnoreCase))
             {
@@ -102,13 +102,26 @@ namespace Lumina
             }
             else
             {
-                MessageBox.Show("Version mismatch, please install the new version");
-                Thread.Sleep(1000);
-                // Process.Start(new ProcessStartInfo("https://discordapp.com/channels/1154133794417295532/1224072077405978646") { UseShellExecute = true });
+                Console.WriteLine("Getting Auto Updater Status...");
+                WebClient client1 = new WebClient();
+                Stream stream1 = client1.OpenRead("https://raw.githubusercontent.com/miuku-dll/Lumina/master/Info/AutoUpdateStatus");
+                StreamReader reader1 = new StreamReader(stream1);
+                String content1 = reader1.ReadLine();
 
-                System.Diagnostics.Process.Start("./Lumina_Updater"); ;
 
+                if (content1 == "on")
+                {
+                    MessageBox.Show("New version detected. Press ok to install");
+                    Thread.Sleep(1000);
 
+                    System.Diagnostics.Process.Start("./Lumina_Updater"); ;
+                }
+                else if (content1 == "off")
+                {
+                    MessageBox.Show("New version detected. Auto Update is turned off, please install new version from our Discord...");
+                    Thread.Sleep(1000);
+                    Process.Start(new ProcessStartInfo("https://discordapp.com/channels/1154133794417295532/1224072077405978646") { UseShellExecute = true });
+                }
                 Environment.Exit(0);
             }
 

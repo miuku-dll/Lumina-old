@@ -26,5 +26,8 @@
     <Setting Name="Resolution" Type="System.String" Scope="User">
       <Value Profile="(Default)">1080x1920</Value>
     </Setting>
+    <Setting Name="AutoUpdater" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

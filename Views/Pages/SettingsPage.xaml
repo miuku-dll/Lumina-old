@@ -46,6 +46,19 @@
 
             <ui:Card>
                 <Grid>
+                    <StackPanel  Margin="10,0,0,0" HorizontalAlignment="Left" Width="496">
+                        <TextBlock Text="Auto Update" FontSize="16"/>
+                        <TextBlock FontSize="12" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="This will automatically update the software, if a update is found" Width="575"/>
+                    </StackPanel>
+
+                    <ui:ToggleSwitch x:Name="AutoUpdateToggle" Checked="AutoUpdateToggle_Checked"
+                Unchecked="AutoUpdateToggle_UnChecked" HorizontalAlignment="Right" Margin="0,0,10,0"/>
+                </Grid>
+            </ui:Card>
+
+            
+            <ui:Card>
+                <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="70" />
                     </Grid.RowDefinitions>
