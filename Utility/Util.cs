@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.IO.Compression;
 using System.Net;
 using System.Runtime.InteropServices;
 
@@ -312,5 +313,7 @@ namespace Lumina
                 StartPrivateServer();
             }
         }
+
+
     }
 }

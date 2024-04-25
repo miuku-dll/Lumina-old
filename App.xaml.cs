@@ -1,4 +1,5 @@
-﻿using Lumina.Services;
+﻿using Ionic.Zip;
+using Lumina.Services;
 using Lumina.ViewModels.Pages;
 using Lumina.ViewModels.Windows;
 using Lumina.Views.Pages;
@@ -8,7 +9,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Diagnostics;
 using System.IO;
+using System.IO.Compression;
 using System.Net;
+using System.Net.Http;
 using System.Reflection;
 using System.Windows.Threading;
 using Wpf.Ui;
@@ -82,17 +85,16 @@ namespace Lumina
         /// Occurs when the application is loading.
         /// </summary>
 
-
-
         async void OnStartup(object sender, StartupEventArgs e)
         {
+
 
             WebClient client = new WebClient();
             Stream stream = client.OpenRead("https://raw.githubusercontent.com/yurkyu/Lumina/master/Info/Version");
             StreamReader reader = new StreamReader(stream);
             String content = reader.ReadLine();
 
-            var Version = "v0.9.54";
+            var Version = "v0.9.55";
 
             if (Version.Equals(content, StringComparison.OrdinalIgnoreCase))
             {
@@ -102,7 +104,11 @@ namespace Lumina
             {
                 MessageBox.Show("Version mismatch, please install the new version");
                 Thread.Sleep(1000);
-                Process.Start(new ProcessStartInfo("https://discordapp.com/channels/1154133794417295532/1224072077405978646") { UseShellExecute = true });
+                // Process.Start(new ProcessStartInfo("https://discordapp.com/channels/1154133794417295532/1224072077405978646") { UseShellExecute = true });
+
+                System.Diagnostics.Process.Start("./Lumina_Updater"); ;
+
+
                 Environment.Exit(0);
             }
 
@@ -152,5 +158,7 @@ namespace Lumina
         {
             // For more info see https://docs.microsoft.com/en-us/dotnet/api/system.windows.application.dispatcherunhandledexception?view=windowsdesktop-6.0
         }
+
+
     }
 }
