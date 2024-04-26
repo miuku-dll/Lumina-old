@@ -15,6 +15,8 @@ namespace Lumina.Views.Pages
 
             InitializeComponent();
 
+            GloveBox.Text = Settings.Default.GloveCount;
+
             if (Settings.Default.CollectStatus == true)
             {
                 AutoCollectToggle.IsChecked = true;
