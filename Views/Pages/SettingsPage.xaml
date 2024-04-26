@@ -122,6 +122,7 @@
                     <ComboBox Name="ResolutionCombobox" Margin="492,3,347,0" VerticalAlignment="Top" Grid.ColumnSpan="2" SelectionChanged="ResolutionCombobox_SelectionChanged">
                         <ComboBoxItem Content="3440x1440" />
                         <ComboBoxItem Content="1080x1920" />
+                        <ComboBoxItem Content="1680x1050" />
                         <ComboBoxItem Content="1360x786" />
                     </ComboBox>
                 </Grid>

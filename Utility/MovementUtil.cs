@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CSInputs.Enums;
-using Lumina;
+﻿using CSInputs.Enums;
 
 namespace Lumina
 {
@@ -79,6 +73,31 @@ namespace Lumina
                 CShauto.Mouse.Move(304, 83);
                 Thread.Sleep(50);
                 CShauto.Mouse.Move(303, 83);
+                Thread.Sleep(50);
+                CShauto.Mouse.Click();
+                Thread.Sleep(500);
+            }
+            else if (Settings.Default.Resolution == "1680x1050")
+            {
+                CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Escape);
+                Thread.Sleep(500);
+                CSInputs.SendInput.Keyboard.Send(KeyboardKeys.R);
+                Thread.Sleep(500);
+                CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Return);
+                Thread.Sleep(3500);
+
+                CShauto.Mouse.Move(70, 370);
+                Thread.Sleep(50);
+                CShauto.Mouse.Move(46, 370);
+                Thread.Sleep(200);
+                CShauto.Mouse.Click();
+
+                Thread.Sleep(500);
+                CShauto.Mouse.Move(379, 106);
+                Thread.Sleep(50);
+                CShauto.Mouse.Move(378, 106);
+                Thread.Sleep(50);
+                CShauto.Mouse.Move(377, 106);
                 Thread.Sleep(50);
                 CShauto.Mouse.Click();
                 Thread.Sleep(500);

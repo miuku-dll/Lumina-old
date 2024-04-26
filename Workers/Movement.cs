@@ -236,7 +236,6 @@ namespace Lumina
                 {
                     Util.Focus();
                     Thread.Sleep(1000);
-                    Util.ResetChar();
                     Util.ResetKeys();
 
                     Util.CheckObby();

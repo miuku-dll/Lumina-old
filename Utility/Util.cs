@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.IO.Compression;
 using System.Net;
 using System.Runtime.InteropServices;
 
@@ -70,7 +69,8 @@ namespace Lumina
                 }
 
             }
-            catch { }
+            catch
+            { MessageBox.Show("Fatal error occurred while checking chat status."); }
         }
 
         public static void SaveConfig()
@@ -230,6 +230,66 @@ namespace Lumina
                     {
                         IntPtr hdc = GetDC(IntPtr.Zero);
                         uint pixel = GetPixel(hdc, 3329, 1407);
+                        ReleaseDC(IntPtr.Zero, hdc);
+                        Color color = Color.FromArgb(
+                            (byte)(pixel & 0x000000FF),
+                            (byte)((pixel & 0x0000FF00) >> 8),
+                            (byte)((pixel & 0x00FF0000) >> 16));
+
+                        if ($"{color}".StartsWith("Color [A=255, R=153, G=250, B=169]"))
+                        { }
+                        else
+                        {
+                            Movement.Obby(); // Doesnt really work, since if you have any extra effects on it wont read shit, could just add a setting for how many gloves u have enabled etc (too much work)
+                        }
+                    }
+                    else if (Settings.Default.GloveCount == "2")
+                    {
+                        IntPtr hdc = GetDC(IntPtr.Zero);
+                        uint pixel = GetPixel(hdc, 3248, 1406);
+                        ReleaseDC(IntPtr.Zero, hdc);
+                        Color color = Color.FromArgb(
+                            (byte)(pixel & 0x000000FF),
+                            (byte)((pixel & 0x0000FF00) >> 8),
+                            (byte)((pixel & 0x00FF0000) >> 16));
+
+                        if ($"{color}".StartsWith("Color [A=255, R=153, G=250, B=169]"))
+                        { }
+                        else
+                        {
+                            Movement.Obby(); // Doesnt really work, since if you have any extra effects on it wont read shit, could just add a setting for how many gloves u have enabled etc (too much work)
+                        }
+                    }
+                }
+
+                else if (Settings.Default.Resolution == "1680x1050")
+                {
+                    bool exists;
+                    string firstMatch;
+                    IEnumerable<string> matchingList;
+                    var Colors = new List<string>() { "Color [A=255, R=153, G=250, B=169]" };
+
+                    if (Settings.Default.GloveCount == "0")
+                    {
+                        IntPtr hdc = GetDC(IntPtr.Zero);
+                        uint pixel = GetPixel(hdc, 1654, 1023);
+                        ReleaseDC(IntPtr.Zero, hdc);
+                        Color color = Color.FromArgb(
+                            (byte)(pixel & 0x000000FF),
+                            (byte)((pixel & 0x0000FF00) >> 8),
+                            (byte)((pixel & 0x00FF0000) >> 16));
+
+                        if ($"{color}".StartsWith("Color [A=255, R=153, G=250, B=169]"))
+                        { }
+                        else
+                        {
+                            Movement.Obby();
+                        }
+                    }
+                    else if (Settings.Default.GloveCount == "1")
+                    {
+                        IntPtr hdc = GetDC(IntPtr.Zero);
+                        uint pixel = GetPixel(hdc, 1527, 1019);
                         ReleaseDC(IntPtr.Zero, hdc);
                         Color color = Color.FromArgb(
                             (byte)(pixel & 0x000000FF),
