@@ -6,7 +6,7 @@ namespace Lumina
     {
         public static async Task Run()
         {
-            await Task.Delay(1000);
+            await Task.Delay(200);
 
             while (Settings.Default.ison == true)
             {
