@@ -3,7 +3,6 @@
 ![Lumina_Github_Banner](https://github.com/miuku-dll/Lumina/assets/80363046/1026330d-29d9-4b54-81b3-3f5b5e221298)
 
 <p align="center">
-<img src="https://dcbadge.vercel.app/api/shield/960948053152501830">
 <a href="https://discord.gg/VsRMhhYYQC">
 <img src="https://dcbadge.vercel.app/api/server/VsRMhhYYQC">
 </a>
