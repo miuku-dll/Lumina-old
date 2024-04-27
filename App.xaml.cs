@@ -96,7 +96,7 @@ namespace Lumina
             StreamReader reader = new StreamReader(stream);
             String content = reader.ReadLine();
 
-            var Version = "v0.9.58";
+            var Version = "v0.9.59";
 
             await Task.Run(() => Killswitch());
 
