@@ -27,8 +27,8 @@ To edit the application, first re-build the project, for any reason, then the in
 ## Showcase
 
 <div align="left">
-      <a href="https://www.youtube.com/watch?v=JXNY-ejcBy0">
-         <img src="https://img.youtube.com/vi/JXNY-ejcBy0/0.jpg" style="width:100%;">
+      <a href="https://www.youtube.com/watch?v=Du9-1uhjA20">
+         <img src="https://img.youtube.com/vi/Du9-1uhjA20/0.jpg" style="width:100%;">
       </a>
 
 #### Lumina, is not fully developed, due to my laziness <br>
