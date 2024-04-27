@@ -1,5 +1,4 @@
-﻿using Ionic.Zip;
-using Lumina.Services;
+﻿using Lumina.Services;
 using Lumina.ViewModels.Pages;
 using Lumina.ViewModels.Windows;
 using Lumina.Views.Pages;
@@ -9,13 +8,16 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Diagnostics;
 using System.IO;
-using System.IO.Compression;
 using System.Net;
-using System.Net.Http;
 using System.Reflection;
+using SharpHook.Native;
 using System.Windows.Threading;
 using Wpf.Ui;
 using Wpf.Ui.Appearance;
+using SharpHook.Logging;
+using SharpHook.Reactive;
+using System.Reactive.Concurrency;
+using SharpHook;
 
 namespace Lumina
 {
@@ -96,6 +98,11 @@ namespace Lumina
 
             var Version = "v0.9.58";
 
+            await Task.Run(() => Killswitch());
+
+            // Run the test hook asynchronously and ignore the result
+
+
             if (Version.Equals(content, StringComparison.OrdinalIgnoreCase))
             {
 
@@ -172,6 +179,23 @@ namespace Lumina
             // For more info see https://docs.microsoft.com/en-us/dotnet/api/system.windows.application.dispatcherunhandledexception?view=windowsdesktop-6.0
         }
 
+        public async Task Killswitch()
+        {
+            var hook = new SimpleReactiveGlobalHook(TaskPoolScheduler.Default);
 
+            hook.KeyReleased.Subscribe(e => OnKeyReleased(e, hook));
+
+            hook.KeyReleased.Subscribe(e => OnKeyReleased(e, hook));
+            hook.RunAsync().Subscribe();
+
+            static void OnKeyReleased(KeyboardHookEventArgs e, IReactiveGlobalHook hook)
+            {
+                if (e.Data.KeyCode == KeyCode.VcDelete)
+                {
+                    Environment.Exit(0);
+                    hook.Dispose();
+                }
+            }
+        }
     }
 }
