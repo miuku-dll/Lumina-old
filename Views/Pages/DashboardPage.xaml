@@ -66,7 +66,7 @@
                         VerticalAlignment="Bottom"
                         FontTypography="Caption"
                         Foreground="#57FFFFFF"
-                        Text="Created by sute" />
+                        Text="Created by miuku" />
                 </Grid>
             </Border>
         </Border>
