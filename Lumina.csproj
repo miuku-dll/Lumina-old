@@ -54,7 +54,12 @@
     <None Remove="Images\girl.png" />
     <None Remove="Images\grad.jpg" />
     <None Remove="Images\mountain.png" />
+    <None Remove="Images\sea.jpg" />
     <None Remove="Settings.settings" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\sea.jpg" />
   </ItemGroup>
 
   <ItemGroup>

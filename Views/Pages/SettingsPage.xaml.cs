@@ -5,6 +5,7 @@ using System.Drawing;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Controls;
+using Wpf.Ui;
 using Wpf.Ui.Controls;
 
 namespace Lumina.Views.Pages
@@ -49,6 +50,7 @@ namespace Lumina.Views.Pages
 
         private void SaveServ_Click(object sender, RoutedEventArgs e)
         {
+
             Settings.Default.PrivateServer = PrivServ.Text;
             Settings.Default.Save();
             Settings.Default.Reload();
@@ -88,5 +90,7 @@ namespace Lumina.Views.Pages
         {
             Process.Start(new ProcessStartInfo("https://boostrobotics.eu/windows-key-codes/") { UseShellExecute = true });
         }
+
+
     }
 }

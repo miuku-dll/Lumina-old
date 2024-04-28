@@ -23,7 +23,6 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-
         <Border
             Grid.Row="0"
             Height="200"
@@ -32,7 +31,7 @@
                 <ImageBrush
                     RenderOptions.BitmapScalingMode="HighQuality"
                     Stretch="UniformToFill"
-                    ImageSource="/Assets/bluegrad.jpg"/>
+                    ImageSource="/Images/sea.jpg"/>
             </Border.Background>
             <Border CornerRadius="8">
                 <Border.Background>
@@ -60,13 +59,6 @@
                             Foreground="#B7FFFFFF"
                             Text="For Roblox." />
                     </StackPanel>
-                    <ui:TextBlock
-                        Margin="0,0,13,12"
-                        HorizontalAlignment="Right"
-                        VerticalAlignment="Bottom"
-                        FontTypography="Caption"
-                        Foreground="#57FFFFFF"
-                        Text="Created by miuku" />
                 </Grid>
             </Border>
         </Border>
@@ -207,18 +199,21 @@
                 FontWeight="DemiBold"
                 Text="Learn more" />
             <ui:HyperlinkButton
+                Icon="{ui:SymbolIcon 'LinkSquare24'}"
                 Margin="8,8,0,0"
                 Padding="4"
                 Content="Github Repository"
                 NavigateUri="https://github.com/yurkyu/Lumina/"
                 ToolTip="https://github.com/yurkyu/Lumina/" Click="HyperlinkButton_Click_1" />
             <ui:HyperlinkButton
+                Icon="{ui:SymbolIcon 'PeopleCommunity24'}"
                 Margin="8,0,0,0"
                 Padding="4"
                 Content="Discord Server"
                 NavigateUri="https://discord.gg/G3znu7cqQz"
                 ToolTip="https://discord.gg/G3znu7cqQz" />
             <ui:HyperlinkButton
+                Icon="{ui:SymbolIcon 'CalendarPlay24'}"
                 Margin="8,0,0,0"
                 Padding="4"
                 Content="Youtube"
@@ -227,3 +222,4 @@
         </StackPanel>
     </Grid>
 </Page>
+   

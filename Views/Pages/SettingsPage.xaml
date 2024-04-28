@@ -20,9 +20,7 @@
     <Page.Resources>
         <helpers:EnumToBooleanConverter x:Key="EnumToBooleanConverter" />
     </Page.Resources>
-
-
-
+    
     <Grid VerticalAlignment="Top" Height="800">
 
         <Grid.ColumnDefinitions>
@@ -31,7 +29,6 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Height="700" Width="700" VerticalAlignment="Top">
-
             <ui:Card>
                 <Grid>
                     <StackPanel  Margin="10,0,0,0" HorizontalAlignment="Left" Width="496">
@@ -64,8 +61,9 @@
                     </StackPanel>
                     <ui:Button
                         Content="Save"
+                        Icon="{ui:SymbolIcon 'Save24'}"
                         x:Name="SavePrivateServer"
-                        Icon="Fluent24" Height="35" Click="SaveServ_Click" Width="109" Grid.ColumnSpan="2" Margin="555,31,0,0" VerticalAlignment="Top" />
+                        Click="SaveServ_Click" Width="109" Grid.ColumnSpan="2" Margin="555,31,0,4" VerticalAlignment="Stretch" />
                 </Grid>
             </ui:Card>
             <ui:Card>
@@ -86,9 +84,10 @@
 
                     </StackPanel>
                     <ui:Button
+                        Icon="{ui:SymbolIcon 'Save24'}"
                         Content="Save"
                         x:Name="WebhookButton"
-                        Icon="Fluent24" Height="35" Click="WebhookButton_Click" Width="109" Grid.ColumnSpan="2" Margin="555,31,0,0" VerticalAlignment="Top" />
+                        Height="35" Click="WebhookButton_Click" Width="109" Grid.ColumnSpan="2" Margin="555,31,0,0" VerticalAlignment="Top" />
                 </Grid>
             </ui:Card>
 
