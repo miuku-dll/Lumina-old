@@ -226,8 +226,6 @@ namespace Lumina
                     Thread.Sleep(50);
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
                     Thread.Sleep(500);
-
-
                 }
                 else
                 {
