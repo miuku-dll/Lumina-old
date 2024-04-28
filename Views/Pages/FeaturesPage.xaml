@@ -34,6 +34,7 @@
                     </StackPanel>
 
                     <ui:ToggleSwitch Name="GlobalToggle" Checked="GlobalToggle_Checked"
+                            ToolTip="This will turn on all selected features."
                             Unchecked="GlobalToggle_UnChecked" Margin="520,9,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </ui:Card>
@@ -46,6 +47,7 @@
                     </StackPanel>
 
                     <ui:ToggleSwitch x:Name="AutoCollectToggle" Checked="AutoCollectToggle_Checked"
+                            ToolTip="Auto collection will collect all spots on the map."
                             Unchecked="AutoCollectToggle_UnChecked" Margin="520,9,0,0" IsChecked="False" VerticalAlignment="Top"/>
                 </Grid>
             </ui:Card>
@@ -86,6 +88,7 @@
                     </StackPanel>
 
                     <ui:ToggleSwitch x:Name="SetToggle" Checked="StarChecker_Checked"
+                                     ToolTip="This will send all rare star notifications through your webhook (set your webhook in 'setting'."
                                      Unchecked="StarChecker_UnChecked" HorizontalAlignment="Right" Margin="0,0,10,0"/>
                 </Grid>
             </ui:Card>
