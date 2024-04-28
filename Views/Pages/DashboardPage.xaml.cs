@@ -25,12 +25,17 @@ namespace Lumina.Views.Pages
 
             InitializeComponent();
 
-            Version.Text = content + "";
+            Version.Text = content;
         }
 
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://discord.gg/4xuYgTzp5H");
+
+        }
+
+        private void HyperlinkButton_Click_1(object sender, RoutedEventArgs e)
+        {
 
         }
     }

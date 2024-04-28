@@ -130,5 +130,17 @@ namespace Lumina {
                 this["AutoUpdater"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string KillSwitchBind {
+            get {
+                return ((string)(this["KillSwitchBind"]));
+            }
+            set {
+                this["KillSwitchBind"] = value;
+            }
+        }
     }
 }

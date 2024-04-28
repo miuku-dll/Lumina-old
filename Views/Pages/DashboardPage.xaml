@@ -211,7 +211,7 @@
                 Padding="4"
                 Content="Github Repository"
                 NavigateUri="https://github.com/yurkyu/Lumina/"
-                ToolTip="https://github.com/yurkyu/Lumina/" />
+                ToolTip="https://github.com/yurkyu/Lumina/" Click="HyperlinkButton_Click_1" />
             <ui:HyperlinkButton
                 Margin="8,0,0,0"
                 Padding="4"

@@ -23,26 +23,14 @@
 
 
 
-    <Grid VerticalAlignment="Top">
+    <Grid VerticalAlignment="Top" Height="800">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="700" />
             <ColumnDefinition Width="300" />
         </Grid.ColumnDefinitions>
 
-        <StackPanel Height="600" Width="700">
-
-            <ui:Card>
-                <Grid>
-                    <StackPanel  Margin="10,0,0,0" HorizontalAlignment="Left" Width="496">
-                        <TextBlock Text="Rare star announcements" FontSize="16"/>
-                        <TextBlock FontSize="12" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="This will announce all rare stars you get through your webhook" Width="575"/>
-                    </StackPanel>
-
-                    <ui:ToggleSwitch x:Name="SetToggle" Checked="StarChecker_Checked"
-                Unchecked="StarChecker_UnChecked" HorizontalAlignment="Right" Margin="0,0,10,0"/>
-                </Grid>
-            </ui:Card>
+        <StackPanel Height="700" Width="700" VerticalAlignment="Top">
 
             <ui:Card>
                 <Grid>
@@ -56,7 +44,7 @@
                 </Grid>
             </ui:Card>
 
-            
+
             <ui:Card>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -80,7 +68,6 @@
                         Icon="Fluent24" Height="35" Click="SaveServ_Click" Width="109" Grid.ColumnSpan="2" Margin="555,31,0,0" VerticalAlignment="Top" />
                 </Grid>
             </ui:Card>
-
             <ui:Card>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -165,7 +152,5 @@
                 </Grid>
             </ui:Card>
         </StackPanel>
-
-
     </Grid>
 </Page>

@@ -6,18 +6,17 @@ using Lumina.Views.Windows;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SharpHook;
+using SharpHook.Native;
+using SharpHook.Reactive;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
+using System.Reactive.Concurrency;
 using System.Reflection;
-using SharpHook.Native;
 using System.Windows.Threading;
 using Wpf.Ui;
 using Wpf.Ui.Appearance;
-using SharpHook.Logging;
-using SharpHook.Reactive;
-using System.Reactive.Concurrency;
-using SharpHook;
 
 namespace Lumina
 {
@@ -96,12 +95,7 @@ namespace Lumina
             StreamReader reader = new StreamReader(stream);
             String content = reader.ReadLine();
 
-            var Version = "v0.9.59";
-
-            await Task.Run(() => Killswitch());
-
-            // Run the test hook asynchronously and ignore the result
-
+            var Version = "v0.9.5.10";
 
             if (Version.Equals(content, StringComparison.OrdinalIgnoreCase))
             {
@@ -149,13 +143,10 @@ namespace Lumina
 
                 Process.Start(new ProcessStartInfo("https://discord.gg/4xuYgTzp5H") { UseShellExecute = true });
 
-
                 Settings.Default.FirstLaunch = false;
                 Util.SaveConfig();
             }
-
-        Address:
-
+            await Task.Run(() => Killswitch());
             _host.Start();
         }
 
@@ -181,6 +172,7 @@ namespace Lumina
 
         public async Task Killswitch()
         {
+
             var hook = new SimpleReactiveGlobalHook(TaskPoolScheduler.Default);
 
             hook.KeyReleased.Subscribe(e => OnKeyReleased(e, hook));

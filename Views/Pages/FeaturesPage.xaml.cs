@@ -1,4 +1,5 @@
-﻿using Lumina.ViewModels.Pages;
+﻿using FluentScheduler;
+using Lumina.ViewModels.Pages;
 using System.Windows.Controls;
 using Wpf.Ui.Controls;
 
@@ -115,6 +116,16 @@ namespace Lumina.Views.Pages
 
             Settings.Default.GloveCount = Item;
             Util.SaveConfig();
+        }
+
+        private void StarChecker_Checked(object sender, RoutedEventArgs e)
+        {
+            JobManager.AddJob(() => Util.StarDetection(), (s) => s.ToRunEvery(8).Seconds());
+        }
+
+        private void StarChecker_UnChecked(object sender, RoutedEventArgs e)
+        {
+            JobManager.Stop();
         }
     }
 }
