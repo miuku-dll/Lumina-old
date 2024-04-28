@@ -95,7 +95,7 @@ namespace Lumina
             StreamReader reader = new StreamReader(stream);
             String content = reader.ReadLine();
 
-            var Version = "v0.9.5.10";
+            var Version = "v0.9.6";
 
             if (Version.Equals(content, StringComparison.OrdinalIgnoreCase))
             {
