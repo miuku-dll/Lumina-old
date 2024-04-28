@@ -30,14 +30,15 @@
 
         <StackPanel Height="700" Width="700" VerticalAlignment="Top">
             <ui:Card>
-                <Grid>
+                <Grid >
                     <StackPanel  Margin="10,0,0,0" HorizontalAlignment="Left" Width="496">
                         <TextBlock Text="Auto Update" FontSize="16"/>
                         <TextBlock FontSize="12" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="This will automatically update the software, if a update is found" Width="575"/>
                     </StackPanel>
 
-                    <ui:ToggleSwitch x:Name="AutoUpdateToggle" Checked="AutoUpdateToggle_Checked"
-                Unchecked="AutoUpdateToggle_UnChecked" HorizontalAlignment="Right" Margin="0,0,10,0"/>
+                    <ui:ToggleSwitch x:Name="AutoUpdateToggle" Checked="AutoUpdateToggle_Checked" IsEnabled="False"
+                                     ToolTip="If Lumina has gotten a new version, this will install it automatically on launch."
+                                     Unchecked="AutoUpdateToggle_UnChecked" HorizontalAlignment="Right" Margin="0,0,10,0"/>
                 </Grid>
             </ui:Card>
 
@@ -105,7 +106,9 @@
                         <TextBlock Text="Resolution" FontSize="16"/>
                         <TextBlock FontSize="12" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="Select your monitors resolution" Width="575"/>
                     </StackPanel>
-                    <ComboBox Name="ResolutionCombobox" Margin="492,3,347,0" VerticalAlignment="Top" Grid.ColumnSpan="2" SelectionChanged="ResolutionCombobox_SelectionChanged">
+                    <ComboBox Name="ResolutionCombobox"
+                              ToolTip="Select your monitors resolution, so the software clicks the right pixels."
+                              Margin="492,3,347,0" VerticalAlignment="Top" Grid.ColumnSpan="2" SelectionChanged="ResolutionCombobox_SelectionChanged">
                         <ComboBoxItem Content="3440x1440" />
                         <ComboBoxItem Content="1080x1920" />
                         <ComboBoxItem Content="1680x1050" />
