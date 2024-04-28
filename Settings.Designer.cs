@@ -109,7 +109,7 @@ namespace Lumina {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1080x1920")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1920x1080")]
         public string Resolution {
             get {
                 return ((string)(this["Resolution"]));

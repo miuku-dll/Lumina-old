@@ -83,7 +83,7 @@ namespace Lumina
         {
             try
             {
-                if (Settings.Default.Resolution == "1080x1920")
+                if (Settings.Default.Resolution == "1920x1080")
                 {
                     bool exists;
                     string firstMatch;

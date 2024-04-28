@@ -7,9 +7,7 @@ namespace Lumina
 
         public static void ResetChar()
         {
-
-            // Reset Char
-            if (Settings.Default.Resolution == "1080x1920")
+            if (Settings.Default.Resolution == "1920x1080")
             {
                 CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Escape);
                 Thread.Sleep(500);
@@ -18,9 +16,17 @@ namespace Lumina
                 CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Return);
                 Thread.Sleep(3500);
 
-                CShauto.Mouse.Move(37, 372);
+                CShauto.Mouse.Move(70, 410);
                 Thread.Sleep(50);
-                CShauto.Mouse.Move(35, 370);
+                CShauto.Mouse.Move(69, 410);
+                Thread.Sleep(50);
+                CShauto.Mouse.Move(68, 410);
+                Thread.Sleep(50);
+                CShauto.Mouse.Move(67, 410);
+                Thread.Sleep(50);
+                CShauto.Mouse.Move(66, 410);
+                Thread.Sleep(50);
+                CShauto.Mouse.Move(65, 410);
                 Thread.Sleep(200);
                 CShauto.Mouse.Click();
 
@@ -127,6 +133,7 @@ namespace Lumina
                 CShauto.Mouse.Click();
                 Thread.Sleep(500);
             }
+            else MessageBox.Show("No resolution selected?");
         }
     }
 }
