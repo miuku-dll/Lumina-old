@@ -392,11 +392,6 @@ namespace Lumina
 
                 var Colors = new List<string>() { "Color [A=255, R=75, G=138, B=255]", "Color [A=255, R=81, G=99, B=255]", "Color [A=255, R=255, G=127, B=127]", "Color [A=255, R=111, G=150, B=255]", "Color [A=255, R=41, G=22, B=147]", "Color [A=255, R=81, G=64, B=255]", "Color [A=255, R=81, G=66, B=255]", "Color [A=255, R=151, G=162, B=255]", "Color [A=255, R=37, G=86, B=255]", "Color [A=255, R=9, G=104, B=55]", "Color [A=255, R=163, G=34, B=72]", "Color [A=255, R=56, G=201, B=216]", "Color [A=255, R=84, G=96, B=255]", "Color [A=255, R=119, G=91, B=255]", "Color [A=255, R=7, G=142, B=0]", "Color [A=255, R=190, G=210, B=255]", "Color [A=255, R=255, G=66, B=69]", "Color [A=255, R=125, G=255, B=223", "Color [A=255, R=136, G=136, B=136]", "Color [A=255, R=76, G=133, B=255]" };
 
-                exists = Colors.Any(x => x.Contains($"{color}"));
-                if (exists)
-                { }
-                else
-                { }
             // exists => true
 
             loop:
@@ -508,10 +503,7 @@ namespace Lumina
                     Webhooks.WebhookVirtual();
                 }
 
-                else
-                {
-
-                }
+                else { }
             }
             else if (Settings.Default.Resolution == "3440x1440")
             {
@@ -529,11 +521,6 @@ namespace Lumina
 
                 var Colors = new List<string>() { "Color [A=255, R=75, G=138, B=255]", "Color [A=255, R=81, G=99, B=255]", "Color [A=255, R=255, G=127, B=127]", "Color [A=255, R=111, G=150, B=255]", "Color [A=255, R=41, G=22, B=147]", "Color [A=255, R=81, G=64, B=255]", "Color [A=255, R=81, G=66, B=255]", "Color [A=255, R=151, G=162, B=255]", "Color [A=255, R=37, G=86, B=255]", "Color [A=255, R=9, G=104, B=55]", "Color [A=255, R=163, G=34, B=72]", "Color [A=255, R=56, G=201, B=216]", "Color [A=255, R=84, G=96, B=255]", "Color [A=255, R=119, G=91, B=255]", "Color [A=255, R=7, G=142, B=0]", "Color [A=255, R=190, G=210, B=255]", "Color [A=255, R=255, G=66, B=69]", "Color [A=255, R=125, G=255, B=223", "Color [A=255, R=136, G=136, B=136]", "Color [A=255, R=76, G=133, B=255]" };
 
-                exists = Colors.Any(x => x.Contains($"{color}"));
-                if (exists)
-                { }
-                else
-                { }
             // exists => true
 
             loop:
@@ -645,10 +632,7 @@ namespace Lumina
                     Webhooks.WebhookVirtual();
                 }
 
-                else
-                {
-
-                }
+                else { }
             }
             else if (Settings.Default.Resolution == "1680x1050")
             {
@@ -666,11 +650,6 @@ namespace Lumina
 
                 var Colors = new List<string>() { "Color [A=255, R=75, G=138, B=255]", "Color [A=255, R=81, G=99, B=255]", "Color [A=255, R=255, G=127, B=127]", "Color [A=255, R=111, G=150, B=255]", "Color [A=255, R=41, G=22, B=147]", "Color [A=255, R=81, G=64, B=255]", "Color [A=255, R=81, G=66, B=255]", "Color [A=255, R=151, G=162, B=255]", "Color [A=255, R=37, G=86, B=255]", "Color [A=255, R=9, G=104, B=55]", "Color [A=255, R=163, G=34, B=72]", "Color [A=255, R=56, G=201, B=216]", "Color [A=255, R=84, G=96, B=255]", "Color [A=255, R=119, G=91, B=255]", "Color [A=255, R=7, G=142, B=0]", "Color [A=255, R=190, G=210, B=255]", "Color [A=255, R=255, G=66, B=69]", "Color [A=255, R=125, G=255, B=223", "Color [A=255, R=136, G=136, B=136]", "Color [A=255, R=76, G=133, B=255]" };
 
-                exists = Colors.Any(x => x.Contains($"{color}"));
-                if (exists)
-                { }
-                else
-                { }
             // exists => true
 
             loop:
@@ -782,10 +761,7 @@ namespace Lumina
                     Webhooks.WebhookVirtual();
                 }
 
-                else
-                {
-
-                }
+                else { }
             }
             else if (Settings.Default.Resolution == "1360x786")
             {
@@ -803,13 +779,6 @@ namespace Lumina
 
                 var Colors = new List<string>() { "Color [A=255, R=75, G=138, B=255]", "Color [A=255, R=81, G=99, B=255]", "Color [A=255, R=255, G=127, B=127]", "Color [A=255, R=111, G=150, B=255]", "Color [A=255, R=41, G=22, B=147]", "Color [A=255, R=81, G=64, B=255]", "Color [A=255, R=81, G=66, B=255]", "Color [A=255, R=151, G=162, B=255]", "Color [A=255, R=37, G=86, B=255]", "Color [A=255, R=9, G=104, B=55]", "Color [A=255, R=163, G=34, B=72]", "Color [A=255, R=56, G=201, B=216]", "Color [A=255, R=84, G=96, B=255]", "Color [A=255, R=119, G=91, B=255]", "Color [A=255, R=7, G=142, B=0]", "Color [A=255, R=190, G=210, B=255]", "Color [A=255, R=255, G=66, B=69]", "Color [A=255, R=125, G=255, B=223", "Color [A=255, R=136, G=136, B=136]", "Color [A=255, R=76, G=133, B=255]" };
 
-                exists = Colors.Any(x => x.Contains($"{color}"));
-                if (exists)
-                { }
-                else
-                { }
-            // exists => true
-
             loop:
                 if ($"{color}".StartsWith("Color [A=255, R=7, G=142, B=0]"))
                 {
@@ -919,10 +888,7 @@ namespace Lumina
                     Webhooks.WebhookVirtual();
                 }
 
-                else
-                {
-
-                }
+                else { }
             }
         }
 
