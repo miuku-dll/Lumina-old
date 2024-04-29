@@ -58,7 +58,8 @@ namespace Lumina
                 services.AddSingleton<DashboardViewModel>();
                 services.AddSingleton<FeaturesPage>();
                 services.AddSingleton<FeaturesViewModel>();
-                services.AddSingleton<SettingsPage>();
+                services.AddSingleton<
+                    SettingsPage>();
                 services.AddSingleton<SettingsViewModel>();
                 services.AddSingleton<FullAutoPage>();
                 services.AddSingleton<FullAutoViewModel>();

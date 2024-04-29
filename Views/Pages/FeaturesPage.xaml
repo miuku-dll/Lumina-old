@@ -54,7 +54,7 @@
 
             <ui:CardExpander Header="Auto Obby" RenderTransformOrigin="0.5,0.5" Height="auto">
                 <Grid Height="125">
-                    <Border Background="#292929" CornerRadius="10,10,10,10" Padding="10,10,10,10" Height="60" VerticalAlignment="Top">
+                    <Border CornerRadius="10,10,10,10" Padding="10,10,10,10" Height="60" VerticalAlignment="Top">
                         <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" Width="530">
                             <TextBlock Text="Auto Obby" FontSize="16"/>
                             <TextBlock FontSize="12" HorizontalAlignment="Left" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="This will complete the obby every 2 minutes" Width="333"/>
@@ -65,7 +65,7 @@
                     <ui:ToggleSwitch Name="ObbyToggle" Checked="ObbyToggle_Checked"
                  Unchecked="ObbyToggle_UnChecked" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,20,20,0"/>
 
-                    <Border VerticalAlignment="Bottom" Background="#292929" CornerRadius="10,10,10,10" Padding="10,10,10,10" Height="60">
+                    <Border VerticalAlignment="Bottom" CornerRadius="10,10,10,10" Padding="10,10,10,10" Height="60">
                         <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" Width="530">
                             <TextBlock Text="Glove Count" FontSize="16"/>
                             <TextBlock FontSize="12" HorizontalAlignment="Left" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="How many gloves you have equipped" Width="333"/>
