@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -41,11 +41,14 @@
     <None Remove="Assets\bluegrad.jpg" />
     <None Remove="Assets\Fingerprint.png" />
     <None Remove="Assets\firewatch.png" />
+    <None Remove="Assets\Layers.png" />
     <None Remove="Assets\query.png" />
     <None Remove="Assets\RatingControl.png" />
     <None Remove="Assets\toggle2.png" />
     <None Remove="Assets\Toggle3.png" />
     <None Remove="Assets\ToggleSwitch.png" />
+    <None Remove="Assets\UserShield.png" />
+    <None Remove="Assets\Version.png" />
     <None Remove="Assets\wpfui-icon-256.png" />
     <None Remove="Assets\wpfui-icon-1024.png" />
     <None Remove="Assets\XamlUICommand.png" />
@@ -55,12 +58,19 @@
     <None Remove="Images\cat4.png" />
     <None Remove="Images\girl.png" />
     <None Remove="Images\grad.jpg" />
+    <None Remove="Images\gradient.png" />
     <None Remove="Images\mountain.png" />
+    <None Remove="Images\sand.jpg" />
     <None Remove="Images\sea.jpg" />
     <None Remove="Settings.settings" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\Layers.png" />
+    <Resource Include="Assets\UserShield.png" />
+    <Resource Include="Assets\Version.png" />
+    <Resource Include="Images\gradient.png" />
+    <Resource Include="Images\sand.jpg" />
     <Resource Include="Images\sea.jpg" />
   </ItemGroup>
 

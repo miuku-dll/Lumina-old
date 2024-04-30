@@ -32,7 +32,7 @@
             <ui:Card>
                 <Grid >
                     <StackPanel  Margin="10,0,0,0" HorizontalAlignment="Left" Width="496">
-                        <TextBlock Text="Auto Update" FontSize="16"/>
+                        <TextBlock Text="Auto Update" FontSize="16" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}"/>
                         <TextBlock FontSize="12" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="This will automatically update the software, if a update is found" Width="575"/>
                     </StackPanel>
 
@@ -103,7 +103,7 @@
                         <ColumnDefinition Width="502"/>
                     </Grid.ColumnDefinitions>
                     <StackPanel  Margin="10,0,0,0" HorizontalAlignment="Left" Width="496">
-                        <TextBlock Text="Resolution" FontSize="16"/>
+                        <TextBlock Text="Resolution" FontSize="16" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}"/>
                         <TextBlock FontSize="12" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="Select your monitors resolution" Width="575"/>
                     </StackPanel>
                     <ComboBox Name="ResolutionCombobox"
@@ -128,7 +128,7 @@
                         <ColumnDefinition Width="502"/>
                     </Grid.ColumnDefinitions>
                     <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="550" Grid.Row="0">
-                        <TextBlock Text="Personalization" FontSize="16"/>
+                        <TextBlock Text="Personalization" FontSize="16" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}"/>
                         <TextBlock FontSize="12" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="Pick what color scheme you prefer" Width="575"/>
 
 
