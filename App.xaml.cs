@@ -92,9 +92,9 @@ namespace Lumina
             StreamReader reader = new StreamReader(stream);
             String content = reader.ReadLine();
 
-            // var Version = "v0.9.52";
+            var Version = "v0.9.51";
 
-            /* if (Version.Equals(content, StringComparison.OrdinalIgnoreCase))
+            if (Version.Equals(content, StringComparison.OrdinalIgnoreCase))
             {
 
             }
@@ -104,7 +104,7 @@ namespace Lumina
                 Thread.Sleep(1000);
                 Process.Start(new ProcessStartInfo("https://discordapp.com/channels/1154133794417295532/1224072077405978646") { UseShellExecute = true });
                 Environment.Exit(0);
-            } */
+            }
 
             ApplicationThemeManager.Apply(
                 ApplicationTheme.Dark

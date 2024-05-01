@@ -34,13 +34,10 @@
   <ItemGroup>
     <None Remove="Assets\bell-ring1.png" />
     <None Remove="Assets\firewatch.png" />
-    <None Remove="Assets\Layers.png" />
     <None Remove="Assets\RatingControl.png" />
     <None Remove="Assets\toggle2.png" />
     <None Remove="Assets\Toggle3.png" />
     <None Remove="Assets\ToggleSwitch.png" />
-    <None Remove="Assets\UserShield.png" />
-    <None Remove="Assets\Version.png" />
     <None Remove="Assets\wpfui-icon-256.png" />
     <None Remove="Assets\wpfui-icon-1024.png" />
     <None Remove="Assets\XamlUICommand.png" />
@@ -56,13 +53,10 @@
   <ItemGroup>
     <Resource Include="Assets\bell-ring1.png" />
     <Resource Include="Assets\firewatch.png" />
-    <Resource Include="Assets\Layers.png" />
     <Resource Include="Assets\RatingControl.png" />
     <Resource Include="Assets\toggle2.png" />
     <Resource Include="Assets\Toggle3.png" />
     <Resource Include="Assets\ToggleSwitch.png" />
-    <Resource Include="Assets\UserShield.png" />
-    <Resource Include="Assets\Version.png" />
     <Resource Include="Assets\wpfui-icon-256.png" />
     <Resource Include="Assets\wpfui-icon-1024.png" />
     <Resource Include="Assets\XamlUICommand.png" />
