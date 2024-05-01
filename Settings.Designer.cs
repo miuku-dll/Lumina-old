@@ -62,24 +62,12 @@ namespace Lumina {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool CollectStatus {
+        public bool FishingStatus {
             get {
-                return ((bool)(this["CollectStatus"]));
+                return ((bool)(this["FishingStatus"]));
             }
             set {
-                this["CollectStatus"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool ObbyStatus {
-            get {
-                return ((bool)(this["ObbyStatus"]));
-            }
-            set {
-                this["ObbyStatus"] = value;
+                this["FishingStatus"] = value;
             }
         }
         
@@ -97,13 +85,13 @@ namespace Lumina {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public string GloveCount {
+        [global::System.Configuration.DefaultSettingValueAttribute("1000")]
+        public string SleepTime {
             get {
-                return ((string)(this["GloveCount"]));
+                return ((string)(this["SleepTime"]));
             }
             set {
-                this["GloveCount"] = value;
+                this["SleepTime"] = value;
             }
         }
     }

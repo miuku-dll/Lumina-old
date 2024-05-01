@@ -24,7 +24,7 @@
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
-        <StackPanel Width="600" Height="500">
+        <StackPanel Width="750" Height="500" Margin="0,0,0,-50">
 
             <ui:Card>
                 <Grid>
@@ -34,47 +34,34 @@
                     </StackPanel>
 
                     <ui:ToggleSwitch Name="GlobalToggle" Checked="GlobalToggle_Checked"
-                            Unchecked="GlobalToggle_UnChecked" Margin="520,9,0,0" VerticalAlignment="Top"/>
+                            Unchecked="GlobalToggle_UnChecked" Margin="680,0,0,0"/>
                 </Grid>
             </ui:Card>
 
-            <ui:Card>
-                <Grid>
-                    <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" Width="200">
-                        <TextBlock Text="Auto Collect" FontSize="16"/>
-                        <TextBlock FontSize="12" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="This will toggle auto collection"/>
-                    </StackPanel>
-
-                    <ui:ToggleSwitch x:Name="AutoCollectToggle" Checked="AutoCollectToggle_Checked"
-                            Unchecked="AutoCollectToggle_UnChecked" Margin="520,9,0,0" IsChecked="False" VerticalAlignment="Top"/>
-                </Grid>
-            </ui:Card>
-
-            <ui:CardExpander Header="Auto Obby" RenderTransformOrigin="0.5,0.5" Height="240">
+            <ui:CardExpander Header="Auto Fishing" RenderTransformOrigin="0.5,0.5" Height="240">
                 <Grid Height="125">
                     <Border Background="#292929" CornerRadius="10,10,10,10" Padding="10,10,10,10" Height="60" VerticalAlignment="Top">
                         <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" Width="530">
-                            <TextBlock Text="Auto Obby" FontSize="16"/>
-                            <TextBlock FontSize="12" HorizontalAlignment="Left" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="This will complete the obby every 2 minutes" Width="333"/>
+                            <TextBlock Text="Auto Fishing" FontSize="16"/>
+                            <TextBlock FontSize="12" HorizontalAlignment="Left" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="Lumina will automatically fish for you" Width="333"/>
 
 
                         </StackPanel>
                     </Border>
-                    <ui:ToggleSwitch Name="ObbyToggle" Checked="ObbyToggle_Checked"
-                 Unchecked="ObbyToggle_UnChecked" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,20,20,0"/>
+                    <ui:ToggleSwitch Name="FishingToggle" Checked="FishingToggle_Checked"
+                 Unchecked="FishingToggle_UnChecked" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,20,20,0"/>
 
                     <Border VerticalAlignment="Bottom" Background="#292929" CornerRadius="10,10,10,10" Padding="10,10,10,10" Height="60">
                         <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" Width="530">
-                            <TextBlock Text="Glove Count" FontSize="16"/>
-                            <TextBlock FontSize="12" HorizontalAlignment="Left" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="How many gloves you have equipped" Width="333"/>
+                            <TextBlock Text="Hook Speed" FontSize="16"/>
+                            <TextBlock FontSize="12" HorizontalAlignment="Left" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="Change this depending on your rod level (in ms)" Width="333"/>
                         </StackPanel>
 
                     </Border>
-                    <ComboBox x:Name="GloveBox" Margin="461,78,20,0" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged" Height="34">
-                        <ComboBoxItem Content="None" />
-                        <ComboBoxItem Content="1" />
-                        <ComboBoxItem Content="2" />
-                    </ComboBox>
+
+                    <Slider x:Name="SleepTime" Maximum="5000" Minimum="10" Value="{Binding Count, Mode=TwoWay}" Margin="294,85,98,18" SmallChange="10" ValueChanged="SleepTime_ValueChanged" TickFrequency="10" LargeChange="10" IsSnapToTickEnabled="True"/>
+
+                    <TextBox x:Name="TimeTextbox" Text="{Binding ElementName=SleepTime, Path=Value, UpdateSourceTrigger=PropertyChanged}" Margin="635,77,20,11" TextAlignment="Center" FontSize="12" Height="30" TextChanged="TextBox_TextChanged"/>
                 </Grid>
             </ui:CardExpander>
         </StackPanel>

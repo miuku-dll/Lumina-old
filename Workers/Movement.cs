@@ -1,4 +1,6 @@
 ﻿using CSInputs.Enums;
+using System.Drawing;
+using System.Runtime.InteropServices;
 
 namespace Lumina
 {
@@ -8,242 +10,109 @@ namespace Lumina
         {
             await Task.Delay(1000);
 
+            Util.Focus();
+            Thread.Sleep(1000);
+
             while (Settings.Default.ison == true)
             {
                 if (Settings.Default.ison == false)
                 {
                     break;
                 }
-
-                Util.Focus();
-                Thread.Sleep(1000);
-                MovementUtil.ResetChar();
                 Util.ResetKeys();
 
-                if (Settings.Default.CollectStatus == true)
+                if (Settings.Default.FishingStatus == true)
                 {
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.A, KeyFlags.Down);
-                    Thread.Sleep(93);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Down);
-                    Thread.Sleep(2000);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.A, KeyFlags.Up);
-                    Thread.Sleep(1234);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Up);
-                    Thread.Sleep(1672);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Down);
-                    Thread.Sleep(2891);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-                    Thread.Sleep(312);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Up);
-                    Thread.Sleep(4778);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
-                    Thread.Sleep(453);
-                    Thread.Sleep(500);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(50);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(50);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(500);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Down);
-                    Thread.Sleep(1172);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Up);
-                    Thread.Sleep(500);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(50);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(50);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(500);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Down);
-                    Thread.Sleep(5216);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Up);
-                    Thread.Sleep(500);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(50);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(50);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(500);
-                    MovementUtil.ResetChar();
-                    Util.ResetKeys();
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.A, KeyFlags.Down);
-                    Thread.Sleep(93);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Down);
-                    Thread.Sleep(2000);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.A, KeyFlags.Up);
-                    Thread.Sleep(1234);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Up);
-                    Thread.Sleep(1672);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Down);
-                    Thread.Sleep(313);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-                    Thread.Sleep(62);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Up);
-                    Thread.Sleep(344);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Down);
-                    Thread.Sleep(78);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-                    Thread.Sleep(125);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-                    Thread.Sleep(281);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-                    Thread.Sleep(204);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-                    Thread.Sleep(187);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.A, KeyFlags.Down);
-                    Thread.Sleep(94);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Up);
-                    Thread.Sleep(375);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-                    Thread.Sleep(187);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-                    Thread.Sleep(110);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Down);
-                    Thread.Sleep(62);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.A, KeyFlags.Up);
-                    Thread.Sleep(297);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-                    Thread.Sleep(156);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-                    Thread.Sleep(735);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-                    Thread.Sleep(78);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Up);
-                    Thread.Sleep(312);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
-                    Thread.Sleep(500);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(50);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(50);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(500);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.A, KeyFlags.Down);
-                    Thread.Sleep(1844);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.A, KeyFlags.Up);
-                    Thread.Sleep(25);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Down);
-                    Thread.Sleep(1200);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Up);
-                    Thread.Sleep(22);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-                    Thread.Sleep(1200);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
-                    Thread.Sleep(500);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(50);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(50);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(500);
-                    MovementUtil.ResetChar();
-                    Util.ResetKeys();
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.A, KeyFlags.Down);
-                    Thread.Sleep(93);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Down);
-                    Thread.Sleep(2000);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.A, KeyFlags.Up);
-                    Thread.Sleep(1234);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Up);
-                    Thread.Sleep(1672);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Down);
-                    Thread.Sleep(484);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.A, KeyFlags.Down);
-                    Thread.Sleep(4250);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.A, KeyFlags.Up);
-                    Thread.Sleep(391);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Up);
-                    Thread.Sleep(500);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(50);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(50);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(500);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.A, KeyFlags.Down);
-                    Thread.Sleep(31);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-                    Thread.Sleep(125);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-                    Thread.Sleep(250);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Down);
-                    Thread.Sleep(16);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.A, KeyFlags.Up);
-                    Thread.Sleep(5062);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-                    Thread.Sleep(235);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Up);
-                    Thread.Sleep(546);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
-                    Thread.Sleep(500);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(50);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(50);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(500);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-                    Thread.Sleep(1891);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
-                    Thread.Sleep(31);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Down);
-                    Thread.Sleep(297);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-                    Thread.Sleep(156);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-                    Thread.Sleep(234);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-                    Thread.Sleep(297);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-                    Thread.Sleep(391);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-                    Thread.Sleep(297);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-                    Thread.Sleep(437);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-                    Thread.Sleep(1250);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Up);
-                    Thread.Sleep(110);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-                    Thread.Sleep(453);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-                    Thread.Sleep(300);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
-                    Thread.Sleep(100);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Down);
-                    Thread.Sleep(906);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-                    Thread.Sleep(16);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Up);
-                    Thread.Sleep(359);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
-                    Thread.Sleep(500);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(50);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(50);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(500);
+                    CheckStatus();
+
+                    [DllImport("user32.dll")]
+                    static extern IntPtr GetDC(IntPtr hwnd);
+                    [DllImport("user32.dll")]
+                    static extern Int32 ReleaseDC(IntPtr hwnd, IntPtr hdc);
+                    [DllImport("gdi32.dll")]
+                    static extern uint GetPixel(IntPtr hdc, int nXPos, int nYPos);
+
+                    IntPtr hdc = GetDC(IntPtr.Zero);
+                    uint pixel = GetPixel(hdc, 835, 821);
+                    ReleaseDC(IntPtr.Zero, hdc);
+                    Color color = Color.FromArgb(
+                        (byte)(pixel & 0x000000FF),
+                        (byte)((pixel & 0x0000FF00) >> 8),
+                        (byte)((pixel & 0x00FF0000) >> 16));
+                    try
+                    {
+                        bool exists;
+                        string firstMatch;
+                        IEnumerable<string> matchingList;
+
+                        var Colors = new List<string>() { "Color [A=255, R=255, G=255, B=255]", "Color [A=255, R=251, G=98, B=76]" };
+
+                        if ($"{color}".StartsWith("Color [A=255, R=255, G=255, B=255]"))
+                        {
+                            CShauto.Mouse.Move(835, 821);
+                            Thread.Sleep(50);
+                            CShauto.Mouse.Click();
+                        }
+                    }
+                    catch
+                    {
+
+                    }
+
                 }
                 else
                 {
 
                 }
-
-                if (Settings.Default.ObbyStatus == true)
-                {
-                    Util.Focus();
-                    Thread.Sleep(1000);
-                    Util.ResetChar();
-                    Util.ResetKeys();
-
-                    Util.CheckObby();
-                }
-                else { }
             }
         }
+
+        public static void CheckStatus()
+        {
+            [DllImport("user32.dll")]
+            static extern IntPtr GetDC(IntPtr hwnd);
+            [DllImport("user32.dll")]
+            static extern Int32 ReleaseDC(IntPtr hwnd, IntPtr hdc);
+            [DllImport("gdi32.dll")]
+            static extern uint GetPixel(IntPtr hdc, int nXPos, int nYPos);
+
+            IntPtr hdc = GetDC(IntPtr.Zero);
+            uint pixel = GetPixel(hdc, 796, 831);
+            ReleaseDC(IntPtr.Zero, hdc);
+            Color color = Color.FromArgb(
+                (byte)(pixel & 0x000000FF),
+                (byte)((pixel & 0x0000FF00) >> 8),
+                (byte)((pixel & 0x00FF0000) >> 16));
+            try
+            {
+                bool exists;
+                string firstMatch;
+                IEnumerable<string> matchingList;
+
+                var Colors = new List<string>() { "Color [A=255, R=251, G=98, B=76]" };
+
+                if ($"{color}".StartsWith("Color [A=255, R=251, G=98, B=76]"))
+                {
+
+                }
+                else
+                {
+                    string numberString = Settings.Default.SleepTime;
+                    int a = int.Parse(numberString);
+
+                    CShauto.Mouse.Move(973, 233);
+                    Thread.Sleep(50);
+                    CShauto.Mouse.Click();
+                    Thread.Sleep(a);
+                    CShauto.Mouse.Click();
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
 
         public static void Obby()
         {

@@ -11,17 +11,14 @@
     <Setting Name="WebhookAddress" Type="System.String" Scope="User">
       <Value Profile="(Default)">Enter your webhook...</Value>
     </Setting>
-    <Setting Name="CollectStatus" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="ObbyStatus" Type="System.Boolean" Scope="User">
+    <Setting Name="FishingStatus" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="FirstLaunch" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="GloveCount" Type="System.String" Scope="User">
-      <Value Profile="(Default)">0</Value>
+    <Setting Name="SleepTime" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1000</Value>
     </Setting>
   </Settings>
 </SettingsFile>

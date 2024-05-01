@@ -15,28 +15,16 @@ namespace Lumina.Views.Pages
 
             InitializeComponent();
 
-            if (Settings.Default.CollectStatus == true)
+            if (Settings.Default.FishingStatus == true)
             {
-                AutoCollectToggle.IsChecked = true;
+                FishingToggle.IsChecked = true;
             }
             else
             {
-                AutoCollectToggle.IsChecked = false;
+                FishingToggle.IsChecked = false;
             }
 
-            if (Settings.Default.ObbyStatus == true)
-            {
-                ObbyToggle.IsChecked = true;
-            }
-            else
-            {
-                ObbyToggle.IsChecked = false;
-            }
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
+            TimeTextbox.Text = Settings.Default.SleepTime;
         }
 
         private void GlobalToggle_UnChecked(object sender, RoutedEventArgs e)
@@ -46,29 +34,18 @@ namespace Lumina.Views.Pages
         private async void GlobalToggle_Checked(object sender, RoutedEventArgs e)
         {
             isonTrue();
-            var timeout = Settings.Default.ison == false;
 
             await Task.Run(() => Movement.Run());
         }
 
-        private void AutoCollectToggle_Checked(object sender, RoutedEventArgs e)
+        private void FishingToggle_Checked(object sender, RoutedEventArgs e)
         {
-            Status1True();
+            FishingStatusTrue();
         }
 
-        private void AutoCollectToggle_UnChecked(object sender, RoutedEventArgs e)
+        private void FishingToggle_UnChecked(object sender, RoutedEventArgs e)
         {
-            Status1False();
-        }
-
-        private void ObbyToggle_Checked(object sender, RoutedEventArgs e)
-        {
-            Status2True();
-        }
-
-        private void ObbyToggle_UnChecked(object sender, RoutedEventArgs e)
-        {
-            Status2False();
+            FishingStatusFalse();
         }
 
         // Config Saving
@@ -85,34 +62,28 @@ namespace Lumina.Views.Pages
         }
 
 
-        private static void Status1True()
+        private static void FishingStatusTrue()
         {
-            Settings.Default.CollectStatus = true;
+            Settings.Default.FishingStatus = true;
             Util.SaveConfig();
         }
-        private static void Status1False()
+        private static void FishingStatusFalse()
         {
-            Settings.Default.CollectStatus = false;
-            Util.SaveConfig();
-        }
-
-        private static void Status2True()
-        {
-            Settings.Default.ObbyStatus = true;
-            Util.SaveConfig();
-        }
-        private static void Status2False()
-        {
-            Settings.Default.ObbyStatus = false;
+            Settings.Default.FishingStatus = false;
             Util.SaveConfig();
         }
 
-        private void ComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            String Item = (this.GloveBox.SelectedItem as ComboBoxItem).Content.ToString();
+            string val = (TimeTextbox.Text != "") ? TimeTextbox.Text : "0";
 
-            Settings.Default.GloveCount = Item;
+            Settings.Default.SleepTime = val;
             Util.SaveConfig();
+        }
+
+        private void SleepTime_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
         }
     }
 }

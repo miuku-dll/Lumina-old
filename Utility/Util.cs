@@ -80,66 +80,7 @@ namespace Lumina
 
         public static void CheckObby()
         {
-            try
-            {
-                bool exists;
-                string firstMatch;
-                IEnumerable<string> matchingList;
-                var Colors = new List<string>() { "Color [A=255, R=153, G=250, B=169]" };
 
-                if (Settings.Default.GloveCount == "0")
-                {
-                    IntPtr hdc = GetDC(IntPtr.Zero);
-                    uint pixel = GetPixel(hdc, 1887, 1053);
-                    ReleaseDC(IntPtr.Zero, hdc);
-                    Color color = Color.FromArgb(
-                        (byte)(pixel & 0x000000FF),
-                        (byte)((pixel & 0x0000FF00) >> 8),
-                        (byte)((pixel & 0x00FF0000) >> 16));
-
-                    if ($"{color}".StartsWith("Color [A=255, R=153, G=250, B=169]"))
-                    { }
-                    else
-                    {
-                        Movement.Obby();
-                    }
-                }
-                else if (Settings.Default.GloveCount == "1")
-                {
-                    IntPtr hdc = GetDC(IntPtr.Zero);
-                    uint pixel = GetPixel(hdc, 1829, 1053);
-                    ReleaseDC(IntPtr.Zero, hdc);
-                    Color color = Color.FromArgb(
-                        (byte)(pixel & 0x000000FF),
-                        (byte)((pixel & 0x0000FF00) >> 8),
-                        (byte)((pixel & 0x00FF0000) >> 16));
-
-                    if ($"{color}".StartsWith("Color [A=255, R=153, G=250, B=169]"))
-                    { }
-                    else
-                    {
-                        Movement.Obby(); // Doesnt really work, since if you have any extra effects on it wont read shit, could just add a setting for how many gloves u have enabled etc (too much work)
-                    }
-                }
-                else if (Settings.Default.GloveCount == "2")
-                {
-                    IntPtr hdc = GetDC(IntPtr.Zero);
-                    uint pixel = GetPixel(hdc, 1770, 1053);
-                    ReleaseDC(IntPtr.Zero, hdc);
-                    Color color = Color.FromArgb(
-                        (byte)(pixel & 0x000000FF),
-                        (byte)((pixel & 0x0000FF00) >> 8),
-                        (byte)((pixel & 0x00FF0000) >> 16));
-
-                    if ($"{color}".StartsWith("Color [A=255, R=153, G=250, B=169]"))
-                    { }
-                    else
-                    {
-                        Movement.Obby(); // Doesnt really work, since if you have any extra effects on it wont read shit, could just add a setting for how many gloves u have enabled etc (too much work)
-                    }
-                }
-            }
-            catch { }
         }
         public static void ResetChar()
         {
