@@ -6,7 +6,7 @@ namespace Lumina
     {
         public static async Task Run()
         {
-            await Task.Delay(1000);
+            await Task.Delay(200);
 
             while (Settings.Default.ison == true)
             {
@@ -44,6 +44,12 @@ namespace Lumina
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
                     Thread.Sleep(50);
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
+                    Thread.Sleep(50);
+                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
+                    Thread.Sleep(50);
+                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
+                    Thread.Sleep(50);
+                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
                     Thread.Sleep(500);
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Down);
                     Thread.Sleep(1172);
@@ -54,11 +60,23 @@ namespace Lumina
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
                     Thread.Sleep(50);
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
+                    Thread.Sleep(50);
+                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
+                    Thread.Sleep(50);
+                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
+                    Thread.Sleep(50);
+                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
                     Thread.Sleep(500);
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Down);
                     Thread.Sleep(5216);
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Up);
                     Thread.Sleep(500);
+                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
+                    Thread.Sleep(50);
+                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
+                    Thread.Sleep(50);
+                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
+                    Thread.Sleep(50);
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
                     Thread.Sleep(50);
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
@@ -119,6 +137,12 @@ namespace Lumina
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
                     Thread.Sleep(50);
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
+                    Thread.Sleep(50);
+                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
+                    Thread.Sleep(50);
+                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
+                    Thread.Sleep(50);
+                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
                     Thread.Sleep(500);
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.A, KeyFlags.Down);
                     Thread.Sleep(1844);
@@ -132,6 +156,12 @@ namespace Lumina
                     Thread.Sleep(1200);
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
                     Thread.Sleep(500);
+                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
+                    Thread.Sleep(50);
+                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
+                    Thread.Sleep(50);
+                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
+                    Thread.Sleep(50);
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
                     Thread.Sleep(50);
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
@@ -161,6 +191,12 @@ namespace Lumina
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
                     Thread.Sleep(50);
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
+                    Thread.Sleep(50);
+                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
+                    Thread.Sleep(50);
+                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
+                    Thread.Sleep(50);
+                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
                     Thread.Sleep(500);
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.A, KeyFlags.Down);
                     Thread.Sleep(31);
@@ -183,43 +219,7 @@ namespace Lumina
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
                     Thread.Sleep(50);
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
-                    Thread.Sleep(500);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-                    Thread.Sleep(1891);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
-                    Thread.Sleep(31);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Down);
-                    Thread.Sleep(297);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-                    Thread.Sleep(156);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-                    Thread.Sleep(234);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-                    Thread.Sleep(297);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-                    Thread.Sleep(391);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-                    Thread.Sleep(297);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-                    Thread.Sleep(437);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Down);
-                    Thread.Sleep(1250);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.S, KeyFlags.Up);
-                    Thread.Sleep(110);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.Space, KeyFlags.Up);
-                    Thread.Sleep(453);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-                    Thread.Sleep(300);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
-                    Thread.Sleep(100);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Down);
-                    Thread.Sleep(906);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Down);
-                    Thread.Sleep(16);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.W, KeyFlags.Up);
-                    Thread.Sleep(359);
-                    CSInputs.SendInput.Keyboard.Send(KeyboardKeys.D, KeyFlags.Up);
-                    Thread.Sleep(500);
+                    Thread.Sleep(50);
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
                     Thread.Sleep(50);
                     CSInputs.SendInput.Keyboard.Send(KeyboardKeys.F);
@@ -236,7 +236,6 @@ namespace Lumina
                 {
                     Util.Focus();
                     Thread.Sleep(1000);
-                    Util.ResetChar();
                     Util.ResetKeys();
 
                     Util.CheckObby();

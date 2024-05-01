@@ -6,9 +6,13 @@ using Lumina.Views.Windows;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SharpHook;
+using SharpHook.Native;
+using SharpHook.Reactive;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
+using System.Reactive.Concurrency;
 using System.Reflection;
 using System.Windows.Threading;
 using Wpf.Ui;
@@ -54,7 +58,8 @@ namespace Lumina
                 services.AddSingleton<DashboardViewModel>();
                 services.AddSingleton<FeaturesPage>();
                 services.AddSingleton<FeaturesViewModel>();
-                services.AddSingleton<SettingsPage>();
+                services.AddSingleton<
+                    SettingsPage>();
                 services.AddSingleton<SettingsViewModel>();
                 services.AddSingleton<FullAutoPage>();
                 services.AddSingleton<FullAutoViewModel>();
@@ -82,17 +87,16 @@ namespace Lumina
         /// Occurs when the application is loading.
         /// </summary>
 
-
-
         async void OnStartup(object sender, StartupEventArgs e)
         {
+
 
             WebClient client = new WebClient();
             Stream stream = client.OpenRead("https://raw.githubusercontent.com/yurkyu/Lumina/master/Info/Version");
             StreamReader reader = new StreamReader(stream);
             String content = reader.ReadLine();
 
-            var Version = "v0.9.51";
+            var Version = "v0.9.6";
 
             if (Version.Equals(content, StringComparison.OrdinalIgnoreCase))
             {
@@ -100,9 +104,26 @@ namespace Lumina
             }
             else
             {
-                MessageBox.Show("Version mismatch, please install the new version");
-                Thread.Sleep(1000);
-                Process.Start(new ProcessStartInfo("https://discordapp.com/channels/1154133794417295532/1224072077405978646") { UseShellExecute = true });
+                Console.WriteLine("Getting Auto Updater Status...");
+                WebClient client1 = new WebClient();
+                Stream stream1 = client1.OpenRead("https://raw.githubusercontent.com/miuku-dll/Lumina/master/Info/AutoUpdateStatus");
+                StreamReader reader1 = new StreamReader(stream1);
+                String content1 = reader1.ReadLine();
+
+
+                if (content1 == "on")
+                {
+                    MessageBox.Show("New version detected. Press ok to install");
+                    Thread.Sleep(1000);
+
+                    System.Diagnostics.Process.Start("./Lumina_Updater"); ;
+                }
+                else if (content1 == "off")
+                {
+                    MessageBox.Show("New version detected. Auto Update is turned off, please install new version from our Discord...");
+                    Thread.Sleep(1000);
+                    Process.Start(new ProcessStartInfo("https://discordapp.com/channels/1154133794417295532/1224072077405978646") { UseShellExecute = true });
+                }
                 Environment.Exit(0);
             }
 
@@ -123,13 +144,10 @@ namespace Lumina
 
                 Process.Start(new ProcessStartInfo("https://discord.gg/4xuYgTzp5H") { UseShellExecute = true });
 
-
                 Settings.Default.FirstLaunch = false;
                 Util.SaveConfig();
             }
-
-        Address:
-
+            await Task.Run(() => Killswitch());
             _host.Start();
         }
 
@@ -151,6 +169,26 @@ namespace Lumina
         private void OnDispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
         {
             // For more info see https://docs.microsoft.com/en-us/dotnet/api/system.windows.application.dispatcherunhandledexception?view=windowsdesktop-6.0
+        }
+
+        public async Task Killswitch()
+        {
+
+            var hook = new SimpleReactiveGlobalHook(TaskPoolScheduler.Default);
+
+            hook.KeyReleased.Subscribe(e => OnKeyReleased(e, hook));
+
+            hook.KeyReleased.Subscribe(e => OnKeyReleased(e, hook));
+            hook.RunAsync().Subscribe();
+
+            static void OnKeyReleased(KeyboardHookEventArgs e, IReactiveGlobalHook hook)
+            {
+                if (e.Data.KeyCode == KeyCode.VcDelete)
+                {
+                    Environment.Exit(0);
+                    hook.Dispose();
+                }
+            }
         }
     }
 }

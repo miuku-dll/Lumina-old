@@ -106,5 +106,41 @@ namespace Lumina {
                 this["GloveCount"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1920x1080")]
+        public string Resolution {
+            get {
+                return ((string)(this["Resolution"]));
+            }
+            set {
+                this["Resolution"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AutoUpdater {
+            get {
+                return ((bool)(this["AutoUpdater"]));
+            }
+            set {
+                this["AutoUpdater"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string KillSwitchBind {
+            get {
+                return ((string)(this["KillSwitchBind"]));
+            }
+            set {
+                this["KillSwitchBind"] = value;
+            }
+        }
     }
 }

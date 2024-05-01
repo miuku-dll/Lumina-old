@@ -3,7 +3,6 @@
 ![Lumina_Github_Banner](https://github.com/miuku-dll/Lumina/assets/80363046/1026330d-29d9-4b54-81b3-3f5b5e221298)
 
 <p align="center">
-<img src="https://dcbadge.vercel.app/api/shield/960948053152501830">
 <a href="https://discord.gg/VsRMhhYYQC">
 <img src="https://dcbadge.vercel.app/api/server/VsRMhhYYQC">
 </a>
@@ -28,8 +27,8 @@ To edit the application, first re-build the project, for any reason, then the in
 ## Showcase
 
 <div align="left">
-      <a href="https://www.youtube.com/watch?v=JXNY-ejcBy0">
-         <img src="https://img.youtube.com/vi/JXNY-ejcBy0/0.jpg" style="width:100%;">
+      <a href="https://www.youtube.com/watch?v=Du9-1uhjA20">
+         <img src="https://img.youtube.com/vi/Du9-1uhjA20/0.jpg" style="width:100%;">
       </a>
 
 #### Lumina, is not fully developed, due to my laziness <br>

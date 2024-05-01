@@ -20,29 +20,28 @@
     <Page.Resources>
         <helpers:EnumToBooleanConverter x:Key="EnumToBooleanConverter" />
     </Page.Resources>
-
-
-
-    <Grid VerticalAlignment="Top">
+    
+    <Grid VerticalAlignment="Top" Height="800">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="700" />
             <ColumnDefinition Width="300" />
         </Grid.ColumnDefinitions>
 
-        <StackPanel Height="600" Width="700">
-
+        <StackPanel Height="700" Width="700" VerticalAlignment="Top">
             <ui:Card>
-                <Grid>
+                <Grid >
                     <StackPanel  Margin="10,0,0,0" HorizontalAlignment="Left" Width="496">
-                        <TextBlock Text="Rare star announcements" FontSize="16"/>
-                        <TextBlock FontSize="12" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="This will announce all rare stars you get through your webhook" Width="575"/>
+                        <TextBlock Text="Auto Update" FontSize="16" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}"/>
+                        <TextBlock FontSize="12" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="This will automatically update the software, if a update is found" Width="575"/>
                     </StackPanel>
 
-                    <ui:ToggleSwitch x:Name="SetToggle" Checked="StarChecker_Checked"
-                Unchecked="StarChecker_UnChecked" HorizontalAlignment="Right" Margin="0,0,10,0"/>
+                    <ui:ToggleSwitch x:Name="AutoUpdateToggle" Checked="AutoUpdateToggle_Checked" IsEnabled="False"
+                                     ToolTip="If Lumina has gotten a new version, this will install it automatically on launch."
+                                     Unchecked="AutoUpdateToggle_UnChecked" HorizontalAlignment="Right" Margin="0,0,10,0"/>
                 </Grid>
             </ui:Card>
+
 
             <ui:Card>
                 <Grid>
@@ -63,11 +62,11 @@
                     </StackPanel>
                     <ui:Button
                         Content="Save"
+                        Icon="{ui:SymbolIcon 'Save24'}"
                         x:Name="SavePrivateServer"
-                        Icon="Fluent24" Height="35" Click="SaveServ_Click" Width="109" Grid.ColumnSpan="2" Margin="555,31,0,0" VerticalAlignment="Top" />
+                        Click="SaveServ_Click" Width="109" Grid.ColumnSpan="2" Margin="555,31,0,4" VerticalAlignment="Stretch" />
                 </Grid>
             </ui:Card>
-
             <ui:Card>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -86,9 +85,35 @@
 
                     </StackPanel>
                     <ui:Button
+                        Icon="{ui:SymbolIcon 'Save24'}"
                         Content="Save"
                         x:Name="WebhookButton"
-                        Icon="Fluent24" Height="35" Click="WebhookButton_Click" Width="109" Grid.ColumnSpan="2" Margin="555,31,0,0" VerticalAlignment="Top" />
+                        Height="35" Click="WebhookButton_Click" Width="109" Grid.ColumnSpan="2" Margin="555,31,0,0" VerticalAlignment="Top" />
+                </Grid>
+            </ui:Card>
+
+            <ui:Card Height="80">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="508"/>
+                        <ColumnDefinition Width="502"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel  Margin="10,0,0,0" HorizontalAlignment="Left" Width="496">
+                        <TextBlock Text="Resolution" FontSize="16" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}"/>
+                        <TextBlock FontSize="12" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="Select your monitors resolution" Width="575"/>
+                    </StackPanel>
+                    <ComboBox Name="ResolutionCombobox"
+                              ToolTip="Select your monitors resolution, so the software clicks the right pixels."
+                              Margin="492,3,347,0" VerticalAlignment="Top" Grid.ColumnSpan="2" SelectionChanged="ResolutionCombobox_SelectionChanged">
+                        <ComboBoxItem Content="3440x1440" />
+                        <ComboBoxItem Content="1920x1080" />
+                        <ComboBoxItem Content="1680x1050" />
+                        <ComboBoxItem Content="1360x786" />
+                    </ComboBox>
                 </Grid>
             </ui:Card>
 
@@ -103,7 +128,7 @@
                         <ColumnDefinition Width="502"/>
                     </Grid.ColumnDefinitions>
                     <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="550" Grid.Row="0">
-                        <TextBlock Text="Personalization" FontSize="16"/>
+                        <TextBlock Text="Personalization" FontSize="16" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}"/>
                         <TextBlock FontSize="12" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="Pick what color scheme you prefer" Width="575"/>
 
 
@@ -129,7 +154,5 @@
                 </Grid>
             </ui:Card>
         </StackPanel>
-
-
     </Grid>
 </Page>

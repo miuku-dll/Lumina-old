@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using Lumina.Views.Pages;
+using System.Collections.ObjectModel;
 using Wpf.Ui.Controls;
 
 namespace Lumina.ViewModels.Windows
@@ -9,7 +10,7 @@ namespace Lumina.ViewModels.Windows
         private string _applicationTitle = "Lumina - Macro";
 
         [ObservableProperty]
-        private ObservableCollection<object> _menuItems = new()
+        private ICollection<object> _menuItems = new ObservableCollection<object>
         {
             new NavigationViewItem()
             {
@@ -17,6 +18,7 @@ namespace Lumina.ViewModels.Windows
                 Icon = new SymbolIcon { Symbol = SymbolRegular.Home24 },
                 TargetPageType = typeof(Views.Pages.DashboardPage)
             },
+
             new NavigationViewItem()
             {
                 Content = "Features",

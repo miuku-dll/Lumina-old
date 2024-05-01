@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -8,6 +8,8 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <BaseOutputPath>./Build</BaseOutputPath>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,9 +23,11 @@
     </PackageReference>
     <PackageReference Include="CShauto" Version="1.0.1" />
     <PackageReference Include="CSInputs" Version="1.0.3" />
+    <PackageReference Include="DotNetZip" Version="1.16.0" />
     <PackageReference Include="FluentScheduler" Version="5.5.1" />
     <PackageReference Include="Microsoft.VisualStudio.Threading" Version="17.9.28" />
     <PackageReference Include="SharpHook" Version="5.3.2" />
+    <PackageReference Include="SharpHook.Reactive" Version="5.3.2" />
     <PackageReference Include="System.ServiceModel.Primitives" Version="8.0.0" />
     <PackageReference Include="System.Threading.Tasks" Version="4.3.0" />
     <PackageReference Include="WPF-UI" Version="3.0.3" />
@@ -32,12 +36,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Assets\About.png" />
     <None Remove="Assets\bell-ring1.png" />
+    <None Remove="Assets\bluegrad.jpg" />
+    <None Remove="Assets\Fingerprint.png" />
     <None Remove="Assets\firewatch.png" />
+    <None Remove="Assets\Layers.png" />
+    <None Remove="Assets\query.png" />
     <None Remove="Assets\RatingControl.png" />
     <None Remove="Assets\toggle2.png" />
     <None Remove="Assets\Toggle3.png" />
     <None Remove="Assets\ToggleSwitch.png" />
+    <None Remove="Assets\UserShield.png" />
+    <None Remove="Assets\Version.png" />
     <None Remove="Assets\wpfui-icon-256.png" />
     <None Remove="Assets\wpfui-icon-1024.png" />
     <None Remove="Assets\XamlUICommand.png" />
@@ -47,12 +58,29 @@
     <None Remove="Images\cat4.png" />
     <None Remove="Images\girl.png" />
     <None Remove="Images\grad.jpg" />
+    <None Remove="Images\gradient.png" />
+    <None Remove="Images\mountain.png" />
+    <None Remove="Images\sand.jpg" />
+    <None Remove="Images\sea.jpg" />
     <None Remove="Settings.settings" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\Layers.png" />
+    <Resource Include="Assets\UserShield.png" />
+    <Resource Include="Assets\Version.png" />
+    <Resource Include="Images\gradient.png" />
+    <Resource Include="Images\sand.jpg" />
+    <Resource Include="Images\sea.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\About.png" />
     <Resource Include="Assets\bell-ring1.png" />
+    <Resource Include="Assets\bluegrad.jpg" />
+    <Resource Include="Assets\Fingerprint.png" />
     <Resource Include="Assets\firewatch.png" />
+    <Resource Include="Assets\query.png" />
     <Resource Include="Assets\RatingControl.png" />
     <Resource Include="Assets\toggle2.png" />
     <Resource Include="Assets\Toggle3.png" />
@@ -66,6 +94,7 @@
     <Resource Include="Images\cat4.png" />
     <Resource Include="Images\girl.png" />
     <Resource Include="Images\grad.jpg" />
+    <Resource Include="Images\mountain.png" />
     <Resource Include="Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

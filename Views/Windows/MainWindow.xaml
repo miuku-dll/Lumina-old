@@ -8,12 +8,12 @@
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
     Title="{Binding ViewModel.ApplicationTitle, Mode=OneWay}"
     Width="1170"
-    Height="802"
+    Height="800"
     MinWidth="800"
     d:DataContext="{d:DesignInstance local:MainWindow,
                                      IsDesignTimeCreatable=True}"
-    d:DesignHeight="450"
-    d:DesignWidth="800"
+    d:DesignHeight="800"
+    d:DesignWidth="1170"
     ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
     ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
     ExtendsContentIntoTitleBar="True"
@@ -30,11 +30,15 @@
     </ui:FluentWindow.InputBindings>
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <ui:TitleBar
             x:Name="TitleBar"
             Title="{Binding ViewModel.ApplicationTitle}"
             Grid.Row="0"
-            CloseWindowByDoubleClickOnIcon="True">
+            CloseWindowByDoubleClickOnIcon="True" Grid.ColumnSpan="2">
             <ui:TitleBar.Icon>
                 <ui:ImageIcon Source="pack://application:,,,/Assets/wpfui-icon-256.png" />
             </ui:TitleBar.Icon>
@@ -51,7 +55,7 @@
             MenuItemsSource="{Binding ViewModel.MenuItems, Mode=OneWay}"
             OpenPaneLength="310"
             PaneDisplayMode="Left"
-            TitleBar="{Binding ElementName=TitleBar, Mode=OneWay}">
+            TitleBar="{Binding ElementName=TitleBar, Mode=OneWay}" Grid.ColumnSpan="2">
             <ui:NavigationView.Header>
                 <ui:BreadcrumbBar x:Name="BreadcrumbBar" Margin="42,32,42,20" />
             </ui:NavigationView.Header>
@@ -71,6 +75,6 @@
             </ui:NavigationView.ContentOverlay>
         </ui:NavigationView>
 
-        <ContentPresenter x:Name="RootContentDialog" Grid.Row="0" />
+        <ContentPresenter x:Name="RootContentDialog" Grid.Row="0" Grid.ColumnSpan="2" />
     </Grid>
 </ui:FluentWindow>
