@@ -46,10 +46,10 @@ About
 Sute's Macro is a Open-Source Tool.
 Written in C#, with .NET Framework 8.0 (soon)
 
-The Sute's Macro Releases Format is: (dd/MM/yyyy)
-The Sute's Macro Project is under the MIT License.
+The Lumina Releases Format is: (dd/MM/yyyy)
+The Lumina Project is under the MIT License.
 
-- [Sute's Macro, uses the holy spirits to work.](https://github.com/yurkyu/sutes-macro/
+- [Lumina, uses the holy spirits to work.](https://github.com/yurkyu/sutes-macro/
 
 ### Screenshots
 
