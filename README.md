@@ -1,6 +1,7 @@
 <h2 align="center">Lumina | Open-source | Easy-to-use</h1>
 
-![Lumina_Github_Banner](https://github.com/miuku-dll/Lumina/assets/80363046/1026330d-29d9-4b54-81b3-3f5b5e221298)
+![LuminaSnowfallBanner](https://github.com/miuku-dll/Lumina/assets/80363046/b5c8948b-c3fb-4088-a6d6-77e64bc315ed)
+
 
 <p align="center">
 <a href="https://discord.gg/VsRMhhYYQC">
