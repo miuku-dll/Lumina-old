@@ -14,7 +14,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Resource Include="Assets\LumBanner.png" />
     <Resource Include="Assets\LuminaICON.ico" />
   </ItemGroup>
 
@@ -40,7 +39,6 @@
   <ItemGroup>
     <None Remove="Assets\About.png" />
     <None Remove="Assets\bell-ring1.png" />
-    <None Remove="Assets\bluegrad.jpg" />
     <None Remove="Assets\Fingerprint.png" />
     <None Remove="Assets\firewatch.png" />
     <None Remove="Assets\Layers.png" />
@@ -83,7 +81,6 @@
   <ItemGroup>
     <Resource Include="Assets\About.png" />
     <Resource Include="Assets\bell-ring1.png" />
-    <Resource Include="Assets\bluegrad.jpg" />
     <Resource Include="Assets\Fingerprint.png" />
     <Resource Include="Assets\firewatch.png" />
     <Resource Include="Assets\query.png" />
