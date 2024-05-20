@@ -1,6 +1,7 @@
 <h2 align="center">Lumina | Open-source | Easy-to-use</h1>
 
-![Lumina_Github_Banner](https://github.com/miuku-dll/Lumina/assets/80363046/1026330d-29d9-4b54-81b3-3f5b5e221298)
+![LuminaSnowfallBanner](https://github.com/miuku-dll/Lumina/assets/80363046/8d46d8ea-cde6-4c5d-b34d-09cb0b51f43c)
+
 
 <p align="center">
 <a href="https://discord.gg/VsRMhhYYQC">
@@ -46,10 +47,10 @@ About
 Sute's Macro is a Open-Source Tool.
 Written in C#, with .NET Framework 8.0 (soon)
 
-The Sute's Macro Releases Format is: (dd/MM/yyyy)
-The Sute's Macro Project is under the MIT License.
+The Lumina Releases Format is: (dd/MM/yyyy)
+The Lumina Project is under the MIT License.
 
-- [Sute's Macro, uses the holy spirits to work.](https://github.com/yurkyu/sutes-macro/
+- [Lumina, uses the holy spirits to work.](https://github.com/yurkyu/sutes-macro/
 
 ### Screenshots
 
