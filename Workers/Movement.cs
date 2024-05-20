@@ -4,6 +4,7 @@ namespace Lumina
 {
     partial class Movement
     {
+
         public static async Task Run()
         {
             await Task.Delay(200);
@@ -19,6 +20,7 @@ namespace Lumina
                 Thread.Sleep(1000);
                 MovementUtil.ResetChar();
                 Util.ResetKeys();
+
 
                 if (Settings.Default.CollectStatus == true)
                 {

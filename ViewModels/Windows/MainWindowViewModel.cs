@@ -33,13 +33,6 @@ namespace Lumina.ViewModels.Windows
         {
             new NavigationViewItem()
             {
-                Content = "Lumina",
-                Icon = new SymbolIcon { Symbol = SymbolRegular.Star24 },
-                TargetPageType = typeof(Views.Pages.LuminaPage)
-            },
-
-            new NavigationViewItem()
-            {
                 Content = "Settings",
                 Icon = new SymbolIcon { Symbol = SymbolRegular.Settings24 },
                 TargetPageType = typeof(Views.Pages.SettingsPage)

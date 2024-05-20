@@ -4,16 +4,18 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
     <ApplicationManifest>app.manifest</ApplicationManifest>
-    <ApplicationIcon>Assets\lumina ico.ico</ApplicationIcon>
+    <ApplicationIcon>Assets\LuminaICON.ico</ApplicationIcon>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
     <BaseOutputPath>./Build</BaseOutputPath>
     <Platforms>AnyCPU;x64</Platforms>
+    <PackageIcon></PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Assets\lumina ico.ico" />
+    <Resource Include="Assets\LumBanner.png" />
+    <Resource Include="Assets\LuminaICON.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,6 +44,8 @@
     <None Remove="Assets\Fingerprint.png" />
     <None Remove="Assets\firewatch.png" />
     <None Remove="Assets\Layers.png" />
+    <None Remove="Assets\Leaderboard.png" />
+    <None Remove="Assets\LumBanner.png" />
     <None Remove="Assets\query.png" />
     <None Remove="Assets\RatingControl.png" />
     <None Remove="Assets\toggle2.png" />
@@ -67,6 +71,8 @@
 
   <ItemGroup>
     <Resource Include="Assets\Layers.png" />
+    <Resource Include="Assets\Leaderboard.png" />
+    <Resource Include="Assets\Lumina.png" />
     <Resource Include="Assets\UserShield.png" />
     <Resource Include="Assets\Version.png" />
     <Resource Include="Images\gradient.png" />
@@ -107,6 +113,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Assets\Lumina.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

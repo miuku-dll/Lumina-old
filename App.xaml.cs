@@ -42,7 +42,6 @@ namespace Lumina
                 services.AddSingleton<IPageService, PageService>();
 
                 // Theme manipulation
-                services.AddSingleton<IThemeService, ThemeService>();
 
                 // TaskBar manipulation
                 services.AddSingleton<ITaskBarService, TaskBarService>();
@@ -79,10 +78,6 @@ namespace Lumina
             return _host.Services.GetService(typeof(T)) as T;
         }
 
-        public enum SystemTheme
-        {
-            Dark = 1
-        }
         /// <summary>
         /// Occurs when the application is loading.
         /// </summary>
@@ -90,15 +85,16 @@ namespace Lumina
         async void OnStartup(object sender, StartupEventArgs e)
         {
 
+            
 
             WebClient client = new WebClient();
             Stream stream = client.OpenRead("https://raw.githubusercontent.com/yurkyu/Lumina/master/Info/Version");
             StreamReader reader = new StreamReader(stream);
             String content = reader.ReadLine();
 
-            var Version = "v0.9.6";
+            var Version = "v0.9.61";
 
-            if (Version.Equals(content, StringComparison.OrdinalIgnoreCase))
+            /* if (Version.Equals(content, StringComparison.OrdinalIgnoreCase))
             {
 
             }
@@ -125,11 +121,8 @@ namespace Lumina
                     Process.Start(new ProcessStartInfo("https://discordapp.com/channels/1154133794417295532/1224072077405978646") { UseShellExecute = true });
                 }
                 Environment.Exit(0);
-            }
+            } */
 
-            ApplicationThemeManager.Apply(
-                ApplicationTheme.Dark
-                );
 
             try
             {

@@ -11,7 +11,7 @@
     d:DataContext="{d:DesignInstance local:FeaturesPage,
                                      IsDesignTimeCreatable=False}"
     d:DesignHeight="450"
-    d:DesignWidth="800"
+    d:DesignWidth="650"
     ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
     ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
     Foreground="{DynamicResource TextFillColorPrimaryBrush}"
@@ -20,27 +20,34 @@
 
     <Grid VerticalAlignment="Top">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="650" />
+            <ColumnDefinition Width="400" />
         </Grid.ColumnDefinitions>
 
-        <StackPanel Width="600" Height="500">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="500" />
+            <RowDefinition Height="200" />
+        </Grid.RowDefinitions>
 
-            <ui:Card>
-                <Grid>
+
+
+        <StackPanel Width="800" Height="500" Grid.Column="0">
+
+            <ui:Card Width="600" HorizontalAlignment="Left">
+                <Grid HorizontalAlignment="Left" Width="600">
                     <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" Width="200">
                         <TextBlock Text="Global Toggle" FontSize="16"/>
                         <TextBlock FontSize="12" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="This will toggle all true features"/>
                     </StackPanel>
 
-                    <ui:ToggleSwitch Name="GlobalToggle" Checked="GlobalToggle_Checked"
-                            ToolTip="This will turn on all selected features."
-                            Unchecked="GlobalToggle_UnChecked" Margin="520,9,0,0" VerticalAlignment="Top"/>
+                    <ui:ToggleSwitch Name="GlobalToggle" Checked="GlobalToggle_Checked" 
+                                     ToolTip="This will turn on all selected features."
+                            Unchecked="GlobalToggle_UnChecked" Margin="530,7,0,0" VerticalAlignment="Top" Width="44"/>
                 </Grid>
             </ui:Card>
 
-            <ui:Card>
-                <Grid>
+            <ui:Card Width="600" HorizontalAlignment="Left">
+                <Grid HorizontalAlignment="Center" Width="570">
                     <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" Width="200">
                         <TextBlock Text="Auto Collect" FontSize="16"/>
                         <TextBlock FontSize="12" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="This will toggle auto collection"/>
@@ -48,11 +55,11 @@
 
                     <ui:ToggleSwitch x:Name="AutoCollectToggle" Checked="AutoCollectToggle_Checked"
                             ToolTip="Auto collection will collect all spots on the map."
-                            Unchecked="AutoCollectToggle_UnChecked" Margin="520,9,0,0" IsChecked="False" VerticalAlignment="Top"/>
+                            Unchecked="AutoCollectToggle_UnChecked" HorizontalAlignment="Right" VerticalAlignment="Center" IsChecked="False"/>
                 </Grid>
             </ui:Card>
 
-            <ui:CardExpander Header="Auto Obby" RenderTransformOrigin="0.5,0.5" Height="auto">
+            <ui:CardExpander Header="Auto Obby" RenderTransformOrigin="0.5,0.5" Height="auto" Width="600" HorizontalAlignment="Left">
                 <Grid Height="125">
                     <Border CornerRadius="10,10,10,10" Padding="10,10,10,10" Height="60" VerticalAlignment="Top">
                         <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" Width="530">
@@ -72,7 +79,7 @@
                         </StackPanel>
 
                     </Border>
-                    <ComboBox x:Name="GloveBox" Margin="461,78,20,0" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged" Height="34">
+                    <ComboBox x:Name="GloveBox" Margin="380,78,20,0" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged" Height="34">
                         <ComboBoxItem Content="None" />
                         <ComboBoxItem Content="1" />
                         <ComboBoxItem Content="2" />
@@ -80,19 +87,19 @@
                 </Grid>
             </ui:CardExpander>
 
-            <ui:Card>
-                <Grid>
+            <ui:Card Width="600" HorizontalAlignment="Left">
+                <Grid HorizontalAlignment="Center" Width="570">
                     <StackPanel  Margin="10,0,0,0" HorizontalAlignment="Left" Width="496">
                         <TextBlock Text="Rare star announcements" FontSize="16"/>
                         <TextBlock FontSize="12" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="This will announce all rare stars you get through your webhook" Width="575"/>
                     </StackPanel>
 
                     <ui:ToggleSwitch x:Name="SetToggle" Checked="StarChecker_Checked"
-                                     ToolTip="This will send all rare star notifications through your webhook (set your webhook in 'setting'."
-                                     Unchecked="StarChecker_UnChecked" HorizontalAlignment="Right" Margin="0,0,10,0"/>
+                                     ToolTip="This will send all rare star notifications through your webhook (set your webhook in 'setting'." 
+                                     Unchecked="StarChecker_UnChecked" Margin="530,0,0,0"/>
                 </Grid>
             </ui:Card>
-            
+
         </StackPanel>
     </Grid>
 </Page>

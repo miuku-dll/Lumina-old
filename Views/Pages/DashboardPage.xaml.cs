@@ -10,6 +10,7 @@ namespace Lumina.Views.Pages
     {
         public DashboardViewModel ViewModel { get; }
 
+
         public DashboardPage(DashboardViewModel viewModel)
         {
             ViewModel = viewModel;
@@ -26,6 +27,7 @@ namespace Lumina.Views.Pages
             InitializeComponent();
 
             Version.Text = content;
+
         }
 
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
